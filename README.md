@@ -1,5 +1,24 @@
-# Web App - CSTE Centro di Sostenibilità e Transizione Ecologica di Ateneo
-Consumption of Energy and Water Monitoring 
+# 🌐 CSTE Energy & Water Management Platform
+
+Un'applicazione **full-stack** per la gestione e l’analisi dei consumi energetici e idrici degli edifici.  
+Il progetto integra un backend Node.js, un frontend React e script Python per l’estrazione e l’elaborazione dei dati, il tutto containerizzato con Docker.
+
+---
+
+## 📋 Funzionalità principali
+
+- **Autenticazione e autorizzazione** basate su JWT (chiavi RSA).
+- **Gestione dei dati energetici e idrici** tramite API REST.
+- **Dashboard interattive** per visualizzare i consumi e generare report.
+- **Estrazione e analisi di PDF** di fatture tramite script Python.
+- **Esportazione dei dati** in formato Excel e PDF.
+- **Monitoraggio automatico** con processi dedicati.
+- **Frontend moderno** con React, TailwindCSS e Vite.
+- **Containerizzazione completa** con Docker e Docker Compose.
+
+---
+
+## 🏗️ Struttura del progetto
 
 ![image](https://github.com/user-attachments/assets/acfbf364-1db2-4e4f-af12-0067f832b3b6)
 
@@ -7,13 +26,9 @@ Consumption of Energy and Water Monitoring
 
 Questa web app consente di monitorare i consumi energetici, rilevare anomalie, esportare report in formato **Excel** e **PDF** e inviare notifiche email in caso di consumi fuori soglia. Il progetto è composto da un backend basato su **Node.js** e **MongoDB** e un frontend **React**, con gestione dell’autenticazione e delle visualizzazioni tramite grafici.
 
-## Funzionalità principali
 
-- **Autenticazione utente**: Registrazione e login con gestione sicura delle sessioni tramite JWT.
-- **Visualizzazione dei consumi**: Dashboard con grafici per analizzare i consumi energetici.
-- **Rilevamento anomalie**: Notifiche email automatiche in caso di superamento di una soglia di consumo.
-- **Esportazione report**: Report di consumo energetico in formato Excel e PDF.
-- **Notifiche in tempo reale**: Notifiche sulla dashboard per avvisare l’utente di consumi anomali.
+
+
 
 ---
 
@@ -52,161 +67,87 @@ Puoi generare la documentazione JSDoc con il seguente comando:
 
 È necessario farlo sia per il backend che per il frontend, `src` è il percorso dei file da includere nella documentazione.
 
-### Frontend
-
-**Tecnologia:** React.js
-
 **Struttura delle cartelle:**
 
-```
-frontend/
-├── public/                                   # Cartella dei files statici, ad esempio immagini
-│   └── logo-cste.png                         # Logo
+├── LICENSE
+├── README.md
+├── docker-compose.yml
+├── package.json
+├── package-lock.json
+├── backend
+│ ├── .env
+│ ├── Dockerfile
+│ ├── estrazione_fattura.csv
+│ ├── jsdoc.config.json
+│ ├── keys/
+│ │ ├── private.key
+│ │ └── public.pem
+│ ├── package.json
+│ └── src/
+│ ├── app.js
+│ ├── config/
+│ ├── controllers/
+│ ├── middlewares/
+│ ├── models/
+│ ├── python-scripts/
+│ ├── routes/
+│ ├── services/
+│ ├── tasks/
+│ ├── test/
+│ └── utils/
+└── frontend
+├── index.html
+├── package.json
 ├── src/
-│   ├── components/                           # Componenti React
-│   │   ├── common/                           # Componenti condivisi in tutta l'app
-│   │   │   ├── TimeRangePicker.jsx           # Componente filtro range di date (ultimo giorno, settimana, mese o periodo custom)
-│   │   │   ├── BuildingFilterSelect.jsx      # Componente filtro edifici e impianti
-│   │   │   ├── LogFilter.jsx                 # Componente filtro per i log (anomalie)
-│   │   │   ├── Panel.jsx                     # Componente singolo pannello minimizzabile e fullscreen (Edifici e Analisi Avanzata)
-│   │   │   ├── PanelWrapper.jsx              # Componente contenitore di pannelli
-│   │   │   ├── DashboardPanel.jsx            # Componente pannello di base utilizzato nella Home
-│   │   │   ├── DashboardPanel.jsx            # Componente pannello di base utilizzato nella Home
-│   │   │   ├── ResultCard.jsx                # Componente utilizzato nella Home per visualizzare una card con i consumi (Edificio, Consumo e Costo)
-│   │   │   ├── ErrorDisplay.jsx              # Componente utilizzato per mostrare messaggi di errore
-│   │   │   ├── LoadingSpinner.jsx            # Componente che visualizza una rotella di caricamento
-│   │   │   ├── ChartReportSelector.jsx       # Componente di selezione grafico nel report
-│   │   │   ├── Footer.jsx                    # Componente utilizzato per mostrare il footer
-│   │   │   ├── Navbar.jsx                    # Componente che visualizza la navbar con logo, notifiche e profilo
-│   │   │   ├── Notifications.jsx             # Componente che visualizza le notifiche ricevute dal backend
-│   │   │   ├── Menu.jsx                      # Componente che visualizza il menù di navigazione delle pagine
-│   │   │   ├── TabMenuItem.jsx               # Componente che visualizza il singolo elemento del menù di navigazione
-│   │   │   └── DraggableSection.jsx          # Componente utilizzato per le sezioni trascinabili nella pagina report
-│   │   ├── dashboard/                        # Componenti utilizzati nella Dashboard
-│   │   │   ├── AlertNotifications.jsx        # Componente che visualizza il pannello di Alert nella pagina Home
-│   │   │   ├── BuildingEnergyConsumption.jsx # Componente che visualizza i dati sui consumi raggruppati per edificio, in un periodo di tempo
-│   │   │   ├── EnergyComsuption.jsx          # Componente che visualizza i dati sui consumi totali di ateneo, in un periodo di tempo
-│   │   │   └── NotificationTable.jsx         # Componente che visualizza una tabella con i dati dei log (Anomalie)
-│   │   ├── dashboard/charts/base_chart       # Componenti relativi ai grafici di base (Line, Bar)
-│   │   │   ├── BarChart.jsx                  # Componente grafico a barre
-│   │   │   └── TimeSeriesChart.jsx           # Componente grafico a linee
-│   │   ├── dashboard/charts/                 # Componenti relativi a grafici specifici
-│   │   │   ├── BuildingEnergyConsumptionChartPanel.jsx  # Componente grafico a barre dei consumi per edificio, impianto e periodo di tempo
-│   │   │   ├── HourlyAverageConsumptionTotalChart.jsx   # Componente grafico a linee dei consumi medi orari per edificio e periodo di tempo
-│   │   │   ├── TimeSeriesDataComponent.jsx   # Componente grafico a linee su una misura scelta (Corrente, Voltaggio ecc) con filtri
-│   │   │   ├── TimeSeriesChartByBuilding.jsx # Componente che semplifica la scelta di un TimeSeriesDataComponent nella creazione dei report
-│   │   │   ├── HoulyConsumptionChart.jsx     # Componente grafico a barre dei consumi medi orari con filtri
-│   │   │   └── WeeklyBarChart.jsx            # Componente grafico a barre dei consumi settimanali con filtri
-│   │   └── form                              # Componenti su input nei form (usato in login e registrazione)
-│   │       ├── Button.jsx                    # Componente pulsante personalizzato
-│   │       └── Input.jsx                     # Componente input personalizzato
-│   ├── pages/                                # Pagine principali della webapp
-│   │   ├── Login.jsx                         # Pagina di Login Utente
-│   │   ├── Register.jsx                      # Pagina di Registrazione di un nuovo utente
-│   │   ├── Logout.jsx                        # Pagina di Logout
-│   │   ├── RequestPasswordReset.jsx          # Pagina di richiesta di una nuova password
-│   │   ├── ResetPassword.jsx                 # Pagina di inserimento di una nuova passoword
-│   │   ├── Home.jsx                          # Pagina di Homepage
-│   │   ├── Edifici.jsx                       # Pagina Edifici
-│   │   ├── Logs.jsx                          # Pagina tabella cronologia logs/anomalie
-│   │   ├── Profile.jsx                       # Pagina profilo utente
-│   │   ├── UserManagement.jsx                # Pagina gestione utenti
-│   │   ├── Unauthorized.jsx                  # Pagina di errore in caso di accesso ad una pagina protetta da ruolo
-│   │   ├── ReportConfigurator.jsx            # Pagina di creazione di report personalizzati
-│   │   ├── Dashboard.jsx                     # Pagina principale dashboard
-│   │   ├── AdvancedAnalysis.jsx              # Pagina di analisi avanzata
-│   │   └── Settings.jsx                      # Pagina impostazioni
-│   ├── utils/                                # Funzioni di fetch e di utilità
-│   │   ├── api.js                            # Configurazione istanza axios per le richieste API
-│   │   ├── store.js                          # Configurazione dello store Redux con persistenza
-│   │   ├── socket.js                         # Configurazione della websocke (socket.io) per le notifiche in tempo reale
-│   │   ├── authAPI.js                        # Funzioni fetch per autenticazione utente
-│   │   ├── consumiAPI.jsx                    # Funzioni fetch per i consumi
-│   │   ├── exportAPI.jsx                     # Funzioni per richiedere la generazione di un report
-│   │   ├── logsAPI.jsx                       # Funzioni fetch per i logs
-│   │   ├── userAPI.jsx                       # Funzioni fetch per la gestione degli utente
-│   │   ├── filesAPI.jsx                      # Funzioni per caricare un immagine sul server
-│   │   └── observerAPI.jsx                   # Funzioni fetch per gli observer delle notifiche via email
-│   ├── routes/                               # Gestione rotte navigazione della webapp
-│   │   ├──  AppRoutes.js                     # Configurazione rotte della webapp
-│   │   ├──  ProtectedRoute.js                # Componente che gestisce l'accesso a rotte protette da login
-│   │   └──  AdminProtectedRoute.js           # Componente che gestisce l'accesso a rotte protette da privilegi di amministratore
-│   ├── hooks/                                # Custom hooks
-│   │   ├──  useTimeRange.js                  # Hook per la gestione dell'intervallo temporale
-│   │   └──  useBuildingFilters.js            # Hook per la gestione dei filtri per edificio e impianto
-│   ├── context/                              # Context per la gestione di stato dell'app
-│   │   ├──  filterContext.js                 # Permette il passaggio dei filtri edifici e impianti in tutti i pannelli della pagina edifici
-│   │   └──  notificationContext.js           # Permette la gestione delle notifiche nell'intera webapp
-│   ├── slices/                               # Gestione rotte navigazione della webapp
-│   │   └──  userSlice.js                     # Configurazione slice redux per lo stato dell'utente
-│   ├── main.jsx                              # Punto di ingresso React
-│   └── index.css                             # Stile statico principale App
-├── package.json                 # Configurazione progetto
-└── index.html                   # HTML di root
+│ ├── components/
+│ ├── context/
+│ ├── hooks/
+│ ├── pages/
+│ ├── routes/
+│ ├── slices/
+│ └── utils/
+└── public/
 ```
+## ⚙️ Backend (Node.js + Express)
 
-### Backend
+Il backend gestisce la logica di business, l’autenticazione, la comunicazione con il database e l’esposizione delle API REST.
 
-**Tecnologia:** Node.js con Express
+**Struttura principale:**
 
-**Struttura delle cartelle:**
+- **`src/config/`** → configurazioni server, database, autenticazione, email, chiavi RSA  
+- **`src/controllers/`** → logica per le varie risorse (utenti, energia, acqua, PDF, ecc.)  
+- **`src/models/`** → schemi dati (es. `userModel.js`, `energyDataModel.js`, ecc.)  
+- **`src/services/`** → logica applicativa e funzioni riutilizzabili  
+- **`src/routes/`** → definizione endpoint REST  
+- **`src/middlewares/`** → autenticazione e controllo ruoli  
+- **`src/python-scripts/`** → script Python per estrazione e analisi dei PDF  
+- **`src/utils/`** → funzioni di supporto (log, date, costanti, ecc.)  
+- **`src/tasks/`** → job schedulati (es. monitoraggio consumi)
 
-```
-backend/
-├── src/
-│   ├── config/                       # Configurazioni principali per il progetto
-│   │   ├── dbConfig.js               # Configura la connessione a MongoDB
-│   │   ├── authConfig.js             # Configurazione per i JWT (JSON Web Tokens)
-│   │   ├── emailConfig.js            # Configurazione per il server SMTP (email)
-│   │   ├── serverConfig.js           # Configurazione della porta e del server Express
-│   │   └── keys/                     # Contiene le chiavi RSA per JWT (private.key, public.key)
-│   ├── controllers/                  # Logica delle API (gestione delle richieste)
-│   │   ├── energyDataController.js   # Logica per la gestione dei dati energetici
-│   │   ├── anomalyController.js      # Logica per la gestione delle anomalie nei consumi
-│   │   ├── authController.js         # Gestisce autenticazione, login e gestione utenti
-│   │   ├── exportExcelController.js  # Logica per l'esportazione dei dati in formato Excel
-│   │   ├── exportPDFController.js    # Logica per l'esportazione dei dati in formato PDF
-│   │   ├── fileController.js         # Gestisce le operazioni sui file (upload immagini)
-│   │   ├── observerController.js     # Logica per la gestione dell'observer email per le notifiche
-│   │   ├── queryController.js        # Logica per eseguire query personalizzate tra quelle esportate dai service
-│   │   └── userController.js         # Gestisce la logica per la registrazione e gestione utenti
-│   ├── middlewares/                  # Funzioni intermedie che operano prima dei controller
-│   │   ├── isAdminMiddleware.js      # Verifica il ruolo di amministratore
-│   │   └── authMiddleware.js         # Verifica dell'autenticazione tramite JWT
-│   ├── models/                       # Modelli di dati Mongoose per il database
-│   │   ├── energyDataModel.js        # Modello per i dati energetici (consumi)
-│   │   ├── infoMetersModel.js        # Modello per le informazioni sui misuratori
-│   │   ├── logModel.js               # Modello per i log di sistema
-│   │   ├── observerModel.js          # Modello per gli osservatori e monitoraggio
-│   │   └── userModel.js              # Modello per la gestione degli utenti
-│   ├── routes/                       # Definizione delle rotte API
-│   │   ├── energyDataRoutes.js       # Rotte per ottenere e gestire i consumi energetici
-│   │   ├── anomalyRoutes.js          # Rotte per ottenere e gestire i logs/anomalie
-│   │   ├── authRoutes.js             # Rotte per l'autenticazione degli utenti
-│   │   ├── exportExcelRoutes.js      # Rotter per l'esportazione dei dati in formato Excel
-│   │   ├── exportPDFRoutes.js        # Rotte per l'esportazione dei dati in formato PDF
-│   │   ├── fileRoutes.js             # Rotte le operazioni sui file (upload immagini)
-│   │   ├── observerRoutes.js         # Rotte per la gestione dell'observer email per le notifiche
-│   │   ├── queryRoutes.js            # Rotte per eseguire query personalizzate tra quelle esportate dai service
-│   │   └── userController.js         # Rotte per la gestione degli utenti (login, registrazione)
-│   ├── services/                     # Servizi che contengono logiche di business
-│   │   ├── energyDataService.js      # Logica per la gestione dei dati energetici
-│   │   ├── anomalyService.js         # Logica per la gestione e individuazione delle anomalie nei consumi
-│   │   ├── authService.js            # Gestisce autenticazione, login e gestione utenti
-│   │   ├── exportExcelService.js     # Logica per l'esportazione dei dati in formato Excel
-│   │   ├── exportPDFService.js       # Logica per l'esportazione dei dati in formato PDF
-│   │   ├── fileService.js            # Gestisce le operazioni sui file (upload immagini)
-│   │   ├── observerService.js        # Logica per la gestione dell'observer email per le notifiche
-│   │   ├── queryService.js           # Logica per eseguire query personalizzate tra quelle esportate dai service
-│   │   └── userService.js            # Gestisce la logica per la registrazione e gestione utenti
-│   ├── tasks/                        # Task periodici o operazioni in background
-│   │   └── monitorWorker.js          # Task per monitorare i consumi e inviare notifiche su anomalie
-│   ├── utils/                        # Funzioni utilitarie riutilizzabili in più parti del progetto
-│   │   └── utils.js                  # Funzioni per la gestione e formattazione delle date e altre funzioni di utilità
-│   ├── app.js             # Configurazione principale di Express
-│   └── server.js          # Avvio del server Express (connesso al database, avvia il server)
-└── package.json           # Configurazione del progetto, dipendenze, script
-```
+---
+
+## 💻 Frontend (React + Vite + TailwindCSS)
+
+Il frontend fornisce un’interfaccia utente dinamica e reattiva per visualizzare, filtrare e gestire i dati energetici.
+
+**Struttura principale:**
+
+- **`src/components/`** → componenti UI riutilizzabili (`common/`, `dashboard/`, `form/`)  
+- **`src/context/`** → gestione dello stato globale (filtri, notifiche, ecc.)  
+- **`src/hooks/`** → custom hooks React per logiche comuni  
+- **`src/pages/`** → pagine principali (Dashboard, Login, Report, ecc.)  
+- **`src/routes/`** → definizione del routing protetto (`ProtectedRoute`, `AppRoutes`)  
+- **`src/utils/`** → funzioni helper e moduli API per comunicare con il backend  
+- **`src/slices/`** → stato utente con Redux Toolkit  
+- **`public/`** → asset statici (loghi, immagini)
+
+---
+
+## 🐳 Docker e Deployment
+
+### Esecuzione locale
+```bash
+docker-compose up --build
 
 ### Database
 
