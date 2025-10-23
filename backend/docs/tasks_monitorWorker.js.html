@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>tasks/monitorWorker.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">tasks/monitorWorker.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace tasks
+ * @fileoverview
+ * Questo modulo permette creazione sul server di file (immagini) ricevute dal client.
+ * @module monitorWorker
+ */
+
+const { sendEmail } = require("../config/emailConfig");
+const { getObservers } = require("../services/observerService");
+const {
+  checkNoData,
+  checkTotWHighAverage,
+  getRecentData,
+  calculateAverages,
+  checkMissingSensors,
+} = require("../services/anomalyService");
+const Log = require("../models/logModel");
+const { connectDB } = require("../config/dbConfig");
+const { parentPort } = require("worker_threads");
+const { logWarn } = require("../utils/logger");
+const { toUTCDate } = require("../utils/utils");
+
+/**
+ *
+ * @function monitor
+ *
+ * Funzione principale che monitora le anomalie in tempo reale.
+ * Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.
+ *
+ * Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minuti
+ * e verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.
+ *
+ * Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.
+ */
+async function monitor() {
+  connectDB();
+  console.log("Avvio del monitoraggio...");
+  const checkTime = 2; // Controllo i dati degli ultimi checkTime minuti
+
+  try {
+    while (true) {
+      const recentData = await getRecentData(checkTime);
+      const averages = await calculateAverages();
+
+      const missingSensorAnomalies = await checkMissingSensors(
+        recentData,
+        checkTime
+      ); // Controlla i sensori mancanti
+      const noDataAnomalies = await checkNoData(recentData, checkTime); // Controlla dati mancanti (null)
+      const totWHighAverageAnomalies = await checkTotWHighAverage(
+        recentData,
+        averages
+      ); // Controlla anomalie su TotW
+
+      const allAnomalies = [
+        ...missingSensorAnomalies,
+        ...noDataAnomalies,
+        ...totWHighAverageAnomalies,
+      ];
+
+      if (allAnomalies.length > 0) {
+        console.log(`\n---------- ${new Date()} -----------\n`);
+
+        // Inizia la struttura HTML dell'email con stili CSS
+        let combinedMessage = `
+                    &lt;html>
+                    &lt;head>
+                        &lt;style>
+                            body {
+                                font-family: Arial, sans-serif;
+                                line-height: 1.6;
+                                background-color: #f4f4f4;
+                                padding: 20px;
+                            }
+                            .container {
+                                background-color: #ffffff;
+                                border-radius: 8px;
+                                padding: 20px;
+                                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+                            }
+                            h2 {
+                                color: #333;
+                            }
+                            h3 {
+                                color: #555;
+                            }
+                            .anomaly {
+                                border-bottom: 1px solid #ddd;
+                                margin-bottom: 10px;
+                                padding-bottom: 10px;
+                            }
+                            .error {
+                                color: #d9534f;
+                                font-weight: bold;
+                            }
+                            .warn {
+                                color: #f0ad4e;
+                                font-weight: bold;
+                            }
+                            .info {
+                                color: #5bc0de;
+                                font-weight: bold;
+                            }
+                            .details {
+                                margin-left: 20px;
+                            }
+                        &lt;/style>
+                    &lt;/head>
+                    &lt;body>
+                        &lt;div class="container">
+                            &lt;h2>Rapporto di monitoraggio delle anomalie&lt;/h2>
+                            &lt;p>&lt;strong>Data:&lt;/strong> ${new Date().toLocaleString()}&lt;/p>
+                            &lt;h3>Dettagli delle ${
+                              allAnomalies.length
+                            } anomalie rilevate:&lt;/h3>
+                `;
+
+        for (const anomaly of allAnomalies) {
+          // Controlla se esiste già un log con la stessa anomalia
+          const existingLog = await Log.findOne({
+            date: toUTCDate(anomaly.date),
+            type: anomaly.type,
+            message: anomaly.message,
+            building: anomaly.building || "Non specificato",
+            sensor: anomaly.sensor || "Non specificato",
+          });
+
+          if (!existingLog) {
+            // Se l'anomalia non esiste, inserisci nel database e invia la notifica
+            await Log.create({
+              timestamp: toUTCDate(new Date()),
+              date: toUTCDate(anomaly.date),
+              type: anomaly.type,
+              message: anomaly.message,
+              building: anomaly.building || "Non specificato",
+              sensor: anomaly.sensor || "Non specificato",
+            });
+            const anomalyType = anomaly.type.toLowerCase();
+            let typeClass = "info";
+
+            // Determina il colore basato sul tipo di anomalia
+            if (anomalyType === "error") {
+              typeClass = "error";
+            } else if (anomalyType === "warn") {
+              typeClass = "warn";
+            }
+
+            combinedMessage += `
+                            &lt;div class="anomaly">
+                                &lt;p class="${typeClass}">Tipo: ${
+              anomaly.type
+            }&lt;/p>
+                                &lt;div class="details">
+                                    &lt;p>&lt;strong>Data:&lt;/strong> ${new Date(
+                                      anomaly.date
+                                    ).toLocaleString()}&lt;/p>
+                                    &lt;p>&lt;strong>Messaggio:&lt;/strong> ${
+                                      anomaly.message
+                                    }&lt;/p>
+                                    &lt;p>&lt;strong>Edificio:&lt;/strong> ${
+                                      anomaly.building || "Non specificato"
+                                    }&lt;/p>
+                                    &lt;p>&lt;strong>Sensore:&lt;/strong> ${
+                                      anomaly.sensor || "Non specificato"
+                                    }&lt;/p>
+                                &lt;/div>
+                            &lt;/div>
+                        `;
+            console.log(anomaly.message);
+            // Invia la notifica al main thread per inoltrarla ai client WebSocket
+            parentPort.postMessage(anomaly);
+          }
+        }
+
+        combinedMessage += `
+                        &lt;/div>
+                    &lt;/body>
+                    &lt;/html>
+                `;
+        // Invia l'email solo se ci sono anomalie raccolte
+        if (
+          combinedMessage.trim() !==
+          `
+                    &lt;html>
+                    &lt;body>
+                        &lt;h2>Rapporto di monitoraggio delle anomalie&lt;/h2>
+                        &lt;p>&lt;strong>Data:&lt;/strong> ${new Date().toISOString()}&lt;/p>
+                        &lt;h3>Dettagli delle anomalie rilevate:&lt;/h3>
+                    &lt;/body>
+                    &lt;/html>
+                `
+        ) {
+          const observers = await getObservers();
+          const subject = `${
+            allAnomalies.length
+          } anomalie rilevate (${new Date().toLocaleString()})`;
+          observers.forEach(async (observer) => {
+            await sendEmail(observer.email, subject, combinedMessage);
+          });
+        }
+      }
+
+      await new Promise((resolve) => setTimeout(resolve, 60000)); // Aspetta 1 minuto prima del prossimo controllo
+    }
+  } catch (error) {
+    console.error("Errore nel monitoraggio:", error);
+  }
+}
+
+monitor();
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

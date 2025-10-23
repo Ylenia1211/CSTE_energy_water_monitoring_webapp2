@@ -1,0 +1,57 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend per il monitoraggio dei consumi energetici con autenticazione JWT, API per i consumi, notifiche e report.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "extract-pdf": "venv/bin/python python-scripts/estrai_dati.py test.pdf", 
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ylenia1211/CSTE_energy_monitoring_webapp.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "jwt",
+    "api",
+    "backend",
+    "energy",
+    "consumption",
+    "login"
+  ],
+  "author": "Ylenia Galluzzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ylenia1211/CSTE_energy_monitoring_webapp/issues"
+  },
+  "homepage": "https://github.com/Ylenia1211/CSTE_energy_monitoring_webapp#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "docdash": "^2.0.2",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "image-size": "^1.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.46",
+    "mongoose": "^8.10.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.16",
+    "pdfkit": "^0.15.1",
+    "pdfmake": "^0.2.15",
+    "socket.io": "^4.8.1",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdoc-route-plugin": "^0.1.0",
+    "nodemon": "^3.1.7"
+  }
+}

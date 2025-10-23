@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/dashboard/charts/WeeklyBarChart.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AdminProtectedRoute.html">AdminProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-AdminProtectedRoute.html#~AdminProtectedRoute">AdminProtectedRoute</a></li></ul></li><li><a href="module-AdvancedAnalysis.html">AdvancedAnalysis</a><ul class='methods'><li data-type='method'><a href="module-AdvancedAnalysis.html#~AdvancedAnalysis">AdvancedAnalysis</a></li></ul></li><li><a href="module-AlertNotifications.html">AlertNotifications</a><ul class='methods'><li data-type='method'><a href="module-AlertNotifications.html#~AlertNotifications">AlertNotifications</a></li></ul></li><li><a href="module-AppRoutes.html">AppRoutes</a><ul class='methods'><li data-type='method'><a href="module-AppRoutes.html#~AppRoutes">AppRoutes</a></li></ul></li><li><a href="module-BarChart.html">BarChart</a></li><li><a href="module-BuildingEnergyConsumption.html">BuildingEnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumption.html#~BuildingEnergyConsumption">BuildingEnergyConsumption</a></li></ul></li><li><a href="module-BuildingEnergyConsumptionChartPanel.html">BuildingEnergyConsumptionChartPanel</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~BuildingEnergyConsumptionChartPanel">BuildingEnergyConsumptionChartPanel</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useBarChartData">useBarChartData</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useExport">useExport</a></li></ul></li><li><a href="module-BuildingFilterSelect.html">BuildingFilterSelect</a><ul class='methods'><li data-type='method'><a href="module-BuildingFilterSelect.html#~BuildingFilterSelect">BuildingFilterSelect</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~applyFilters">applyFilters</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~fetchBuildingsAndImpianti">fetchBuildingsAndImpianti</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleBuildingChange">handleBuildingChange</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleImpiantoChange">handleImpiantoChange</a></li></ul></li><li><a href="module-Button.html">Button</a><ul class='methods'><li data-type='method'><a href="module-Button.html#~Button">Button</a></li></ul></li><li><a href="module-ChartReportSelector.html">ChartReportSelector</a><ul class='methods'><li data-type='method'><a href="module-ChartReportSelector.html#~ChartReportSelector">ChartReportSelector</a></li></ul></li><li><a href="module-Dashboard.html">Dashboard</a><ul class='methods'><li data-type='method'><a href="module-Dashboard.html#~Dashboard">Dashboard</a></li></ul></li><li><a href="module-DashboardPanel.html">DashboardPanel</a><ul class='methods'><li data-type='method'><a href="module-DashboardPanel.html#~DashboardPanel">DashboardPanel</a></li></ul></li><li><a href="module-DraggableSection.html">DraggableSection</a><ul class='methods'><li data-type='method'><a href="module-DraggableSection.html#~DraggableSection">DraggableSection</a></li></ul></li><li><a href="module-Edifici.html">Edifici</a><ul class='methods'><li data-type='method'><a href="module-Edifici.html#~Edifici">Edifici</a></li></ul></li><li><a href="module-EnergyConsumption.html">EnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-EnergyConsumption.html#~EnergyConsumption">EnergyConsumption</a></li></ul></li><li><a href="module-ErrorDisplay.html">ErrorDisplay</a><ul class='methods'><li data-type='method'><a href="module-ErrorDisplay.html#~ErrorDisplay">ErrorDisplay</a></li></ul></li><li><a href="module-FilterContext.html">FilterContext</a></li><li><a href="module-Footer.html">Footer</a><ul class='methods'><li data-type='method'><a href="module-Footer.html#~Footer">Footer</a></li></ul></li><li><a href="module-Home.html">Home</a><ul class='methods'><li data-type='method'><a href="module-Home.html#~Home">Home</a></li></ul></li><li><a href="module-HourlyAverageConsumptionTotalChart.html">HourlyAverageConsumptionTotalChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~HourlyAverageConsumptionTotalChart">HourlyAverageConsumptionTotalChart</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchBuildings">fetchBuildings</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchData">fetchData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~generateTimeSeriesData">generateTimeSeriesData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~handleExportToPDF">handleExportToPDF</a></li></ul></li><li><a href="module-HourlyConsumptionChart.html">HourlyConsumptionChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyConsumptionChart.html#~HourlyConsumptionChart">HourlyConsumptionChart</a></li></ul></li><li><a href="module-Input.html">Input</a><ul class='methods'><li data-type='method'><a href="module-Input.html#~Input">Input</a></li></ul></li><li><a href="module-LoadingSpinner.html">LoadingSpinner</a><ul class='methods'><li data-type='method'><a href="module-LoadingSpinner.html#~LoadingSpinner">LoadingSpinner</a></li></ul></li><li><a href="module-LogFilter.html">LogFilter</a><ul class='methods'><li data-type='method'><a href="module-LogFilter.html#~LogFilter">LogFilter</a></li></ul></li><li><a href="module-Login.html">Login</a><ul class='methods'><li data-type='method'><a href="module-Login.html#~Login">Login</a></li></ul></li><li><a href="module-Logout.html">Logout</a><ul class='methods'><li data-type='method'><a href="module-Logout.html#~Logout">Logout</a></li></ul></li><li><a href="module-Logs.html">Logs</a><ul class='methods'><li data-type='method'><a href="module-Logs.html#~Logs">Logs</a></li></ul></li><li><a href="module-Menu.html">Menu</a><ul class='methods'><li data-type='method'><a href="module-Menu.html#~Menu">Menu</a></li></ul></li><li><a href="module-Navbar.html">Navbar</a><ul class='methods'><li data-type='method'><a href="module-Navbar.html#~Navbar">Navbar</a></li></ul></li><li><a href="module-NotificationContext.html">NotificationContext</a></li><li><a href="module-NotificationTable.html">NotificationTable</a><ul class='methods'><li data-type='method'><a href="module-NotificationTable.html#~NotificationTable">NotificationTable</a></li></ul></li><li><a href="module-Notifications.html">Notifications</a><ul class='methods'><li data-type='method'><a href="module-Notifications.html#~Notifications">Notifications</a></li></ul></li><li><a href="module-Panel.html">Panel</a></li><li><a href="module-PanelWrapper.html">PanelWrapper</a><ul class='methods'><li data-type='method'><a href="module-PanelWrapper.html#~PanelWrapper">PanelWrapper</a></li></ul></li><li><a href="module-Profile.html">Profile</a><ul class='methods'><li data-type='method'><a href="module-Profile.html#~Profile">Profile</a></li></ul></li><li><a href="module-ProtectedRoute.html">ProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-ProtectedRoute.html#~ProtectedRoute">ProtectedRoute</a></li></ul></li><li><a href="module-Register.html">Register</a><ul class='methods'><li data-type='method'><a href="module-Register.html#~Register">Register</a></li></ul></li><li><a href="module-ReportConfigurator.html">ReportConfigurator</a><ul class='methods'><li data-type='method'><a href="module-ReportConfigurator.html#~ReportConfigurator">ReportConfigurator</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~addSection">addSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~cancelEdit">cancelEdit</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~dataURItoBlob">dataURItoBlob</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~editSection">editSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~generatePDF">generatePDF</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragEnter">handleDragEnter</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragLeave">handleDragLeave</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleGetDescription">handleGetDescription</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~moveSection">moveSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~removeSection">removeSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~saveEditedSection">saveEditedSection</a></li></ul></li><li><a href="module-RequestPasswordReset.html">RequestPasswordReset</a><ul class='methods'><li data-type='method'><a href="module-RequestPasswordReset.html#~RequestPasswordReset">RequestPasswordReset</a></li></ul></li><li><a href="module-ResetPassword.html">ResetPassword</a><ul class='methods'><li data-type='method'><a href="module-ResetPassword.html#~ResetPassword">ResetPassword</a></li></ul></li><li><a href="module-ResultCard.html">ResultCard</a><ul class='methods'><li data-type='method'><a href="module-ResultCard.html#~ResultCard">ResultCard</a></li></ul></li><li><a href="module-Settings.html">Settings</a><ul class='methods'><li data-type='method'><a href="module-Settings.html#~Settings">Settings</a></li><li data-type='method'><a href="module-Settings.html#~checkIfUserIsObserving">checkIfUserIsObserving</a></li><li data-type='method'><a href="module-Settings.html#~handleToggleNotification">handleToggleNotification</a></li></ul></li><li><a href="module-TabMenuItem.html">TabMenuItem</a><ul class='methods'><li data-type='method'><a href="module-TabMenuItem.html#~TabMenuItem">TabMenuItem</a></li></ul></li><li><a href="module-TimeRangePicker.html">TimeRangePicker</a><ul class='methods'><li data-type='method'><a href="module-TimeRangePicker.html#~TimeRangePicker">TimeRangePicker</a></li></ul></li><li><a href="module-TimeSeriesChart.html">TimeSeriesChart</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChart.html#~TimeSeriesChartComponent">TimeSeriesChartComponent</a></li><li data-type='method'><a href="module-TimeSeriesChart.html#~getRandomColor">getRandomColor</a></li></ul></li><li><a href="module-TimeSeriesChartByBuilding.html">TimeSeriesChartByBuilding</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChartByBuilding.html#~TimeSeriesChartByBuilding">TimeSeriesChartByBuilding</a></li></ul></li><li><a href="module-TimeSeriesDataComponent.html">TimeSeriesDataComponent</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesDataComponent.html#~TimeSeriesDataComponent">TimeSeriesDataComponent</a></li></ul></li><li><a href="module-Unauthorized.html">Unauthorized</a><ul class='methods'><li data-type='method'><a href="module-Unauthorized.html#~Unauthorized">Unauthorized</a></li></ul></li><li><a href="module-UserManagement.html">UserManagement</a><ul class='methods'><li data-type='method'><a href="module-UserManagement.html#~UserManagement">UserManagement</a></li><li data-type='method'><a href="module-UserManagement.html#~cancelDelete">cancelDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~confirmDelete">confirmDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~fetchUsers">fetchUsers</a></li><li data-type='method'><a href="module-UserManagement.html#~handleAddUser">handleAddUser</a></li><li data-type='method'><a href="module-UserManagement.html#~handleCancel">handleCancel</a></li><li data-type='method'><a href="module-UserManagement.html#~handleChange">handleChange</a></li><li data-type='method'><a href="module-UserManagement.html#~handleDelete">handleDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~handleEdit">handleEdit</a></li><li data-type='method'><a href="module-UserManagement.html#~handleSave">handleSave</a></li><li data-type='method'><a href="module-UserManagement.html#~resetForm">resetForm</a></li></ul></li><li><a href="module-WeeklyBarChart.html">WeeklyBarChart</a><ul class='methods'><li data-type='method'><a href="module-WeeklyBarChart.html#~WeeklyBarChart">WeeklyBarChart</a></li></ul></li><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumption">fetchHourlyAverageConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumptionTotal">fetchHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li><a href="module-exportAPI.html">exportAPI</a></li><li><a href="module-fileAPI.html">fileAPI</a></li><li><a href="module-logsAPI.html">logsAPI</a></li><li><a href="module-main.html">main</a><ul class='methods'><li data-type='method'><a href="module-main.html#~renderApp">renderApp</a></li></ul></li><li><a href="module-observersAPI.html">observersAPI</a><ul class='methods'><li data-type='method'><a href="module-observersAPI.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observersAPI.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observersAPI.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observersAPI.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queriesAPI.html">queriesAPI</a><ul class='methods'><li data-type='method'><a href="module-queriesAPI.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-socketAPI.html">socketAPI</a><ul class='methods'><li data-type='method'><a href="module-socketAPI.html#~setupSocketListeners">setupSocketListeners</a></li></ul></li><li><a href="module-store.html">store</a></li><li><a href="module-useBuildingFilters.html">useBuildingFilters</a><ul class='methods'><li data-type='method'><a href="module-useBuildingFilters.html#~useBuildingFilters">useBuildingFilters</a></li></ul></li><li><a href="module-useTimeRange.html">useTimeRange</a><ul class='methods'><li data-type='method'><a href="module-useTimeRange.html#~useTimeRange">useTimeRange</a></li></ul></li><li><a href="module-userAPI.html">userAPI</a><ul class='methods'><li data-type='method'><a href="module-userAPI.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userAPI.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userAPI.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userAPI.html#~getUserProfile">getUserProfile</a></li><li data-type='method'><a href="module-userAPI.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userAPI.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserDetails">updateUserDetails</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserProfile">updateUserProfile</a></li></ul></li><li><a href="module-userSlice.html">userSlice</a><ul class='methods'><li data-type='method'><a href="module-userSlice.html#~middleware">middleware</a></li><li data-type='method'><a href="module-userSlice.html#~serializableMiddleware">serializableMiddleware</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/dashboard/charts/WeeklyBarChart.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview
+ * @namespace components
+ * Questo file contiene il componente React WeeklyBarChart, che visualizza un grafico a barre settimanale
+ * basato sui dati di consumo energetico per edifici e impianti. Gli utenti possono selezionare la settimana
+ * tramite un input di tipo "week", applicare filtri su edifici e impianti, e visualizzare i dati corrispondenti
+ * in un grafico interattivo. Il componente offre anche funzionalità di esportazione in Excel e PDF.
+ *
+ * @module WeeklyBarChart
+ */
+
+import React, { useState, useEffect, useRef } from "react";
+import {
+  BarChart,
+  generateChartData,
+  getChartOptions,
+} from "./base_chart/BarChart";
+import { fetchWeeklyBarChartDataByBuilding } from "../../../utils/consumiAPI";
+import BuildingFilterSelect from "../../common/BuildingFilterSelect";
+import moment from "moment";
+
+import { exportQueryDataToExcel } from "../../../utils/exportAPI";
+
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+
+/**
+ * Componente che gestisce la visualizzazione del grafico a barre settimanale per edifici e impianti.
+ * Permette di selezionare una settimana, applicare filtri e esportare i dati in formato Excel o PDF.
+ *
+ * @component
+ * @example
+ * // Esempio di utilizzo:
+ * &lt;WeeklyBarChart />
+ *
+ * @returns {JSX.Element} Componente del grafico settimanale a barre.
+ */
+const WeeklyBarChart = () => {
+  // Stato per i dati e per il caricamento
+  const [chartData, setChartData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  // Stato per i filtri degli edifici e impianti
+  const [filters, setFilters] = useState({ buildings: [], impianti: [] });
+
+  const chartRef = useRef();
+
+  // Stato per la settimana selezionata (data di inizio della settimana)
+  const [selectedWeekStart, setSelectedWeekStart] = useState(
+    moment().startOf("week").isoWeekday(1).toDate()
+  );
+
+  // Effetto per recuperare i dati quando cambia la settimana o i filtri
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const startDate = moment(selectedWeekStart)
+          .isoWeekday(1) // Imposta il primo giorno della settimana come lunedì
+          .startOf("day") // Imposta l'orario di inizio a mezzanotte
+          .toDate(); // Mantieni la data locale (senza UTC)
+
+        const endDate = moment(selectedWeekStart)
+          .isoWeekday(7) // Imposta il giorno finale come domenica
+          .endOf("day") // Imposta l'orario di fine alle 23:59:59
+          .toDate(); // Mantieni la data locale (senza UTC)
+
+        const data = await fetchWeeklyBarChartDataByBuilding(
+          startDate,
+          endDate,
+          filters.buildings,
+          filters.impianti
+        );
+
+        if (data &amp;&amp; data.labels &amp;&amp; data.datasets) {
+          const generatedData = generateChartData(data.labels, data.datasets);
+          setChartData(generatedData);
+        } else {
+          throw new Error("Dati non validi ricevuti dal server.");
+        }
+      } catch (error) {
+        console.error("Errore durante il recupero dei dati:", error);
+        setChartData(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, [selectedWeekStart, filters]);
+
+  /**
+   * Gestisce il cambiamento della settimana selezionata.
+   * @param {Event} e - Evento di cambio settimana.
+   */
+  const handleWeekChange = (e) => {
+    const newDate = moment(e.target.value, "YYYY-WW").isoWeekday(1);
+    setSelectedWeekStart(newDate.toDate());
+  };
+
+  /**
+   * Gestisce il cambiamento dei filtri per edifici e impianti.
+   * @param {Object} newFilters - I nuovi filtri selezionati.
+   */
+  const handleFilterChange = (newFilters) => {
+    setFilters(newFilters);
+  };
+
+  if (loading) {
+    return &lt;p>Caricamento dei dati... Attendere per favore.&lt;/p>;
+  }
+
+  if (!chartData) {
+    return &lt;p>Non ci sono dati disponibili per il periodo selezionato.&lt;/p>;
+  }
+
+  const chartOptions = getChartOptions("Consumo per edificio e sensori");
+
+  /**
+   * Funzione per esportare i dati in formato Excel.
+   * Utilizza la funzione `exportQueryDataToExcel` per esportare i dati.
+   */
+  const handleExportToExcel = async () => {
+    try {
+      // Ottieni tutti i dati senza paginazione per l'esportazione
+      // const data = await getLogs({ ...filters }); // Passa il parametro `noPagination` come true per avere tutti i dati
+      // console.log("Dati da esportare:", data);
+      await exportQueryDataToExcel(
+        "BuildingEnergyConsumption",
+        "energyDataService",
+        "getNestedFields",
+        {
+          fieldName,
+          startDate,
+          endDate,
+          buildings: filters.buildings,
+          impianti: filters.impianti,
+        }
+      );
+    } catch (error) {
+      console.error("Errore durante l'esportazione:", error.message);
+      toast.error("Errore durante l'esportazione.");
+    }
+  };
+
+  /**
+   * Funzione per esportare il grafico in formato PDF.
+   * Usa `html2canvas` per catturare l'immagine del grafico e `jsPDF` per generare il PDF.
+   */
+  const handleExportToPDF = () => {
+    if (chartRef.current) {
+      const chartElement =
+        chartRef.current.querySelector("canvas") || chartRef.current;
+
+      html2canvas(chartElement).then((canvas) => {
+        const pdf = new jsPDF("l", "mm", "a4");
+        const imgData = canvas.toDataURL("image/png");
+
+        // Imposta la dimensione del titolo e aggiungilo
+        pdf.setFontSize(20);
+        pdf.text(`Grafico Consumi settimanali per edificio e impianto`, 10, 10); // Posizione (x, y)
+        pdf.setFontSize(18);
+        pdf.text(`Periodo: ${selectedWeekStart}`, 10, 20); // Posizione (x, y)
+        pdf.text(
+          `Filtri applicati: ${filters.buildings.join(
+            ", "
+          )}, ${filters.impianti.join(", ")}`,
+          10,
+          30
+        ); // Posizione (x, y)
+        console.log(filters);
+
+        // Calcola le dimensioni dell'immagine per adattarla meglio
+        const imgWidth = 287; // Larghezza dell'immagine in mm
+        const imgHeight = (canvas.height / canvas.width) * imgWidth; // Mantiene le proporzioni
+        const imgX = 10; // Posizione orizzontale
+        const imgY = 40; // Posizione verticale, subito sotto il titolo
+
+        // Aggiungi l'immagine del grafico con le dimensioni calcolate
+        pdf.addImage(imgData, "PNG", imgX, imgY, imgWidth, imgHeight);
+
+        // Salva il PDF con il nome specificato
+        pdf.save(`grafico_consumi_settimanali.pdf`);
+      });
+    } else {
+      console.error("Il contenitore del grafico non è stato trovato.");
+    }
+  };
+
+  return (
+    &lt;div>
+      &lt;div className="flex items-center justify-between space-x-6">
+        {/* Input per selezionare la settimana */}
+        &lt;div className="flex-1">
+          &lt;input
+            type="week"
+            value={moment(selectedWeekStart).format("YYYY-[W]WW")}
+            onChange={handleWeekChange}
+            className="border border-gray-300 rounded p-2"
+          />
+        &lt;/div>
+
+        {/* BuildingFilterSelect per selezionare edifici e impianti */}
+        &lt;div className="flex-1">
+          &lt;BuildingFilterSelect
+            initialSelectedBuildings={filters.buildings}
+            initialSelectedImpianti={filters.impianti}
+            onFilterChange={handleFilterChange}
+          />
+        &lt;/div>
+      &lt;/div>
+      &lt;div>
+        &lt;button
+          className="px-4 py-2 bg-green-500 text-white rounded"
+          onClick={handleExportToExcel}
+          disabled={true}
+        >
+          Esporta in Excel
+        &lt;/button>
+
+        &lt;button
+          className="px-4 py-2 bg-blue-500 text-white rounded"
+          onClick={handleExportToPDF}
+        >
+          Esporta in PDF
+        &lt;/button>
+      &lt;/div>
+      {/* Visualizzazione del grafico */}
+      &lt;div className="result-card p-6 bg-gray-100 rounded-lg">
+        &lt;p>
+          &lt;strong>Settimana selezionata:&lt;/strong>{" "}
+          {moment(selectedWeekStart).isoWeekday(1).format("DD MMM YYYY")} -{" "}
+          {moment(selectedWeekStart).isoWeekday(7).format("DD MMM YYYY")}
+        &lt;/p>
+
+        &lt;p>
+          {filters.buildings.length > 0 &amp;&amp; (
+            &lt;>
+              &lt;strong>Edifici:&lt;/strong> {filters.buildings.join(", ")}
+            &lt;/>
+          )}
+          {filters.buildings.length > 0 &amp;&amp; filters.impianti.length > 0 &amp;&amp; (
+            &lt;>
+              {" "}
+              &lt;strong>Impianti:&lt;/strong> {filters.impianti.join(", ")}
+            &lt;/>
+          )}
+        &lt;/p>
+      &lt;/div>
+      &lt;span ref={chartRef}>
+        &lt;BarChart data={chartData} options={chartOptions} />
+      &lt;/span>
+    &lt;/div>
+  );
+};
+
+export default WeeklyBarChart;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:16 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

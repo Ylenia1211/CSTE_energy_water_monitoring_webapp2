@@ -1,0 +1,92 @@
+/**
+ * @namespace utils
+ * @fileoverview
+ * Modulo per la gestione delle operazioni di autenticazione dell'utente.
+ *
+ * Questo modulo esporta le funzioni per:
+ * - Effettuare il login di un utente tramite le credenziali (username, password).
+ * - Registrare un nuovo utente fornendo username, email e password.
+ * - Effettuare il logout dell'utente.
+ *
+ * Ogni funzione interagisce con un'API di autenticazione tramite l'istanza Axios configurata in precedenza.
+ *
+ * @module authAPI
+ * @requires axiosInstance
+ */
+
+import axiosInstance from "./api";
+
+const BASE_API = "/auth";
+
+/**
+ * Esegue il login di un utente.
+ *
+ * Invia una richiesta POST al server per eseguire l'autenticazione dell'utente.
+ * Se le credenziali sono corrette, il server restituirà i dati necessari
+ * (es. un token JWT).
+ *
+ * @function
+ * @name loginUser
+ * @param {string} username - Il nome utente dell'utente.
+ * @param {string} password - La password dell'utente.
+ * @returns {Promise} Una promessa che risolve i dati di risposta della richiesta di login.
+ * @throws {Error} Se le credenziali non sono valide, viene sollevato un errore.
+ */
+export const loginUser = (username, password) => {
+  try {
+    return axiosInstance.post(`${BASE_API}/login`, { username, password });
+  } catch (error) {
+    throw new Error("Credenziali non valide");
+  }
+};
+
+/**
+ * Registra un nuovo utente.
+ *
+ * Invia una richiesta POST al server per registrare un nuovo utente con i dati
+ * forniti (username, email, password). In caso di successo, il server risponde con
+ * i dati dell'utente appena creato.
+ *
+ * @function
+ * @name registerUser
+ * @param {string} username - Il nome utente dell'utente da registrare.
+ * @param {string} email - L'indirizzo email dell'utente.
+ * @param {string} password - La password dell'utente.
+ * @returns {Promise<Object>} Una promessa che risolve i dati di risposta della richiesta di registrazione.
+ * @throws {Error} Se c'è un errore nella registrazione, viene sollevato un errore con il messaggio di errore ricevuto dal server.
+ */
+export const registerUser = async (username, email, password) => {
+  try {
+    const response = await axiosInstance.post(`${BASE_API}/register`, {
+      username,
+      email,
+      password,
+    });
+    return response.data; // Restituisce i dati se la richiesta è completata con successo
+  } catch (error) {
+    // Controlla se è un errore Axios e propaga il messaggio
+    if (error.response && error.response.data) {
+      throw new Error(error.response.data.message || "Errore sconosciuto");
+    }
+    throw new Error("Errore di connessione al server");
+  }
+};
+
+/**
+ * Esegue il logout dell'utente.
+ *
+ * Invia una richiesta POST al server per eseguire il logout dell'utente.
+ * Il server dovrebbe invalidare la sessione o il token dell'utente.
+ *
+ * @function
+ * @name logoutUser
+ * @returns {Promise} Una promessa che risolve quando il logout è stato completato con successo.
+ * @throws {Error} Se il logout fallisce, viene sollevato un errore.
+ */
+export const logoutUser = () => {
+  try {
+    return axiosInstance.post(`${BASE_API}/logout`);
+  } catch (error) {
+    throw new Error("Logout fallito");
+  }
+};

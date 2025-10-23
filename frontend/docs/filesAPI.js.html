@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>filesAPI.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li></li><li><a href="module-exportAPI.html">exportAPI</a></li><li></li><li><a href="module-fileAPI.html">fileAPI</a></li><li></li><li><a href="module-logsAPI.html">logsAPI</a></li><li></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">filesAPI.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace utils
+ * @fileoverview
+ * Questo modulo contiene le funzioni per la gestione del caricamento di file e immagini
+ * sul server, utilizzando richieste HTTP. Le funzioni principali includono:
+ *
+ * 1. **uploadImage**: Carica un'immagine sul server e restituisce l'URL dell'immagine caricata.
+ *
+ * Ogni funzione interagisce con l'API del server per inviare dati (come immagini) tramite
+ * il metodo POST, utilizzando il tipo di contenuto `multipart/form-data`.
+ *
+ * La documentazione specifica anche i possibili errori che potrebbero verificarsi durante
+ * la comunicazione con il server e fornisce esempi su come gestirli.
+ *
+ * @module fileAPI
+ * @requires axiosInstance
+ *
+ */
+
+// Il codice del modulo continua qui sotto
+
+import axiosInstance from "./api";
+
+const BASE_API = "/files";
+
+/**
+ * Carica un'immagine sul server.
+ *
+ * Questa funzione invia l'immagine al server utilizzando una richiesta HTTP POST con un oggetto FormData.
+ * L'immagine viene inviata come parte di un modulo multipart/form-data. Se la richiesta ha successo,
+ * la risposta contiene l'URL dell'immagine caricata.
+ *
+ * @param {File} imageData - Il file immagine da caricare (tipo `File` di JavaScript).
+ * @returns {Promise&lt;Object>} Una promessa che restituisce un oggetto contenente l'URL dell'immagine caricata.
+ *
+ * @throws {Error} Se si verifica un errore durante il caricamento dell'immagine o se la connessione al server fallisce.
+ *
+ * @example
+ * const imageFile = document.querySelector('input[type="file"]').files[0];
+ * uploadImage(imageFile)
+ *   .then(data => {
+ *     console.log('Immagine caricata con successo:', data.url);
+ *   })
+ *   .catch(error => {
+ *     console.error('Errore durante il caricamento dell\'immagine:', error.message);
+ *   });
+ */
+export const uploadImage = async (imageData) => {
+  try {
+    const formData = new FormData();
+    formData.append("image", imageData);
+
+    const response = await axiosInstance.post(
+      `${BASE_API}/upload-image`,
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+
+    return response.data; // risposta deve contenere l'URL dell'immagine
+  } catch (error) {
+    if (error.response &amp;&amp; error.response.data) {
+      throw new Error(error.response.data.message || "Errore sconosciuto");
+    }
+    throw new Error("Errore di connessione al server");
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Fri Dec 13 2024 12:39:39 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

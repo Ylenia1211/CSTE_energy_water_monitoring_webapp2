@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>controllers/userController.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">controllers/userController.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview
+ * Controller per le richieste HTTP relativi alla gestion degli utenti nel sistema.
+ *
+ * Questo modulo gestisce tutte le operazioni relative agli utenti, come la visualizzazione, l'aggiornamento,
+ * la creazione, la cancellazione, e la gestione delle password. Ogni funzione di questo controller interagisce
+ * con il servizio `userService` per eseguire la logica di business e restituisce le risposte appropriate.
+ *
+ * @module userController
+ */
+
+const userService = require("../services/userService");
+
+/**
+ * Controller per ottenere i dati del profilo dell'utente.
+ *
+ * Questa funzione recupera le informazioni relative all'utente autenticato.
+ * Il `userId` viene estratto dal `payload` dell'autenticazione (middleware `authMiddleware`).
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene i dati dell'utente tramite il middleware di autenticazione.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce i dati del profilo dell'utente.
+ * @throws {Error} Se si verifica un errore durante il recupero dei dati del profilo.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con i dati dell'utente.
+ */
+const getProfile = async (req, res) => {
+  try {
+    const userId = req?.payload?.userId; //Viene passato direttamente dal authMiddleware
+    const user = await userService.getProfile(userId);
+    res.status(200).json(user);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
+ * Controller per aggiornare il profilo dell'utente.
+ *
+ * Questa funzione permette di aggiornare il profilo dell'utente, comprese le modifiche alla password.
+ * L'ID dell'utente è estratto dal `payload` dell'autenticazione (middleware `authMiddleware`).
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene i dati da aggiornare nel corpo della richiesta.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce un messaggio di successo con i dati aggiornati.
+ * @throws {Error} Se si verifica un errore durante l'aggiornamento dei dati dell'utente.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con un messaggio di successo e i dati aggiornati dell'utente.
+ */
+const updateProfile = async (req, res) => {
+  try {
+    const userId = req?.payload?.userId;
+    const { currentPassword, ...updateData } = req.body;
+
+    // Passa i dati al service per l'aggiornamento
+    const updatedUser = await userService.updateProfile(
+      userId,
+      updateData,
+      currentPassword
+    );
+
+    res
+      .status(200)
+      .json({ message: "Profilo aggiornato con successo", user: updatedUser });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
+ * Controller per ottenere tutti gli utenti nel sistema.
+ *
+ * Questa funzione recupera una lista di tutti gli utenti registrati nel sistema.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce la lista di utenti.
+ * @throws {Error} Se si verifica un errore durante il recupero degli utenti.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con la lista di tutti gli utenti.
+ */
+const getAllUsers = async (req, res) => {
+  try {
+    const allUsers = await userService.getAllUsers();
+    res.status(200).json(allUsers);
+  } catch (error) {
+    res.status(500).json({ message: "Errore nel recupero degli utenti" });
+  }
+};
+
+/**
+ * Controller per aggiornare un utente specifico.
+ *
+ * Questa funzione permette di aggiornare i dettagli di un utente specifico, identificato tramite `userId`.
+ * Il `currentUser` è l'utente attualmente autenticato e può essere utilizzato per validare i permessi.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene l'ID dell'utente da aggiornare nei parametri URL e i nuovi dati nel corpo della richiesta.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce l'utente aggiornato.
+ * @throws {Error} Se si verifica un errore durante l'aggiornamento dell'utente.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con i dati dell'utente aggiornati.
+ */
+const updateUser = async (req, res) => {
+  const { userId } = req.params;
+  const updateData = req.body;
+  const currentUser = req.payload; // Dati dell'utente attualmente autenticato, per doppio controllo, non necessario
+
+  console.log(updateData);
+
+  try {
+    const updatedUser = await userService.updateUser(
+      userId,
+      updateData,
+      currentUser
+    );
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
+ * Controller per eliminare un utente.
+ *
+ * Questa funzione permette di eliminare un utente dal sistema identificato tramite `userId`.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene l'ID dell'utente da eliminare nei parametri URL.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce un messaggio di successo.
+ * @throws {Error} Se si verifica un errore durante l'eliminazione dell'utente.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con un messaggio di successo.
+ */
+const deleteUser = async (req, res) => {
+  const { userId } = req.params;
+  const currentUser = req.payload; // Dati dell'utente attualmente autenticato
+
+  try {
+    const result = await userService.deleteUser(userId, currentUser);
+    res.status(200).json({ message: result });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
+ * Controller per aggiungere un nuovo utente.
+ *
+ * Questa funzione consente di creare un nuovo utente nel sistema. I dati dell'utente sono passati nel corpo della richiesta.
+ * Il `currentUser` è l'utente che sta eseguendo la creazione e può essere utilizzato per validare i permessi.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene i dati del nuovo utente nel corpo della richiesta.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce i dati dell'utente appena creato.
+ * @throws {Error} Se si verifica un errore durante la creazione dell'utente.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con i dati dell'utente appena creato.
+ */
+const addUser = async (req, res) => {
+  const newUser = req.body; // I dettagli del nuovo utente
+  const currentUser = req.payload; // Informazioni sull'utente autenticato
+
+  try {
+    const createdUser = await userService.addUser(newUser, currentUser);
+    res.status(201).json(createdUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+/**
+ * Controller per richiedere il recupero della password.
+ *
+ * Questa funzione invia una email di recupero password all'utente, contenente un link per il reset.
+ * Il link è valido solo per un periodo di tempo limitato.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene l'email dell'utente che richiede il recupero.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce un messaggio di successo.
+ * @throws {Error} Se si verifica un errore durante il recupero della password.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con un messaggio di successo.
+ */
+const requestPasswordReset = async (req, res) => {
+  try {
+    const { email } = req.body;
+    if (!email)
+      return res.status(400).json({ message: "L'email è richiesta." });
+
+    const { token, email: userEmail } = await userService.generateResetToken(
+      email
+    );
+    await userService.sendResetEmail(userEmail, token);
+
+    res
+      .status(200)
+      .json({ message: "Email di recupero inviata con successo." });
+  } catch (error) {
+    res.status(500).json({
+      message: "Errore durante il recupero della password: " + error.message,
+    });
+  }
+};
+
+/**
+ * Controller per resettare la password tramite un token di recupero.
+ *
+ * Questa funzione consente di aggiornare la password dell'utente utilizzando un token di reset.
+ * Il token viene inviato tramite email al momento della richiesta di recupero password.
+ *
+ * @async
+ * @function
+ * @param {Object} req - L'oggetto della richiesta HTTP, contiene il token di recupero e la nuova password nel corpo della richiesta.
+ * @param {Object} res - L'oggetto della risposta HTTP, restituisce un messaggio di successo.
+ * @throws {Error} Se si verifica un errore durante il reset della password.
+ * @returns {Promise&lt;void>} Restituisce una risposta JSON con un messaggio di successo.
+ */
+const resetPassword = async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+    if (!token || !newPassword)
+      return res
+        .status(400)
+        .json({ message: "Token e nuova password sono richiesti." });
+
+    await userService.resetPasswordWithToken(token, newPassword);
+    res.status(200).json({ message: "Password aggiornata con successo." });
+  } catch (error) {
+    res.status(500).json({
+      message: "Errore durante il reset della password: " + error.message,
+    });
+  }
+};
+
+module.exports = {
+  updateProfile,
+  getProfile,
+  getAllUsers,
+  updateUser,
+  deleteUser,
+  addUser,
+  requestPasswordReset,
+  resetPassword,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

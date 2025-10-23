@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>utils/userAPI.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AdminProtectedRoute.html">AdminProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-AdminProtectedRoute.html#~AdminProtectedRoute">AdminProtectedRoute</a></li></ul></li><li><a href="module-AdvancedAnalysis.html">AdvancedAnalysis</a><ul class='methods'><li data-type='method'><a href="module-AdvancedAnalysis.html#~AdvancedAnalysis">AdvancedAnalysis</a></li></ul></li><li><a href="module-AlertNotifications.html">AlertNotifications</a><ul class='methods'><li data-type='method'><a href="module-AlertNotifications.html#~AlertNotifications">AlertNotifications</a></li></ul></li><li><a href="module-AppRoutes.html">AppRoutes</a><ul class='methods'><li data-type='method'><a href="module-AppRoutes.html#~AppRoutes">AppRoutes</a></li></ul></li><li><a href="module-BarChart.html">BarChart</a></li><li><a href="module-BuildingEnergyConsumption.html">BuildingEnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumption.html#~BuildingEnergyConsumption">BuildingEnergyConsumption</a></li></ul></li><li><a href="module-BuildingEnergyConsumptionChartPanel.html">BuildingEnergyConsumptionChartPanel</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~BuildingEnergyConsumptionChartPanel">BuildingEnergyConsumptionChartPanel</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useBarChartData">useBarChartData</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useExport">useExport</a></li></ul></li><li><a href="module-BuildingFilterSelect.html">BuildingFilterSelect</a><ul class='methods'><li data-type='method'><a href="module-BuildingFilterSelect.html#~BuildingFilterSelect">BuildingFilterSelect</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~applyFilters">applyFilters</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~fetchBuildingsAndImpianti">fetchBuildingsAndImpianti</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleBuildingChange">handleBuildingChange</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleImpiantoChange">handleImpiantoChange</a></li></ul></li><li><a href="module-Button.html">Button</a><ul class='methods'><li data-type='method'><a href="module-Button.html#~Button">Button</a></li></ul></li><li><a href="module-ChartReportSelector.html">ChartReportSelector</a><ul class='methods'><li data-type='method'><a href="module-ChartReportSelector.html#~ChartReportSelector">ChartReportSelector</a></li></ul></li><li><a href="module-Dashboard.html">Dashboard</a><ul class='methods'><li data-type='method'><a href="module-Dashboard.html#~Dashboard">Dashboard</a></li></ul></li><li><a href="module-DashboardPanel.html">DashboardPanel</a><ul class='methods'><li data-type='method'><a href="module-DashboardPanel.html#~DashboardPanel">DashboardPanel</a></li></ul></li><li><a href="module-DraggableSection.html">DraggableSection</a><ul class='methods'><li data-type='method'><a href="module-DraggableSection.html#~DraggableSection">DraggableSection</a></li></ul></li><li><a href="module-Edifici.html">Edifici</a><ul class='methods'><li data-type='method'><a href="module-Edifici.html#~Edifici">Edifici</a></li></ul></li><li><a href="module-EnergyConsumption.html">EnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-EnergyConsumption.html#~EnergyConsumption">EnergyConsumption</a></li></ul></li><li><a href="module-ErrorDisplay.html">ErrorDisplay</a><ul class='methods'><li data-type='method'><a href="module-ErrorDisplay.html#~ErrorDisplay">ErrorDisplay</a></li></ul></li><li><a href="module-FilterContext.html">FilterContext</a></li><li><a href="module-Footer.html">Footer</a><ul class='methods'><li data-type='method'><a href="module-Footer.html#~Footer">Footer</a></li></ul></li><li><a href="module-Home.html">Home</a><ul class='methods'><li data-type='method'><a href="module-Home.html#~Home">Home</a></li></ul></li><li><a href="module-HourlyAverageConsumptionTotalChart.html">HourlyAverageConsumptionTotalChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~HourlyAverageConsumptionTotalChart">HourlyAverageConsumptionTotalChart</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchBuildings">fetchBuildings</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchData">fetchData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~generateTimeSeriesData">generateTimeSeriesData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~handleExportToPDF">handleExportToPDF</a></li></ul></li><li><a href="module-HourlyConsumptionChart.html">HourlyConsumptionChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyConsumptionChart.html#~HourlyConsumptionChart">HourlyConsumptionChart</a></li></ul></li><li><a href="module-Input.html">Input</a><ul class='methods'><li data-type='method'><a href="module-Input.html#~Input">Input</a></li></ul></li><li><a href="module-LoadingSpinner.html">LoadingSpinner</a><ul class='methods'><li data-type='method'><a href="module-LoadingSpinner.html#~LoadingSpinner">LoadingSpinner</a></li></ul></li><li><a href="module-LogFilter.html">LogFilter</a><ul class='methods'><li data-type='method'><a href="module-LogFilter.html#~LogFilter">LogFilter</a></li></ul></li><li><a href="module-Login.html">Login</a><ul class='methods'><li data-type='method'><a href="module-Login.html#~Login">Login</a></li></ul></li><li><a href="module-Logout.html">Logout</a><ul class='methods'><li data-type='method'><a href="module-Logout.html#~Logout">Logout</a></li></ul></li><li><a href="module-Logs.html">Logs</a><ul class='methods'><li data-type='method'><a href="module-Logs.html#~Logs">Logs</a></li></ul></li><li><a href="module-Menu.html">Menu</a><ul class='methods'><li data-type='method'><a href="module-Menu.html#~Menu">Menu</a></li></ul></li><li><a href="module-Navbar.html">Navbar</a><ul class='methods'><li data-type='method'><a href="module-Navbar.html#~Navbar">Navbar</a></li></ul></li><li><a href="module-NotificationContext.html">NotificationContext</a></li><li><a href="module-NotificationTable.html">NotificationTable</a><ul class='methods'><li data-type='method'><a href="module-NotificationTable.html#~NotificationTable">NotificationTable</a></li></ul></li><li><a href="module-Notifications.html">Notifications</a><ul class='methods'><li data-type='method'><a href="module-Notifications.html#~Notifications">Notifications</a></li></ul></li><li><a href="module-Panel.html">Panel</a></li><li><a href="module-PanelWrapper.html">PanelWrapper</a><ul class='methods'><li data-type='method'><a href="module-PanelWrapper.html#~PanelWrapper">PanelWrapper</a></li></ul></li><li><a href="module-Profile.html">Profile</a><ul class='methods'><li data-type='method'><a href="module-Profile.html#~Profile">Profile</a></li></ul></li><li><a href="module-ProtectedRoute.html">ProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-ProtectedRoute.html#~ProtectedRoute">ProtectedRoute</a></li></ul></li><li><a href="module-Register.html">Register</a><ul class='methods'><li data-type='method'><a href="module-Register.html#~Register">Register</a></li></ul></li><li><a href="module-ReportConfigurator.html">ReportConfigurator</a><ul class='methods'><li data-type='method'><a href="module-ReportConfigurator.html#~ReportConfigurator">ReportConfigurator</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~addSection">addSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~cancelEdit">cancelEdit</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~dataURItoBlob">dataURItoBlob</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~editSection">editSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~generatePDF">generatePDF</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragEnter">handleDragEnter</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragLeave">handleDragLeave</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleGetDescription">handleGetDescription</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~moveSection">moveSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~removeSection">removeSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~saveEditedSection">saveEditedSection</a></li></ul></li><li><a href="module-RequestPasswordReset.html">RequestPasswordReset</a><ul class='methods'><li data-type='method'><a href="module-RequestPasswordReset.html#~RequestPasswordReset">RequestPasswordReset</a></li></ul></li><li><a href="module-ResetPassword.html">ResetPassword</a><ul class='methods'><li data-type='method'><a href="module-ResetPassword.html#~ResetPassword">ResetPassword</a></li></ul></li><li><a href="module-ResultCard.html">ResultCard</a><ul class='methods'><li data-type='method'><a href="module-ResultCard.html#~ResultCard">ResultCard</a></li></ul></li><li><a href="module-Settings.html">Settings</a><ul class='methods'><li data-type='method'><a href="module-Settings.html#~Settings">Settings</a></li><li data-type='method'><a href="module-Settings.html#~checkIfUserIsObserving">checkIfUserIsObserving</a></li><li data-type='method'><a href="module-Settings.html#~handleToggleNotification">handleToggleNotification</a></li></ul></li><li><a href="module-TabMenuItem.html">TabMenuItem</a><ul class='methods'><li data-type='method'><a href="module-TabMenuItem.html#~TabMenuItem">TabMenuItem</a></li></ul></li><li><a href="module-TimeRangePicker.html">TimeRangePicker</a><ul class='methods'><li data-type='method'><a href="module-TimeRangePicker.html#~TimeRangePicker">TimeRangePicker</a></li></ul></li><li><a href="module-TimeSeriesChart.html">TimeSeriesChart</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChart.html#~TimeSeriesChartComponent">TimeSeriesChartComponent</a></li><li data-type='method'><a href="module-TimeSeriesChart.html#~getRandomColor">getRandomColor</a></li></ul></li><li><a href="module-TimeSeriesChartByBuilding.html">TimeSeriesChartByBuilding</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChartByBuilding.html#~TimeSeriesChartByBuilding">TimeSeriesChartByBuilding</a></li></ul></li><li><a href="module-TimeSeriesDataComponent.html">TimeSeriesDataComponent</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesDataComponent.html#~TimeSeriesDataComponent">TimeSeriesDataComponent</a></li></ul></li><li><a href="module-Unauthorized.html">Unauthorized</a><ul class='methods'><li data-type='method'><a href="module-Unauthorized.html#~Unauthorized">Unauthorized</a></li></ul></li><li><a href="module-UserManagement.html">UserManagement</a><ul class='methods'><li data-type='method'><a href="module-UserManagement.html#~UserManagement">UserManagement</a></li><li data-type='method'><a href="module-UserManagement.html#~cancelDelete">cancelDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~confirmDelete">confirmDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~fetchUsers">fetchUsers</a></li><li data-type='method'><a href="module-UserManagement.html#~handleAddUser">handleAddUser</a></li><li data-type='method'><a href="module-UserManagement.html#~handleCancel">handleCancel</a></li><li data-type='method'><a href="module-UserManagement.html#~handleChange">handleChange</a></li><li data-type='method'><a href="module-UserManagement.html#~handleDelete">handleDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~handleEdit">handleEdit</a></li><li data-type='method'><a href="module-UserManagement.html#~handleSave">handleSave</a></li><li data-type='method'><a href="module-UserManagement.html#~resetForm">resetForm</a></li></ul></li><li><a href="module-WeeklyBarChart.html">WeeklyBarChart</a><ul class='methods'><li data-type='method'><a href="module-WeeklyBarChart.html#~WeeklyBarChart">WeeklyBarChart</a></li></ul></li><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumption">fetchHourlyAverageConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumptionTotal">fetchHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li><a href="module-exportAPI.html">exportAPI</a></li><li><a href="module-fileAPI.html">fileAPI</a></li><li><a href="module-logsAPI.html">logsAPI</a></li><li><a href="module-main.html">main</a><ul class='methods'><li data-type='method'><a href="module-main.html#~renderApp">renderApp</a></li></ul></li><li><a href="module-observersAPI.html">observersAPI</a><ul class='methods'><li data-type='method'><a href="module-observersAPI.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observersAPI.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observersAPI.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observersAPI.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queriesAPI.html">queriesAPI</a><ul class='methods'><li data-type='method'><a href="module-queriesAPI.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-socketAPI.html">socketAPI</a><ul class='methods'><li data-type='method'><a href="module-socketAPI.html#~setupSocketListeners">setupSocketListeners</a></li></ul></li><li><a href="module-store.html">store</a></li><li><a href="module-useBuildingFilters.html">useBuildingFilters</a><ul class='methods'><li data-type='method'><a href="module-useBuildingFilters.html#~useBuildingFilters">useBuildingFilters</a></li></ul></li><li><a href="module-useTimeRange.html">useTimeRange</a><ul class='methods'><li data-type='method'><a href="module-useTimeRange.html#~useTimeRange">useTimeRange</a></li></ul></li><li><a href="module-userAPI.html">userAPI</a><ul class='methods'><li data-type='method'><a href="module-userAPI.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userAPI.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userAPI.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userAPI.html#~getUserProfile">getUserProfile</a></li><li data-type='method'><a href="module-userAPI.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userAPI.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserDetails">updateUserDetails</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserProfile">updateUserProfile</a></li></ul></li><li><a href="module-userSlice.html">userSlice</a><ul class='methods'><li data-type='method'><a href="module-userSlice.html#~middleware">middleware</a></li><li data-type='method'><a href="module-userSlice.html#~serializableMiddleware">serializableMiddleware</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">utils/userAPI.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace utils
+ * @fileoverview
+ * Modulo per la gestione delle operazioni relative agli utenti.
+ *
+ * Questo modulo offre funzioni per:
+ * - Ottenere e aggiornare il profilo dell'utente.
+ * - Gestire la creazione, l'aggiornamento e l'eliminazione di utenti.
+ * - Gestire il recupero e il reset della password.
+ *
+ * Le funzioni interagiscono con un'API di gestione utenti tramite l'istanza Axios configurata in precedenza.
+ *
+ * @module userAPI
+ * @requires axiosInstance
+ */
+
+import axiosInstance from "./api";
+
+const BASE_API = "/users";
+
+/**
+ * Ottiene i dati del profilo dell'utente.
+ *
+ * Invia una richiesta GET per recuperare il profilo dell'utente corrente.
+ *
+ * @function
+ * @name getUserProfile
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dati del profilo utente.
+ * @throws {Error} Se c'è un errore nella richiesta, viene sollevato un errore con un messaggio di errore.
+ */
+export const getUserProfile = async () => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/profile`, {
+      withCredentials: true,
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error("Errore nel recupero del profilo: " + error.message);
+  }
+};
+
+/**
+ * Ottiene i dati di tutti gli utenti.
+ *
+ * Invia una richiesta GET per recuperare i profili di tutti gli utenti.
+ *
+ * @function
+ * @name getAllUsers
+ * @returns {Promise&lt;Array>} Una promessa che risolve con un array contenente i dati di tutti gli utenti.
+ * @throws {Error} Se c'è un errore nella richiesta, viene sollevato un errore con un messaggio di errore.
+ */
+export const getAllUsers = async () => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/profiles`, {
+      withCredentials: true,
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error("Errore nel recupero del profilo: " + error.message);
+  }
+};
+
+/**
+ * Aggiorna i dati del profilo dell'utente.
+ *
+ * Invia una richiesta PUT per aggiornare il profilo dell'utente corrente.
+ * Se viene fornita una password corrente, viene inviata insieme agli altri dati.
+ *
+ * @function
+ * @name updateUserProfile
+ * @param {Object} updateData - I dati da aggiornare (ad esempio, nome, email).
+ * @param {string} [currentPassword] - La password corrente dell'utente, necessaria se si aggiorna la password.
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dati aggiornati del profilo.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const updateUserProfile = async (updateData, currentPassword) => {
+  try {
+    // Crea un oggetto per inviare solo i campi modificati
+    const requestData = { ...updateData };
+
+    console.log(requestData);
+
+    // Se la password corrente è presente, includila nella richiesta
+    if (currentPassword) {
+      requestData.currentPassword = currentPassword;
+    }
+
+    // Esegui la chiamata al server per aggiornare i dati del profilo
+    const response = await axiosInstance.put(
+      `${BASE_API}/profile`,
+      requestData,
+      { withCredentials: true }
+    );
+
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      // Risposta dal server con un messaggio di errore dettagliato
+      throw new Error(error.response.data.message);
+    } else {
+      // Errore di connessione o altro errore
+      throw new Error(error.message);
+    }
+  }
+};
+
+/**
+ * Aggiorna i dettagli di un utente specifico.
+ *
+ * Invia una richiesta PUT per aggiornare i dettagli di un utente identificato dal `userId`.
+ *
+ * @function
+ * @name updateUserDetails
+ * @param {string} userId - L'ID dell'utente di cui aggiornare i dettagli.
+ * @param {Object} updatedData - I nuovi dati da aggiornare per l'utente.
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dettagli aggiornati dell'utente.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const updateUserDetails = async (userId, updatedData) => {
+  try {
+    // Esegui la chiamata API PUT per aggiornare i dettagli dell'utente
+    const response = await axiosInstance.put(
+      `${BASE_API}/profile/${userId}`,
+      updatedData,
+      {
+        withCredentials: true,
+      }
+    );
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      // Risposta del server con un messaggio di errore dettagliato
+      throw new Error(error.response.data.message);
+    } else {
+      // Errore di connessione o altro errore
+      throw new Error(error.message);
+    }
+  }
+};
+
+/**
+ * Elimina un utente specifico.
+ *
+ * Invia una richiesta DELETE per eliminare un utente identificato dal `userId`.
+ *
+ * @function
+ * @name deleteUser
+ * @param {string} userId - L'ID dell'utente da eliminare.
+ * @returns {Promise&lt;Object>} Una promessa che risolve con il risultato della richiesta di eliminazione.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const deleteUser = async (userId) => {
+  try {
+    // Esegui la chiamata API DELETE per eliminare l'utente
+    const response = await axiosInstance.delete(
+      `${BASE_API}/profile/${userId}`,
+      {
+        withCredentials: true,
+      }
+    );
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      // Risposta del server con un messaggio di errore dettagliato
+      throw new Error(error.response.data.message);
+    } else {
+      // Errore di connessione o altro errore
+      throw new Error(error.message);
+    }
+  }
+};
+
+/**
+ * Aggiunge un nuovo utente.
+ *
+ * Invia una richiesta POST per creare un nuovo utente con i dati forniti.
+ *
+ * @function
+ * @name addUser
+ * @param {Object} userData - I dati del nuovo utente (ad esempio, nome, email, password).
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dati del nuovo utente creato.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const addUser = async (userData) => {
+  try {
+    // Esegui la chiamata API POST per aggiungere un nuovo utente
+    const response = await axiosInstance.post(`${BASE_API}/profile`, userData, {
+      withCredentials: true,
+    });
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      // Risposta del server con un messaggio di errore dettagliato
+      throw new Error(error.response.data.message);
+    } else {
+      // Errore di connessione o altro errore
+      throw new Error(error.message);
+    }
+  }
+};
+
+/**
+ * Richiede il recupero della password per l'utente tramite email.
+ *
+ * Invia una richiesta POST per richiedere il reset della password.
+ *
+ * @function
+ * @name requestPasswordReset
+ * @param {string} email - L'email dell'utente che richiede il recupero della password.
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dati della richiesta di reset.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const requestPasswordReset = async (email) => {
+  try {
+    const response = await axiosInstance.post(
+      `${BASE_API}/password-reset/request`,
+      { email }
+    );
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      throw new Error(error.response.data.message);
+    } else {
+      throw new Error(error.message);
+    }
+  }
+};
+
+/**
+ * Resetta la password di un utente tramite un token di recupero.
+ *
+ * Invia una richiesta POST per aggiornare la password dell'utente utilizzando il token di reset.
+ *
+ * @function
+ * @name resetPassword
+ * @param {string} token - Il token di reset della password.
+ * @param {string} newPassword - La nuova password dell'utente.
+ * @returns {Promise&lt;Object>} Una promessa che risolve con i dati del reset della password.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con un messaggio di errore.
+ */
+export const resetPassword = async (token, newPassword) => {
+  try {
+    const response = await axiosInstance.post(
+      `${BASE_API}/password-reset/reset`,
+      { token, newPassword }
+    );
+    return response.data;
+  } catch (error) {
+    if (error.response) {
+      throw new Error(error.response.data.message);
+    } else {
+      throw new Error(error.message);
+    }
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:16 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

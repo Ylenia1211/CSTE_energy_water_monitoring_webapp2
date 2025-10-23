@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "dotenv-extended": "^2.9.0",
+    "image-size": "^1.1.1",
+    "moment-timezone": "^0.5.46"
+  }
+}

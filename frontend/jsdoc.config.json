@@ -1,0 +1,14 @@
+{
+  "plugins": ["node_modules/jsdoc-route-plugin"],
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "node_modules/docdash",
+    "verbose": true
+  },
+  "jsdoc": {
+    "errors": {
+      "ignore": true
+    }
+  }
+}

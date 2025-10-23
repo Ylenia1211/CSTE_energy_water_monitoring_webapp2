@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>authService - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">authService</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+            
+        
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+                <div class="description usertext">Modulo per la gestione dell'autenticazione utente tramite JWT.Include funzionalità di registrazione, login, logout e parsing dei token.</div>
+            
+
+            
+                
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Modulo per la gestione dell'autenticazione utente tramite JWT.Include funzionalità di registrazione, login, logout e parsing dei token.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_authService.js.html">services/authService.js</a>, <a href="services_authService.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~generateToken"><span class="type-signature type-signature-inner">(inner) </span>generateToken<span class="signature">(payload)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Genera un token JWT per il payload fornito.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_authService.js.html">services/authService.js</a>, <a href="services_authService.js.html#line17">line 17</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>payload</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Il payload da includere nel token JWT.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - Il token JWT generato.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~getPayload"><span class="type-signature type-signature-inner">(inner) </span>getPayload<span class="signature">(token)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Estrae il payload da un token JWT senza verificarlo.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_authService.js.html">services/authService.js</a>, <a href="services_authService.js.html#line31">line 31</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>token</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Il token JWT da decodificare.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - Il payload decodificato.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~loginUser"><span class="type-signature type-signature-async, inner">(async, inner) </span>loginUser<span class="signature">(username, password)</span><span class="type-signature"> &rarr; {Promise.&lt;string>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Effettua il login di un utente verificando username e password.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_authService.js.html">services/authService.js</a>, <a href="services_authService.js.html#line75">line 75</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>username</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">L'username dell'utente.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">La password dell'utente.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-throws">Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        Se l'utente non esiste o la password non corrisponde.
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - Il token JWT per l'utente autenticato.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;string></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~registerUser"><span class="type-signature type-signature-async, inner">(async, inner) </span>registerUser<span class="signature">(username, email, password, privilege<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Promise.&lt;Object>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Registra un nuovo utente nel sistema.</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="services_authService.js.html">services/authService.js</a>, <a href="services_authService.js.html#line42">line 42</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>username</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">L'username dell'utente.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">L'email dell'utente.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">La password dell'utente.</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>privilege</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last">Il livello di privilegio dell'utente (default: 0).</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-throws">Throws:</h5>
+
+        
+
+<dl>
+    <dt>
+        <div class="param-desc usertext">
+        Se un utente con lo stesso username o email esiste già.
+        </div>
+    </dt>
+    <dd></dd>
+    <dt>
+        <dl class="param-type">
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">Error</span>
+
+
+
+            </dd>
+        </dl>
+    </dt>
+    <dd></dd>
+</dl>
+
+
+    
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    - Il documento utente appena creato.
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;Object></span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>components/dashboard/charts/HourlyAverageConsumptionTotalChart.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AdminProtectedRoute.html">AdminProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-AdminProtectedRoute.html#~AdminProtectedRoute">AdminProtectedRoute</a></li></ul></li><li><a href="module-AdvancedAnalysis.html">AdvancedAnalysis</a><ul class='methods'><li data-type='method'><a href="module-AdvancedAnalysis.html#~AdvancedAnalysis">AdvancedAnalysis</a></li></ul></li><li><a href="module-AlertNotifications.html">AlertNotifications</a><ul class='methods'><li data-type='method'><a href="module-AlertNotifications.html#~AlertNotifications">AlertNotifications</a></li></ul></li><li><a href="module-AppRoutes.html">AppRoutes</a><ul class='methods'><li data-type='method'><a href="module-AppRoutes.html#~AppRoutes">AppRoutes</a></li></ul></li><li><a href="module-BarChart.html">BarChart</a></li><li><a href="module-BuildingEnergyConsumption.html">BuildingEnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumption.html#~BuildingEnergyConsumption">BuildingEnergyConsumption</a></li></ul></li><li><a href="module-BuildingEnergyConsumptionChartPanel.html">BuildingEnergyConsumptionChartPanel</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~BuildingEnergyConsumptionChartPanel">BuildingEnergyConsumptionChartPanel</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useBarChartData">useBarChartData</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useExport">useExport</a></li></ul></li><li><a href="module-BuildingFilterSelect.html">BuildingFilterSelect</a><ul class='methods'><li data-type='method'><a href="module-BuildingFilterSelect.html#~BuildingFilterSelect">BuildingFilterSelect</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~applyFilters">applyFilters</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~fetchBuildingsAndImpianti">fetchBuildingsAndImpianti</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleBuildingChange">handleBuildingChange</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleImpiantoChange">handleImpiantoChange</a></li></ul></li><li><a href="module-Button.html">Button</a><ul class='methods'><li data-type='method'><a href="module-Button.html#~Button">Button</a></li></ul></li><li><a href="module-ChartReportSelector.html">ChartReportSelector</a><ul class='methods'><li data-type='method'><a href="module-ChartReportSelector.html#~ChartReportSelector">ChartReportSelector</a></li></ul></li><li><a href="module-Dashboard.html">Dashboard</a><ul class='methods'><li data-type='method'><a href="module-Dashboard.html#~Dashboard">Dashboard</a></li></ul></li><li><a href="module-DashboardPanel.html">DashboardPanel</a><ul class='methods'><li data-type='method'><a href="module-DashboardPanel.html#~DashboardPanel">DashboardPanel</a></li></ul></li><li><a href="module-DraggableSection.html">DraggableSection</a><ul class='methods'><li data-type='method'><a href="module-DraggableSection.html#~DraggableSection">DraggableSection</a></li></ul></li><li><a href="module-Edifici.html">Edifici</a><ul class='methods'><li data-type='method'><a href="module-Edifici.html#~Edifici">Edifici</a></li></ul></li><li><a href="module-EnergyConsumption.html">EnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-EnergyConsumption.html#~EnergyConsumption">EnergyConsumption</a></li></ul></li><li><a href="module-ErrorDisplay.html">ErrorDisplay</a><ul class='methods'><li data-type='method'><a href="module-ErrorDisplay.html#~ErrorDisplay">ErrorDisplay</a></li></ul></li><li><a href="module-FilterContext.html">FilterContext</a></li><li><a href="module-Footer.html">Footer</a><ul class='methods'><li data-type='method'><a href="module-Footer.html#~Footer">Footer</a></li></ul></li><li><a href="module-Home.html">Home</a><ul class='methods'><li data-type='method'><a href="module-Home.html#~Home">Home</a></li></ul></li><li><a href="module-HourlyAverageConsumptionTotalChart.html">HourlyAverageConsumptionTotalChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~HourlyAverageConsumptionTotalChart">HourlyAverageConsumptionTotalChart</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchBuildings">fetchBuildings</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchData">fetchData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~generateTimeSeriesData">generateTimeSeriesData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~handleExportToPDF">handleExportToPDF</a></li></ul></li><li><a href="module-HourlyConsumptionChart.html">HourlyConsumptionChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyConsumptionChart.html#~HourlyConsumptionChart">HourlyConsumptionChart</a></li></ul></li><li><a href="module-Input.html">Input</a><ul class='methods'><li data-type='method'><a href="module-Input.html#~Input">Input</a></li></ul></li><li><a href="module-LoadingSpinner.html">LoadingSpinner</a><ul class='methods'><li data-type='method'><a href="module-LoadingSpinner.html#~LoadingSpinner">LoadingSpinner</a></li></ul></li><li><a href="module-LogFilter.html">LogFilter</a><ul class='methods'><li data-type='method'><a href="module-LogFilter.html#~LogFilter">LogFilter</a></li></ul></li><li><a href="module-Login.html">Login</a><ul class='methods'><li data-type='method'><a href="module-Login.html#~Login">Login</a></li></ul></li><li><a href="module-Logout.html">Logout</a><ul class='methods'><li data-type='method'><a href="module-Logout.html#~Logout">Logout</a></li></ul></li><li><a href="module-Logs.html">Logs</a><ul class='methods'><li data-type='method'><a href="module-Logs.html#~Logs">Logs</a></li></ul></li><li><a href="module-Menu.html">Menu</a><ul class='methods'><li data-type='method'><a href="module-Menu.html#~Menu">Menu</a></li></ul></li><li><a href="module-Navbar.html">Navbar</a><ul class='methods'><li data-type='method'><a href="module-Navbar.html#~Navbar">Navbar</a></li></ul></li><li><a href="module-NotificationContext.html">NotificationContext</a></li><li><a href="module-NotificationTable.html">NotificationTable</a><ul class='methods'><li data-type='method'><a href="module-NotificationTable.html#~NotificationTable">NotificationTable</a></li></ul></li><li><a href="module-Notifications.html">Notifications</a><ul class='methods'><li data-type='method'><a href="module-Notifications.html#~Notifications">Notifications</a></li></ul></li><li><a href="module-Panel.html">Panel</a></li><li><a href="module-PanelWrapper.html">PanelWrapper</a><ul class='methods'><li data-type='method'><a href="module-PanelWrapper.html#~PanelWrapper">PanelWrapper</a></li></ul></li><li><a href="module-Profile.html">Profile</a><ul class='methods'><li data-type='method'><a href="module-Profile.html#~Profile">Profile</a></li></ul></li><li><a href="module-ProtectedRoute.html">ProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-ProtectedRoute.html#~ProtectedRoute">ProtectedRoute</a></li></ul></li><li><a href="module-Register.html">Register</a><ul class='methods'><li data-type='method'><a href="module-Register.html#~Register">Register</a></li></ul></li><li><a href="module-ReportConfigurator.html">ReportConfigurator</a><ul class='methods'><li data-type='method'><a href="module-ReportConfigurator.html#~ReportConfigurator">ReportConfigurator</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~addSection">addSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~cancelEdit">cancelEdit</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~dataURItoBlob">dataURItoBlob</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~editSection">editSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~generatePDF">generatePDF</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragEnter">handleDragEnter</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragLeave">handleDragLeave</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleGetDescription">handleGetDescription</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~moveSection">moveSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~removeSection">removeSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~saveEditedSection">saveEditedSection</a></li></ul></li><li><a href="module-RequestPasswordReset.html">RequestPasswordReset</a><ul class='methods'><li data-type='method'><a href="module-RequestPasswordReset.html#~RequestPasswordReset">RequestPasswordReset</a></li></ul></li><li><a href="module-ResetPassword.html">ResetPassword</a><ul class='methods'><li data-type='method'><a href="module-ResetPassword.html#~ResetPassword">ResetPassword</a></li></ul></li><li><a href="module-ResultCard.html">ResultCard</a><ul class='methods'><li data-type='method'><a href="module-ResultCard.html#~ResultCard">ResultCard</a></li></ul></li><li><a href="module-Settings.html">Settings</a><ul class='methods'><li data-type='method'><a href="module-Settings.html#~Settings">Settings</a></li><li data-type='method'><a href="module-Settings.html#~checkIfUserIsObserving">checkIfUserIsObserving</a></li><li data-type='method'><a href="module-Settings.html#~handleToggleNotification">handleToggleNotification</a></li></ul></li><li><a href="module-TabMenuItem.html">TabMenuItem</a><ul class='methods'><li data-type='method'><a href="module-TabMenuItem.html#~TabMenuItem">TabMenuItem</a></li></ul></li><li><a href="module-TimeRangePicker.html">TimeRangePicker</a><ul class='methods'><li data-type='method'><a href="module-TimeRangePicker.html#~TimeRangePicker">TimeRangePicker</a></li></ul></li><li><a href="module-TimeSeriesChart.html">TimeSeriesChart</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChart.html#~TimeSeriesChartComponent">TimeSeriesChartComponent</a></li><li data-type='method'><a href="module-TimeSeriesChart.html#~getRandomColor">getRandomColor</a></li></ul></li><li><a href="module-TimeSeriesChartByBuilding.html">TimeSeriesChartByBuilding</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChartByBuilding.html#~TimeSeriesChartByBuilding">TimeSeriesChartByBuilding</a></li></ul></li><li><a href="module-TimeSeriesDataComponent.html">TimeSeriesDataComponent</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesDataComponent.html#~TimeSeriesDataComponent">TimeSeriesDataComponent</a></li></ul></li><li><a href="module-Unauthorized.html">Unauthorized</a><ul class='methods'><li data-type='method'><a href="module-Unauthorized.html#~Unauthorized">Unauthorized</a></li></ul></li><li><a href="module-UserManagement.html">UserManagement</a><ul class='methods'><li data-type='method'><a href="module-UserManagement.html#~UserManagement">UserManagement</a></li><li data-type='method'><a href="module-UserManagement.html#~cancelDelete">cancelDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~confirmDelete">confirmDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~fetchUsers">fetchUsers</a></li><li data-type='method'><a href="module-UserManagement.html#~handleAddUser">handleAddUser</a></li><li data-type='method'><a href="module-UserManagement.html#~handleCancel">handleCancel</a></li><li data-type='method'><a href="module-UserManagement.html#~handleChange">handleChange</a></li><li data-type='method'><a href="module-UserManagement.html#~handleDelete">handleDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~handleEdit">handleEdit</a></li><li data-type='method'><a href="module-UserManagement.html#~handleSave">handleSave</a></li><li data-type='method'><a href="module-UserManagement.html#~resetForm">resetForm</a></li></ul></li><li><a href="module-WeeklyBarChart.html">WeeklyBarChart</a><ul class='methods'><li data-type='method'><a href="module-WeeklyBarChart.html#~WeeklyBarChart">WeeklyBarChart</a></li></ul></li><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumption">fetchHourlyAverageConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumptionTotal">fetchHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li><a href="module-exportAPI.html">exportAPI</a></li><li><a href="module-fileAPI.html">fileAPI</a></li><li><a href="module-logsAPI.html">logsAPI</a></li><li><a href="module-main.html">main</a><ul class='methods'><li data-type='method'><a href="module-main.html#~renderApp">renderApp</a></li></ul></li><li><a href="module-observersAPI.html">observersAPI</a><ul class='methods'><li data-type='method'><a href="module-observersAPI.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observersAPI.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observersAPI.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observersAPI.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queriesAPI.html">queriesAPI</a><ul class='methods'><li data-type='method'><a href="module-queriesAPI.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-socketAPI.html">socketAPI</a><ul class='methods'><li data-type='method'><a href="module-socketAPI.html#~setupSocketListeners">setupSocketListeners</a></li></ul></li><li><a href="module-store.html">store</a></li><li><a href="module-useBuildingFilters.html">useBuildingFilters</a><ul class='methods'><li data-type='method'><a href="module-useBuildingFilters.html#~useBuildingFilters">useBuildingFilters</a></li></ul></li><li><a href="module-useTimeRange.html">useTimeRange</a><ul class='methods'><li data-type='method'><a href="module-useTimeRange.html#~useTimeRange">useTimeRange</a></li></ul></li><li><a href="module-userAPI.html">userAPI</a><ul class='methods'><li data-type='method'><a href="module-userAPI.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userAPI.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userAPI.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userAPI.html#~getUserProfile">getUserProfile</a></li><li data-type='method'><a href="module-userAPI.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userAPI.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserDetails">updateUserDetails</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserProfile">updateUserProfile</a></li></ul></li><li><a href="module-userSlice.html">userSlice</a><ul class='methods'><li data-type='method'><a href="module-userSlice.html#~middleware">middleware</a></li><li data-type='method'><a href="module-userSlice.html#~serializableMiddleware">serializableMiddleware</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">components/dashboard/charts/HourlyAverageConsumptionTotalChart.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview
+ * Questo file contiene il componente React `HourlyAverageConsumptionTotalChart`,
+ * che visualizza un grafico a linee con i dati di consumo medio orario per un edificio selezionato.
+ * Include funzionalità di selezione del periodo temporale, selezione dell'edificio,
+ * zoom/pan sul grafico e opzioni di esportazione in PDF.
+ *
+ * @module HourlyAverageConsumptionTotalChart
+ */
+
+import React, { useState, useEffect, useRef } from "react";
+import { Line } from "react-chartjs-2";
+import {
+  fetchHourlyAverageConsumptionTotal,
+  fetchMetersData,
+} from "../../../utils/consumiAPI";
+import useTimeRange from "../../../hooks/useTimeRange";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
+import "chart.js/auto";
+import Select from "react-select";
+import zoomPlugin from "chartjs-plugin-zoom";
+import annotationPlugin from "chartjs-plugin-annotation"; // Importa il plugin per le annotazioni
+
+import {
+  Chart as ChartJS,
+  LineElement,
+  CategoryScale,
+  TimeScale,
+  Tooltip,
+  Legend,
+  Title,
+  Filler,
+} from "chart.js";
+import TimeRangePicker from "../../common/TimeRangePicker";
+
+// Registrazione dei componenti di Chart.js
+ChartJS.register(
+  LineElement,
+  CategoryScale,
+  TimeScale,
+  Tooltip,
+  Legend,
+  Title,
+  Filler,
+  zoomPlugin,
+  annotationPlugin
+);
+
+/**
+ * Genera i dati strutturati per un grafico a linee basato sui dati di consumo medio orario.
+ *
+ * @function generateTimeSeriesData
+ * @param {Array&lt;Object>} data - Array di oggetti contenenti `hour` (ora del giorno) e `averageConsumption`.
+ * @returns {Object} Dati formattati per il componente `react-chartjs-2`.
+ */
+const generateTimeSeriesData = (data) => {
+  const labels = data.map(
+    (item) => `${item.hour.toString().padStart(2, "0")}:00`
+  );
+
+  const dataset = {
+    label: "Consumo Medio Orario (kWh)",
+    data: data.map((item) => item.averageConsumption),
+    borderColor: "rgba(75, 192, 192, 1)",
+    backgroundColor: "rgba(75, 192, 192, 0.2)",
+    fill: true,
+  };
+
+  return {
+    labels,
+    datasets: [dataset],
+  };
+};
+
+/**
+ * Componente React che visualizza un grafico dei consumi medi orari per l'edificio selezionato.
+ * Supporta la selezione del periodo temporale, zoom/pan e l'esportazione in PDF.
+ *
+ * @component
+ * @example
+ * return (
+ *   &lt;HourlyAverageConsumptionTotalChart />
+ * )
+ *
+ * @returns {JSX.Element} Un componente React con grafico, selettore di edificio e time range picker.
+ */
+const HourlyAverageConsumptionTotalChart = () => {
+  const { startDate, endDate, activeRange, handleSelectRange } =
+    useTimeRange("week");
+  const [data, setData] = useState(null);
+  const [constantValue, setConstantValue] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [selectedBuilding, setSelectedBuilding] = useState(null);
+  const [buildings, setBuildings] = useState([]);
+  const chartRef = useRef();
+
+  /**
+   * Recupera l'elenco degli edifici disponibili.
+   *
+   * @async
+   * @function fetchBuildings
+   * @returns {Promise&lt;void>}
+   */
+  const fetchBuildings = async () => {
+    try {
+      const response = await fetchMetersData();
+      if (response) {
+        const buildingOptions = Object.keys(response).map((building) => ({
+          value: building,
+          label: building,
+        }));
+        setBuildings(buildingOptions);
+      }
+    } catch (error) {
+      console.error("Errore nel recupero degli edifici:", error);
+    }
+  };
+
+  /**
+   * Recupera i dati di consumo medio orario per l'edificio selezionato e il periodo specificato.
+   *
+   * @async
+   * @function fetchData
+   * @returns {Promise&lt;void>}
+   */
+  const fetchData = async () => {
+    setIsLoading(true);
+
+    try {
+      const response = await fetchHourlyAverageConsumptionTotal(
+        startDate,
+        endDate,
+        selectedBuilding?.value // Passa il filtro sull'edificio
+      );
+
+      if (response.error) {
+        console.error("Errore nel recupero dei dati:", response.error);
+        return;
+      }
+
+      const chartData = generateTimeSeriesData(response.hourlyData);
+      setConstantValue(response.constantValue);
+      setData(chartData);
+    } catch (error) {
+      console.error("Errore nel recupero dei dati:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  /**
+   * Effettua la chiamata iniziale per recuperare l'elenco degli edifici disponibili.
+   */
+  useEffect(() => {
+    fetchBuildings();
+  }, []);
+
+  /**
+   * Recupera i dati aggiornati ogni volta che il periodo temporale o l'edificio selezionato cambiano.
+   */
+  useEffect(() => {
+    if (startDate &amp;&amp; endDate) {
+      fetchData();
+    }
+  }, [startDate, endDate, selectedBuilding]);
+
+  /**
+   * Esporta il grafico corrente in un file PDF.
+   *
+   * @function handleExportToPDF
+   * @returns {void}
+   */
+  const handleExportToPDF = () => {
+    if (chartRef.current) {
+      const chartElement =
+        chartRef.current.querySelector("canvas") || chartRef.current;
+
+      html2canvas(chartElement).then((canvas) => {
+        const pdf = new jsPDF("l", "mm", "a4");
+        const imgData = canvas.toDataURL("image/png");
+
+        pdf.setFontSize(20);
+        pdf.text(`Grafico consumo medio per ora del giorno`, 10, 10);
+        pdf.setFontSize(18);
+        pdf.text(
+          `Periodo: ${new Date(startDate).toLocaleString()} - ${new Date(
+            endDate
+          ).toLocaleString()}`,
+          10,
+          20
+        );
+
+        const imgWidth = 287;
+        const imgHeight = (canvas.height / canvas.width) * imgWidth;
+        const imgX = 10;
+        const imgY = 40;
+
+        pdf.addImage(imgData, "PNG", imgX, imgY, imgWidth, imgHeight);
+        pdf.save(`grafico-consumi.pdf`);
+      });
+    }
+  };
+
+  const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    animation: false,
+    plugins: {
+      legend: { position: "top" },
+      zoom: {
+        pan: { enabled: true, mode: "xy", speed: 0.5, modifierKey: "ctrl" },
+        zoom: { wheel: { enabled: true }, drag: { enabled: true }, mode: "xy" },
+      },
+      annotation: {
+        annotations: {
+          line1: {
+            type: "line",
+            yMin: constantValue,
+            yMax: constantValue,
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 2,
+            borderDash: [5, 5],
+            label: {
+              content: `Valore Medio Costante: ${constantValue.toFixed(2)} kWh`,
+              enabled: true,
+              position: "center",
+              backgroundColor: "rgba(255, 99, 132, 0.7)",
+              font: { size: 14 },
+            },
+          },
+        },
+      },
+    },
+    scales: {
+      x: { title: { display: true, text: "Ora del Giorno" } },
+      y: {
+        title: { display: true, text: "Avg(Consumi) Orario" },
+        beginAtZero: true,
+      },
+    },
+  };
+
+  return (
+    &lt;div className="time-series-data">
+      &lt;div className="mb-4">
+        &lt;h2 className="text-lg font-bold mb-2">Seleziona Edificio&lt;/h2>
+        &lt;Select
+          options={buildings}
+          value={selectedBuilding}
+          onChange={setSelectedBuilding}
+          placeholder="Seleziona un edificio..."
+          isClearable
+        />
+      &lt;/div>
+
+      &lt;TimeRangePicker
+        defaultRange={activeRange}
+        onSelectRange={handleSelectRange}
+        isLoading={isLoading}
+        showRealtimeCheckbox={true}
+      />
+
+      &lt;button
+        className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+        onClick={handleExportToPDF}
+      >
+        Esporta in PDF
+      &lt;/button>
+
+      {isLoading &amp;&amp; (
+        &lt;div className="flex justify-center items-center mt-6">
+          &lt;div className="animate-spin border-t-4 border-blue-500 border-solid rounded-full w-6 h-6">&lt;/div>
+        &lt;/div>
+      )}
+
+      &lt;div className="results mt-8" ref={chartRef}>
+        {data ? (
+          &lt;Line data={data} options={chartOptions} />
+        ) : (
+          !isLoading &amp;&amp; &lt;p>Nessun dato disponibile.&lt;/p>
+        )}
+      &lt;/div>
+    &lt;/div>
+  );
+};
+
+export default HourlyAverageConsumptionTotalChart;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:16 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

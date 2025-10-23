@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>controllers/energyDataController.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">controllers/energyDataController.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview
+ * Questo file gestisce le richieste HTTP per ottenere dati energetici filtrati in vari formati e per diverse esigenze, come i consumi totali, valori live, e grafici.
+ * Le richieste vengono inviate al servizio `energyDataService` che si occupa di recuperare i dati dal database o da altre fonti.
+ * Ogni endpoint si occupa di specifici filtri e calcoli, come consumi totali, medie orarie, grafici settimanali, e altro.
+ *
+ * Ogni funzione di questo file verifica la validità dei parametri della query string, come date e altri filtri, e restituisce i risultati in formato JSON.
+ * Se si verificano errori durante l'esecuzione, viene restituito un messaggio di errore con codice HTTP appropriato.
+ *
+ * @module energyDataController
+ */
+
+const energyDataService = require("../services/energyDataService");
+
+/**
+ * Funzione per ottenere i dati energetici filtrati in base ai parametri passati nella query string.
+ * La risposta è un JSON contenente i dati filtrati.
+ *
+ * @async
+ * @function getValuesByFilter
+ * @param {Object} req - La richiesta HTTP, contenente i parametri di filtro nella query string (startDate, endDate, fields, altri filtri).
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati filtrati al client.
+ * @returns {Object} - Risultati dei dati energetici filtrati.
+ * @throws {Error} - Se le date non sono presenti o non valide.
+ */
+const getValuesByFilter = async (req, res) => {
+  try {
+    const filters = req.query;
+    const { startDate, endDate, fields, ...otherFilters } = filters;
+
+    if (!startDate || !endDate) {
+      return res
+        .status(400)
+        .json({ message: "Le date di inizio e fine sono obbligatorie" });
+    }
+
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+
+    if (isNaN(start) || isNaN(end)) {
+      return res.status(400).json({
+        message:
+          "Le date devono essere nel formato ISO valido (es. 2023-01-01T00:00:00Z)",
+      });
+    }
+
+    const energyData = await energyDataService.getValuesByFilter(
+      start,
+      end,
+      fields,
+      otherFilters
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    console.error("Errore nel recupero dei dati:", error);
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per ottenere i dati energetici live per un edificio specifico.
+ * La risposta è un JSON contenente i dati live per l'edificio richiesto.
+ *
+ * @async
+ * @function getLiveValuesByBuilding
+ * @param {Object} req - La richiesta HTTP, contenente l'id dell'edificio nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati live al client.
+ * @returns {Object} - Risultato dei dati live per l'edificio.
+ * @throws {Error} - Se si verifica un errore nel recupero dei dati live.
+ */
+const getLiveValuesByBuilding = async (req, res) => {
+  const { building } = req.query;
+  try {
+    const energyData = await energyDataService.getLiveValuesByBuilding(
+      building
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per ottenere i dati energetici live per più edifici o altre categorie generali.
+ * La risposta è un JSON contenente i dati live in base ai filtri passati.
+ *
+ * @async
+ * @function getLiveValues
+ * @param {Object} req - La richiesta HTTP, contenente i filtri nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati live al client.
+ * @returns {Object} - Risultato dei dati live.
+ * @throws {Error} - Se si verifica un errore nel recupero dei dati live.
+ */
+const getLiveValues = async (req, res) => {
+  const filters = req.query;
+  try {
+    const energyData = await energyDataService.getLiveValues(filters);
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per calcolare i consumi totali di energia in un intervallo di tempo definito da `startDate` e `endDate`.
+ * La risposta è un JSON contenente i dati del consumo totale.
+ *
+ * @async
+ * @function getTotalConsumption
+ * @param {Object} req - La richiesta HTTP, contenente `startDate` e `endDate` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati del consumo totale al client.
+ * @returns {Object} - Risultato dei consumi totali.
+ * @throws {Error} - Se si verifica un errore nel recupero dei consumi totali.
+ */
+const getTotalConsumption = async (req, res) => {
+  const { startDate, endDate } = req.query;
+  try {
+    const energyData = await energyDataService.getTotalConsumption(
+      startDate,
+      endDate
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per calcolare i consumi totali di energia per un edificio specifico.
+ * La risposta è un JSON contenente i dati del consumo totale per l'edificio richiesto.
+ *
+ * @async
+ * @function getTotalConsumptionByBuilding
+ * @param {Object} req - La richiesta HTTP, contenente `startDate` e `endDate` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati del consumo totale per edificio al client.
+ * @returns {Object} - Risultato dei consumi totali per edificio.
+ * @throws {Error} - Se si verifica un errore nel recupero dei consumi totali per edificio.
+ */
+const getTotalConsumptionByBuilding = async (req, res) => {
+  const { startDate, endDate } = req.query;
+  try {
+    const energyData = await energyDataService.getTotalConsumptionByBuilding(
+      startDate,
+      endDate
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per generare un grafico a barre per l'analisi del consumo energetico per edificio.
+ * La risposta è un JSON contenente i dati necessari per costruire il grafico.
+ *
+ * @async
+ * @function getBarChartByBuilding
+ * @param {Object} req - La richiesta HTTP, contenente i parametri per il grafico nella query string (startDate, endDate, buildings, impianti).
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati del grafico al client.
+ * @returns {Object} - Risultato dei dati per il grafico a barre.
+ * @throws {Error} - Se si verifica un errore nel recupero dei dati per il grafico.
+ */
+const getBarChartByBuilding = async (req, res) => {
+  const { startDate, endDate, buildings, impianti } = req.query;
+  try {
+    const energyData = await energyDataService.getBarChartByBuilding(
+      startDate,
+      endDate,
+      buildings,
+      impianti
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per recuperare i consumi settimanali, suddivisi per giorno, in un intervallo di tempo definito da `startDate` e `endDate`.
+ * La risposta è un JSON contenente i consumi settimanali per giorno.
+ *
+ * @async
+ * @function getWeeklyConsumptionByDay
+ * @param {Object} req - La richiesta HTTP, contenente `startDate`, `endDate`, `buildings`, e `impianti` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati dei consumi settimanali per giorno al client.
+ * @returns {Object} - Risultato dei consumi settimanali per giorno.
+ * @throws {Error} - Se si verifica un errore nel recupero dei consumi settimanali.
+ */
+const getWeeklyConsumptionByDay = async (req, res) => {
+  const { startDate, endDate, buildings, impianti } = req.query;
+  try {
+    const chartData = await energyDataService.getWeeklyConsumptionByDay(
+      startDate,
+      endDate,
+      buildings,
+      impianti
+    );
+    res.status(200).json(chartData);
+  } catch (error) {
+    res.status(500).json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per recuperare le informazioni sui contatori energetici.
+ * La risposta è un JSON contenente i dettagli dei contatori.
+ *
+ * @async
+ * @function getInfoMeters
+ * @param {Object} req - La richiesta HTTP.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare le informazioni dei contatori al client.
+ * @returns {Object} - Risultato delle informazioni sui contatori.
+ * @throws {Error} - Se si verifica un errore nel recupero delle informazioni.
+ */
+const getInfoMeters = async (req, res) => {
+  try {
+    const energyData = await energyDataService.getInfoMeters();
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per recuperare i dati annidati (nested) per un campo specifico.
+ * La risposta è un JSON contenente i dati annidati.
+ *
+ * @async
+ * @function getNestedFields
+ * @param {Object} req - La richiesta HTTP, contenente `fieldName`, `startDate`, `endDate`, `buildings`, e `impianti` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i dati annidati al client.
+ * @returns {Object} - Risultato dei dati annidati per il campo richiesto.
+ * @throws {Error} - Se si verifica un errore nel recupero dei dati annidati.
+ */
+const getNestedFields = async (req, res) => {
+  const { fieldName, startDate, endDate, buildings, impianti } = req.query;
+  try {
+    const energyData = await energyDataService.getNestedFields(
+      fieldName,
+      startDate,
+      endDate,
+      buildings,
+      impianti
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per calcolare i consumi orari medi in un intervallo di tempo definito da `startDate` e `endDate`.
+ * La risposta è un JSON contenente i consumi orari medi.
+ *
+ * @async
+ * @function getHourlyAverageConsumption
+ * @param {Object} req - La richiesta HTTP, contenente `startDate`, `endDate`, `buildings`, e `impianti` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i consumi orari medi al client.
+ * @returns {Object} - Risultato dei consumi orari medi.
+ * @throws {Error} - Se si verifica un errore nel recupero dei consumi orari medi.
+ */
+const getHourlyAverageConsumption = async (req, res) => {
+  const { startDate, endDate, buildings, impianti } = req.query;
+  try {
+    const energyData = await energyDataService.getHourlyAverageConsumption(
+      startDate,
+      endDate,
+      buildings,
+      impianti
+    );
+    return res.status(200).json(energyData);
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ message: "Errore nel recupero dei dati", error });
+  }
+};
+
+/**
+ * Funzione per calcolare i consumi orari medi totali in un intervallo di tempo definito da `startDate` e `endDate`.
+ * La risposta è un JSON contenente i consumi orari medi e il valore medio costante.
+ *
+ * @async
+ * @function getHourlyAverageConsumptionTotal
+ * @param {Object} req - La richiesta HTTP, contenente `startDate`, `endDate` e `building` nella query string.
+ * @param {Object} res - La risposta HTTP, utilizzata per inviare i consumi orari medi al client.
+ * @returns {Object} - Risultato dei consumi orari medi totali.
+ * @throws {Error} - Se si verifica un errore nel recupero dei consumi orari medi totali.
+ */
+const getHourlyAverageConsumptionTotal = async (req, res) => {
+  const { startDate, endDate, building } = req.query;
+
+  try {
+    // Chiama la funzione di servizio per ottenere i dati
+    const rawData = await energyDataService.getHourlyAverageConsumptionTotal(
+      startDate,
+      endDate,
+      building
+    );
+
+    // Rispondi con i dati calcolati
+    return res.status(200).json(rawData);
+  } catch (error) {
+    // Gestisci eventuali errori
+    console.error("Errore nel calcolo dei consumi orari medi:", error.message);
+    return res.status(500).json({
+      message: "Errore nel recupero dei dati dei consumi orari medi",
+      error: error.message,
+    });
+  }
+};
+
+module.exports = {
+  getValuesByFilter,
+  getLiveValuesByBuilding,
+  getLiveValues,
+  getTotalConsumption,
+  getTotalConsumptionByBuilding,
+  getBarChartByBuilding,
+  getInfoMeters,
+  getNestedFields,
+  getWeeklyConsumptionByDay,
+  getHourlyAverageConsumption,
+  getHourlyAverageConsumptionTotal,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

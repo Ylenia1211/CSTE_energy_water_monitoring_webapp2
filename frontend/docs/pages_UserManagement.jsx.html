@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>pages/UserManagement.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AdminProtectedRoute.html">AdminProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-AdminProtectedRoute.html#~AdminProtectedRoute">AdminProtectedRoute</a></li></ul></li><li><a href="module-AdvancedAnalysis.html">AdvancedAnalysis</a><ul class='methods'><li data-type='method'><a href="module-AdvancedAnalysis.html#~AdvancedAnalysis">AdvancedAnalysis</a></li></ul></li><li><a href="module-AlertNotifications.html">AlertNotifications</a><ul class='methods'><li data-type='method'><a href="module-AlertNotifications.html#~AlertNotifications">AlertNotifications</a></li></ul></li><li><a href="module-AppRoutes.html">AppRoutes</a><ul class='methods'><li data-type='method'><a href="module-AppRoutes.html#~AppRoutes">AppRoutes</a></li></ul></li><li><a href="module-BarChart.html">BarChart</a></li><li><a href="module-BuildingEnergyConsumption.html">BuildingEnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumption.html#~BuildingEnergyConsumption">BuildingEnergyConsumption</a></li></ul></li><li><a href="module-BuildingEnergyConsumptionChartPanel.html">BuildingEnergyConsumptionChartPanel</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~BuildingEnergyConsumptionChartPanel">BuildingEnergyConsumptionChartPanel</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useBarChartData">useBarChartData</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useExport">useExport</a></li></ul></li><li><a href="module-BuildingFilterSelect.html">BuildingFilterSelect</a><ul class='methods'><li data-type='method'><a href="module-BuildingFilterSelect.html#~BuildingFilterSelect">BuildingFilterSelect</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~applyFilters">applyFilters</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~fetchBuildingsAndImpianti">fetchBuildingsAndImpianti</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleBuildingChange">handleBuildingChange</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleImpiantoChange">handleImpiantoChange</a></li></ul></li><li><a href="module-Button.html">Button</a><ul class='methods'><li data-type='method'><a href="module-Button.html#~Button">Button</a></li></ul></li><li><a href="module-ChartReportSelector.html">ChartReportSelector</a><ul class='methods'><li data-type='method'><a href="module-ChartReportSelector.html#~ChartReportSelector">ChartReportSelector</a></li></ul></li><li><a href="module-Dashboard.html">Dashboard</a><ul class='methods'><li data-type='method'><a href="module-Dashboard.html#~Dashboard">Dashboard</a></li></ul></li><li><a href="module-DashboardPanel.html">DashboardPanel</a><ul class='methods'><li data-type='method'><a href="module-DashboardPanel.html#~DashboardPanel">DashboardPanel</a></li></ul></li><li><a href="module-DraggableSection.html">DraggableSection</a><ul class='methods'><li data-type='method'><a href="module-DraggableSection.html#~DraggableSection">DraggableSection</a></li></ul></li><li><a href="module-Edifici.html">Edifici</a><ul class='methods'><li data-type='method'><a href="module-Edifici.html#~Edifici">Edifici</a></li></ul></li><li><a href="module-EnergyConsumption.html">EnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-EnergyConsumption.html#~EnergyConsumption">EnergyConsumption</a></li></ul></li><li><a href="module-ErrorDisplay.html">ErrorDisplay</a><ul class='methods'><li data-type='method'><a href="module-ErrorDisplay.html#~ErrorDisplay">ErrorDisplay</a></li></ul></li><li><a href="module-FilterContext.html">FilterContext</a></li><li><a href="module-Footer.html">Footer</a><ul class='methods'><li data-type='method'><a href="module-Footer.html#~Footer">Footer</a></li></ul></li><li><a href="module-Home.html">Home</a><ul class='methods'><li data-type='method'><a href="module-Home.html#~Home">Home</a></li></ul></li><li><a href="module-HourlyAverageConsumptionTotalChart.html">HourlyAverageConsumptionTotalChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~HourlyAverageConsumptionTotalChart">HourlyAverageConsumptionTotalChart</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchBuildings">fetchBuildings</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchData">fetchData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~generateTimeSeriesData">generateTimeSeriesData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~handleExportToPDF">handleExportToPDF</a></li></ul></li><li><a href="module-HourlyConsumptionChart.html">HourlyConsumptionChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyConsumptionChart.html#~HourlyConsumptionChart">HourlyConsumptionChart</a></li></ul></li><li><a href="module-Input.html">Input</a><ul class='methods'><li data-type='method'><a href="module-Input.html#~Input">Input</a></li></ul></li><li><a href="module-LoadingSpinner.html">LoadingSpinner</a><ul class='methods'><li data-type='method'><a href="module-LoadingSpinner.html#~LoadingSpinner">LoadingSpinner</a></li></ul></li><li><a href="module-LogFilter.html">LogFilter</a><ul class='methods'><li data-type='method'><a href="module-LogFilter.html#~LogFilter">LogFilter</a></li></ul></li><li><a href="module-Login.html">Login</a><ul class='methods'><li data-type='method'><a href="module-Login.html#~Login">Login</a></li></ul></li><li><a href="module-Logout.html">Logout</a><ul class='methods'><li data-type='method'><a href="module-Logout.html#~Logout">Logout</a></li></ul></li><li><a href="module-Logs.html">Logs</a><ul class='methods'><li data-type='method'><a href="module-Logs.html#~Logs">Logs</a></li></ul></li><li><a href="module-Menu.html">Menu</a><ul class='methods'><li data-type='method'><a href="module-Menu.html#~Menu">Menu</a></li></ul></li><li><a href="module-Navbar.html">Navbar</a><ul class='methods'><li data-type='method'><a href="module-Navbar.html#~Navbar">Navbar</a></li></ul></li><li><a href="module-NotificationContext.html">NotificationContext</a></li><li><a href="module-NotificationTable.html">NotificationTable</a><ul class='methods'><li data-type='method'><a href="module-NotificationTable.html#~NotificationTable">NotificationTable</a></li></ul></li><li><a href="module-Notifications.html">Notifications</a><ul class='methods'><li data-type='method'><a href="module-Notifications.html#~Notifications">Notifications</a></li></ul></li><li><a href="module-Panel.html">Panel</a></li><li><a href="module-PanelWrapper.html">PanelWrapper</a><ul class='methods'><li data-type='method'><a href="module-PanelWrapper.html#~PanelWrapper">PanelWrapper</a></li></ul></li><li><a href="module-Profile.html">Profile</a><ul class='methods'><li data-type='method'><a href="module-Profile.html#~Profile">Profile</a></li></ul></li><li><a href="module-ProtectedRoute.html">ProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-ProtectedRoute.html#~ProtectedRoute">ProtectedRoute</a></li></ul></li><li><a href="module-Register.html">Register</a><ul class='methods'><li data-type='method'><a href="module-Register.html#~Register">Register</a></li></ul></li><li><a href="module-ReportConfigurator.html">ReportConfigurator</a><ul class='methods'><li data-type='method'><a href="module-ReportConfigurator.html#~ReportConfigurator">ReportConfigurator</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~addSection">addSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~cancelEdit">cancelEdit</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~dataURItoBlob">dataURItoBlob</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~editSection">editSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~generatePDF">generatePDF</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragEnter">handleDragEnter</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragLeave">handleDragLeave</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleGetDescription">handleGetDescription</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~moveSection">moveSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~removeSection">removeSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~saveEditedSection">saveEditedSection</a></li></ul></li><li><a href="module-RequestPasswordReset.html">RequestPasswordReset</a><ul class='methods'><li data-type='method'><a href="module-RequestPasswordReset.html#~RequestPasswordReset">RequestPasswordReset</a></li></ul></li><li><a href="module-ResetPassword.html">ResetPassword</a><ul class='methods'><li data-type='method'><a href="module-ResetPassword.html#~ResetPassword">ResetPassword</a></li></ul></li><li><a href="module-ResultCard.html">ResultCard</a><ul class='methods'><li data-type='method'><a href="module-ResultCard.html#~ResultCard">ResultCard</a></li></ul></li><li><a href="module-Settings.html">Settings</a><ul class='methods'><li data-type='method'><a href="module-Settings.html#~Settings">Settings</a></li><li data-type='method'><a href="module-Settings.html#~checkIfUserIsObserving">checkIfUserIsObserving</a></li><li data-type='method'><a href="module-Settings.html#~handleToggleNotification">handleToggleNotification</a></li></ul></li><li><a href="module-TabMenuItem.html">TabMenuItem</a><ul class='methods'><li data-type='method'><a href="module-TabMenuItem.html#~TabMenuItem">TabMenuItem</a></li></ul></li><li><a href="module-TimeRangePicker.html">TimeRangePicker</a><ul class='methods'><li data-type='method'><a href="module-TimeRangePicker.html#~TimeRangePicker">TimeRangePicker</a></li></ul></li><li><a href="module-TimeSeriesChart.html">TimeSeriesChart</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChart.html#~TimeSeriesChartComponent">TimeSeriesChartComponent</a></li><li data-type='method'><a href="module-TimeSeriesChart.html#~getRandomColor">getRandomColor</a></li></ul></li><li><a href="module-TimeSeriesChartByBuilding.html">TimeSeriesChartByBuilding</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChartByBuilding.html#~TimeSeriesChartByBuilding">TimeSeriesChartByBuilding</a></li></ul></li><li><a href="module-TimeSeriesDataComponent.html">TimeSeriesDataComponent</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesDataComponent.html#~TimeSeriesDataComponent">TimeSeriesDataComponent</a></li></ul></li><li><a href="module-Unauthorized.html">Unauthorized</a><ul class='methods'><li data-type='method'><a href="module-Unauthorized.html#~Unauthorized">Unauthorized</a></li></ul></li><li><a href="module-UserManagement.html">UserManagement</a><ul class='methods'><li data-type='method'><a href="module-UserManagement.html#~UserManagement">UserManagement</a></li><li data-type='method'><a href="module-UserManagement.html#~cancelDelete">cancelDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~confirmDelete">confirmDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~fetchUsers">fetchUsers</a></li><li data-type='method'><a href="module-UserManagement.html#~handleAddUser">handleAddUser</a></li><li data-type='method'><a href="module-UserManagement.html#~handleCancel">handleCancel</a></li><li data-type='method'><a href="module-UserManagement.html#~handleChange">handleChange</a></li><li data-type='method'><a href="module-UserManagement.html#~handleDelete">handleDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~handleEdit">handleEdit</a></li><li data-type='method'><a href="module-UserManagement.html#~handleSave">handleSave</a></li><li data-type='method'><a href="module-UserManagement.html#~resetForm">resetForm</a></li></ul></li><li><a href="module-WeeklyBarChart.html">WeeklyBarChart</a><ul class='methods'><li data-type='method'><a href="module-WeeklyBarChart.html#~WeeklyBarChart">WeeklyBarChart</a></li></ul></li><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumption">fetchHourlyAverageConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumptionTotal">fetchHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li><a href="module-exportAPI.html">exportAPI</a></li><li><a href="module-fileAPI.html">fileAPI</a></li><li><a href="module-logsAPI.html">logsAPI</a></li><li><a href="module-main.html">main</a><ul class='methods'><li data-type='method'><a href="module-main.html#~renderApp">renderApp</a></li></ul></li><li><a href="module-observersAPI.html">observersAPI</a><ul class='methods'><li data-type='method'><a href="module-observersAPI.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observersAPI.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observersAPI.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observersAPI.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queriesAPI.html">queriesAPI</a><ul class='methods'><li data-type='method'><a href="module-queriesAPI.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-socketAPI.html">socketAPI</a><ul class='methods'><li data-type='method'><a href="module-socketAPI.html#~setupSocketListeners">setupSocketListeners</a></li></ul></li><li><a href="module-store.html">store</a></li><li><a href="module-useBuildingFilters.html">useBuildingFilters</a><ul class='methods'><li data-type='method'><a href="module-useBuildingFilters.html#~useBuildingFilters">useBuildingFilters</a></li></ul></li><li><a href="module-useTimeRange.html">useTimeRange</a><ul class='methods'><li data-type='method'><a href="module-useTimeRange.html#~useTimeRange">useTimeRange</a></li></ul></li><li><a href="module-userAPI.html">userAPI</a><ul class='methods'><li data-type='method'><a href="module-userAPI.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userAPI.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userAPI.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userAPI.html#~getUserProfile">getUserProfile</a></li><li data-type='method'><a href="module-userAPI.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userAPI.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserDetails">updateUserDetails</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserProfile">updateUserProfile</a></li></ul></li><li><a href="module-userSlice.html">userSlice</a><ul class='methods'><li data-type='method'><a href="module-userSlice.html#~middleware">middleware</a></li><li data-type='method'><a href="module-userSlice.html#~serializableMiddleware">serializableMiddleware</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">pages/UserManagement.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @fileoverview
+ * Componente per la gestione degli utenti, che consente di visualizzare, aggiungere,
+ * modificare e eliminare utenti. Inoltre, il componente gestisce la visualizzazione
+ * delle informazioni relative agli utenti, nonché la gestione degli errori e la
+ * conferma delle azioni di eliminazione.
+ *
+ * @module UserManagement
+ */
+
+import React, { useEffect, useState, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getAllUsers,
+  updateUserDetails,
+  deleteUser,
+  addUser,
+} from "../utils/userAPI";
+import { updateUser } from "../slices/userSlice";
+
+/**
+ * Componente che gestisce la visualizzazione, l'aggiunta, la modifica e l'eliminazione
+ * degli utenti. Mostra anche un messaggio di errore se ci sono problemi con la gestione
+ * degli utenti.
+ *
+ * @function UserManagement
+ * @returns {JSX.Element} Una vista per la gestione degli utenti con modali per l'aggiunta,
+ * modifica, eliminazione e conferma delle azioni.
+ */
+const UserManagement = () => {
+  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.user.user);
+  const privilegi = ["Utente base", "Amministratore"];
+  const [users, setUsers] = useState([]);
+  const [editingUser, setEditingUser] = useState(null);
+  const [formData, setFormData] = useState({
+    username: "",
+    email: "",
+    privileges: "",
+    password: "",
+  });
+  const [showModal, setShowModal] = useState(false);
+  const [showConfirmDelete, setShowConfirmDelete] = useState(false);
+  const [userToDelete, setUserToDelete] = useState(null);
+  const [error, setError] = useState(null);
+  const [showAddUserModal, setShowAddUserModal] = useState(false);
+
+  /**
+   * Funzione per resettare i dati del form e gli errori
+   *
+   * @function resetForm
+   */
+  const resetForm = () => {
+    setFormData({ username: "", email: "", privileges: "", password: "" });
+    setEditingUser(null);
+    setError(null);
+  };
+
+  /**
+   * Funzione per recuperare la lista degli utenti tramite API.
+   *
+   * @function fetchUsers
+   * @async
+   * @returns {Promise&lt;void>}
+   */
+  const fetchUsers = useCallback(async () => {
+    try {
+      const data = await getAllUsers();
+      setUsers(data);
+    } catch (error) {
+      console.error("Errore nel recupero degli utenti:", error);
+      setError("Errore nel recupero degli utenti. Riprova più tardi.");
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchUsers();
+  }, [fetchUsers]);
+
+  /**
+   * Funzione per gestire la modifica di un utente esistente.
+   *
+   * @function handleEdit
+   * @param {Object} user - L'utente da modificare.
+   */
+  const handleEdit = (user) => {
+    setEditingUser(user);
+    setFormData({
+      username: user.username,
+      email: user.email,
+      privileges: user.privileges,
+    });
+    setShowModal(true);
+  };
+
+  /**
+   * Funzione per gestire i cambiamenti nei campi del form.
+   *
+   * @function handleChange
+   * @param {React.ChangeEvent} e - L'evento di cambiamento dell'input.
+   */
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  /**
+   * Funzione per annullare una modifica o l'aggiunta di un utente.
+   *
+   * @function handleCancel
+   */
+  const handleCancel = () => {
+    setShowModal(false);
+    setShowAddUserModal(false);
+    resetForm();
+  };
+
+  /**
+   * Funzione per salvare le modifiche apportate a un utente.
+   *
+   * @function handleSave
+   * @async
+   * @throws {Error} Se l'utente non può diventare amministratore.
+   */
+  const handleSave = async () => {
+    try {
+      if (formData.privileges == "1" &amp;&amp; currentUser.privileges != "1") {
+        throw new Error(
+          "Non puoi concedere il ruolo di amministratore a un altro utente."
+        );
+      }
+      const updatedUser = await updateUserDetails(editingUser._id, formData);
+      setUsers(
+        users.map((user) => (user._id === updatedUser._id ? updatedUser : user))
+      );
+      setShowModal(false);
+      resetForm();
+    } catch (error) {
+      console.error("Errore nell'aggiornamento dell'utente:", error);
+      setError("Errore nell'aggiornamento dell'utente: " + error.message);
+    }
+  };
+
+  /**
+   * Funzione per gestire l'eliminazione di un utente.
+   *
+   * @function handleDelete
+   * @param {Object} user - L'utente da eliminare.
+   */
+  const handleDelete = (user) => {
+    setUserToDelete(user);
+    setShowConfirmDelete(true);
+  };
+
+  /**
+   * Funzione per confermare l'eliminazione di un utente.
+   *
+   * @function confirmDelete
+   * @async
+   */
+  const confirmDelete = async () => {
+    try {
+      await deleteUser(userToDelete._id);
+      setUsers(users.filter((user) => user._id !== userToDelete._id));
+      setShowConfirmDelete(false);
+      setUserToDelete(null);
+    } catch (error) {
+      console.error("Errore nell'eliminazione dell'utente:", error);
+      setError("Errore nell'eliminazione dell'utente: " + error.message);
+    }
+  };
+
+  /**
+   * Funzione per annullare l'eliminazione di un utente.
+   *
+   * @function cancelDelete
+   */
+  const cancelDelete = () => {
+    setShowConfirmDelete(false);
+    setUserToDelete(null);
+  };
+
+  /**
+   * Funzione per aggiungere un nuovo utente.
+   *
+   * @function handleAddUser
+   * @async
+   * @throws {Error} Se l'utente non può creare un amministratore.
+   */
+  const handleAddUser = async () => {
+    try {
+      if (formData.privileges == "1" &amp;&amp; currentUser.privileges != "1") {
+        throw new Error(
+          "Non puoi creare un nuovo utente con il ruolo di amministratore."
+        );
+      }
+      const newUser = await addUser(formData);
+      setUsers([...users, newUser]);
+      setShowAddUserModal(false);
+      resetForm();
+    } catch (error) {
+      console.error("Errore nell'aggiunta dell'utente:", error);
+      setError("Errore nell'aggiunta dell'utente: " + error.message);
+    }
+  };
+
+  if (currentUser.privileges != "1") {
+    return (
+      &lt;div className="flex justify-center items-center h-screen text-xl">
+        Accesso non autorizzato.
+      &lt;/div>
+    );
+  }
+
+  return (
+    &lt;div className="mt-4 max-w-6xl mx-auto p-6 bg-white rounded shadow-md">
+      &lt;h1 className="text-2xl font-bold mb-4">Gestione Utenti&lt;/h1>
+      {error &amp;&amp; (
+        &lt;div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-4">
+          {error}
+        &lt;/div>
+      )}
+
+      &lt;div className="flex justify-start mb-4">
+        &lt;button
+          onClick={() => setShowAddUserModal(true)}
+          className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+        >
+          Aggiungi Utente
+        &lt;/button>
+      &lt;/div>
+
+      {/* Tabella utenti */}
+      &lt;table className="w-full border-collapse">
+        &lt;thead>
+          &lt;tr>
+            &lt;th className="border-b py-2 px-4">Username&lt;/th>
+            &lt;th className="border-b py-2 px-4">Email&lt;/th>
+            &lt;th className="border-b py-2 px-4">Ruolo&lt;/th>
+            &lt;th className="border-b py-2 px-4">Azioni&lt;/th>
+          &lt;/tr>
+        &lt;/thead>
+        &lt;tbody>
+          {users.map((user, index) => (
+            &lt;tr key={user._id || `user-${index}`}>
+              &lt;td className="border-b py-2 px-4">{user.username}&lt;/td>
+              &lt;td className="border-b py-2 px-4">{user.email}&lt;/td>
+              &lt;td className="border-b py-2 px-4">
+                {privilegi[user.privileges]}
+              &lt;/td>
+              &lt;td className="border-b py-2 px-4">
+                &lt;button
+                  onClick={() => handleEdit(user)}
+                  className="px-4 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600"
+                >
+                  Modifica
+                &lt;/button>
+                &lt;button
+                  onClick={() => handleDelete(user)}
+                  className="ml-2 px-4 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+                >
+                  Elimina
+                &lt;/button>
+              &lt;/td>
+            &lt;/tr>
+          ))}
+        &lt;/tbody>
+      &lt;/table>
+
+      {/* Modale Modifica */}
+      {showModal &amp;&amp; (
+        &lt;div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+          &lt;div className="bg-white w-3/4 max-w-2xl p-8 rounded shadow-lg">
+            &lt;h2 className="text-xl mb-4">Modifica Utente&lt;/h2>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Username&lt;/label>
+              &lt;input
+                type="text"
+                name="username"
+                placeholder="Nome utente"
+                value={formData.username}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              />
+            &lt;/div>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Email&lt;/label>
+              &lt;input
+                type="email"
+                name="email"
+                placeholder="email@example.com"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              />
+            &lt;/div>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Ruolo&lt;/label>
+              &lt;select
+                name="privileges"
+                value={formData.privileges}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              >
+                &lt;option value="0">Utente base&lt;/option>
+                &lt;option value="1">Amministratore&lt;/option>
+              &lt;/select>
+            &lt;/div>
+            &lt;div className="flex justify-end">
+              &lt;button
+                onClick={handleCancel}
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+              >
+                Annulla
+              &lt;/button>
+              &lt;button
+                onClick={handleSave}
+                className="ml-2 px-4 py-2 bg-yellow-500  text-white rounded hover:bg-yellow-600"
+              >
+                Salva modifica
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      )}
+
+      {/* Modale Conferma Eliminazione */}
+      {showConfirmDelete &amp;&amp; (
+        &lt;div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+          &lt;div className="bg-white w-3/4 max-w-2xl p-8 rounded shadow-lg">
+            &lt;h2 className="text-xl mb-4">Confermi l'eliminazione?&lt;/h2>
+            &lt;p>
+              Sei sicuro di voler eliminare l'utente{" "}
+              &lt;strong>{userToDelete?.username}&lt;/strong>?
+            &lt;/p>
+            &lt;div className="flex justify-end mt-4">
+              &lt;button
+                onClick={cancelDelete}
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+              >
+                Annulla
+              &lt;/button>
+              &lt;button
+                onClick={confirmDelete}
+                className="ml-2 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+              >
+                Elimina
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      )}
+
+      {/* Modale Aggiungi Utente */}
+      {showAddUserModal &amp;&amp; (
+        &lt;div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
+          &lt;div className="bg-white w-3/4 max-w-2xl p-8 rounded shadow-lg">
+            &lt;h2 className="text-xl mb-4">Aggiungi Utente&lt;/h2>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Username&lt;/label>
+              &lt;input
+                type="text"
+                name="username"
+                placeholder="Nome utente"
+                value={formData.username}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              />
+            &lt;/div>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Email&lt;/label>
+              &lt;input
+                type="email"
+                name="email"
+                placeholder="email@example.com"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              />
+            &lt;/div>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Password&lt;/label>
+              &lt;input
+                label="Password"
+                type="password"
+                name="password"
+                placeholder="••••••••"
+                required
+                className="w-full px-3 py-2 border rounded"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            &lt;/div>
+            &lt;div className="mb-4">
+              &lt;label className="block text-sm font-medium">Ruolo&lt;/label>
+              &lt;select
+                name="privileges"
+                value={formData.privileges}
+                onChange={handleChange}
+                className="w-full px-3 py-2 border rounded"
+              >
+                &lt;option value="0">Utente base&lt;/option>
+                &lt;option value="1">Amministratore&lt;/option>
+              &lt;/select>
+            &lt;/div>
+            &lt;div className="flex justify-end">
+              &lt;button
+                onClick={handleCancel}
+                className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400"
+              >
+                Annulla
+              &lt;/button>
+              &lt;button
+                onClick={handleAddUser}
+                className="ml-2 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+              >
+                Aggiungi
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      )}
+    &lt;/div>
+  );
+};
+
+export default UserManagement;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:16 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

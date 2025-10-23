@@ -1,0 +1,15 @@
+cffi==1.17.1
+charset-normalizer==3.4.2
+cryptography==45.0.5
+numpy==1.24.4
+pandas==2.0.3
+pdfminer.six==20231228
+pdfplumber==0.11.5
+pillow==10.4.0
+pycparser==2.22
+PyMuPDF==1.24.11
+pypdfium2==4.30.0
+python-dateutil==2.9.0.post0
+pytz==2025.2
+six==1.17.0
+tzdata==2025.2

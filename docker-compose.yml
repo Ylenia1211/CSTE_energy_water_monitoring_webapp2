@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+   backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    env_file:
+      - ./backend/.env
+    container_name: energy_monitor_backend
+    ports: 
+      - "5555:5555"
+    volumes:
+      - ./backend:/usr/src/app
+      - ./backend/src/config/keys:/app/keys:ro
+

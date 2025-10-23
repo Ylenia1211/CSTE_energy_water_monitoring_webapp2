@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>consumiAPI.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li></li><li><a href="module-exportAPI.html">exportAPI</a></li><li></li><li><a href="module-fileAPI.html">fileAPI</a></li><li></li><li><a href="module-logsAPI.html">logsAPI</a></li><li></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">consumiAPI.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace utils
+ * @fileoverview
+ * Modulo per interagire con l'API relativa ai consumi energetici.
+ *
+ * Questo modulo contiene diverse funzioni per recuperare i dati di consumo energetico, inclusi:
+ * - Consumi totali per un intervallo di tempo.
+ * - Consumi separati per edificio.
+ * - Dati per la generazione di grafici a barre.
+ * - Dati sui contatori e altre informazioni specifiche.
+ *
+ * Le funzioni di questo modulo si basano su Axios per inviare richieste HTTP al server.
+ * Ogni funzione gestisce gli errori e restituisce i dati ricevuti dal backend.
+ *
+ * @module consumiAPI
+ *  @requires axiosInstance
+ */
+
+import axiosInstance from "./api";
+
+const BASE_API = "/api";
+
+/**
+ * Recupera i consumi totali in un intervallo di tempo specificato.
+ *
+ * Invia una richiesta GET per ottenere i consumi totali tra `startDate` e `endDate`.
+ *
+ * @function
+ * @name fetchTotalConsumption
+ * @param {string} startDate - La data di inizio dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {string} endDate - La data di fine dell'intervallo, nel formato "YYYY-MM-DD".
+ * @returns {Promise&lt;Object>} Una promessa che risolve i consumi totali per l'intervallo specificato.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchTotalConsumption = async (startDate, endDate) => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/totalConsumption`, {
+      params: { startDate, endDate },
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error("Errore nella richiesta dei consumi: " + error.message);
+  }
+};
+
+/**
+ * Recupera i consumi separati per edificio in un intervallo di tempo specificato.
+ *
+ * Invia una richiesta GET per ottenere i consumi separati per ogni edificio tra `startDate` e `endDate`.
+ *
+ * @function
+ * @name fetchTotalConsumptionByBuilding
+ * @param {string} startDate - La data di inizio dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {string} endDate - La data di fine dell'intervallo, nel formato "YYYY-MM-DD".
+ * @returns {Promise&lt;Object>} Una promessa che risolve i consumi per ogni edificio nell'intervallo specificato.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchTotalConsumptionByBuilding = async (startDate, endDate) => {
+  try {
+    const response = await axiosInstance.get(
+      `${BASE_API}/totalConsumptionByBuilding`,
+      {
+        params: { startDate, endDate },
+      }
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error(
+      "Errore nella richiesta dei consumi per edificio: " + error.message
+    );
+  }
+};
+
+/**
+ * Recupera i dati per il grafico a barre sugli edifici in un intervallo di tempo specificato.
+ *
+ * Invia una richiesta GET per ottenere i dati per il grafico a barre separati per edifici e impianti.
+ *
+ * @function
+ * @name fetchBarChartDataByBuilding
+ * @param {string} startDate - La data di inizio dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {string} endDate - La data di fine dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {Array&lt;string>} [buildings=[]] - Un array di edifici per filtrare i dati. Se vuoto, verranno presi tutti gli edifici.
+ * @param {Array&lt;string>} [impianti=[]] - Un array di impianti per filtrare i dati. Se vuoto, verranno presi tutti gli impianti.
+ * @returns {Promise&lt;Object>} Una promessa che risolve i dati del grafico a barre per gli edifici specificati.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchBarChartDataByBuilding = async (
+  startDate,
+  endDate,
+  buildings = [],
+  impianti = []
+) => {
+  try {
+    const response = await axiosInstance.get(
+      `${BASE_API}/barChartDataBuilding`,
+      {
+        params: {
+          startDate,
+          endDate,
+          buildings: JSON.stringify(buildings),
+          impianti: JSON.stringify(impianti),
+        },
+      }
+    );
+    return response.data; // Assumiamo che i dati vengano restituiti come chartData
+  } catch (error) {
+    throw new Error(
+      "Errore nel recupero dei dati per il grafico: " + error.message
+    );
+  }
+};
+
+/**
+ * Recupera i dati settimanali per il grafico a barre sugli edifici in un intervallo di tempo specificato.
+ *
+ * Invia una richiesta GET per ottenere i dati settimanali per il grafico a barre separati per edifici e impianti.
+ *
+ * @function
+ * @name fetchWeeklyBarChartDataByBuilding
+ * @param {string} startDate - La data di inizio dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {string} endDate - La data di fine dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {Array&lt;string>} [buildings=[]] - Un array di edifici per filtrare i dati. Se vuoto, verranno presi tutti gli edifici.
+ * @param {Array&lt;string>} [impianti=[]] - Un array di impianti per filtrare i dati. Se vuoto, verranno presi tutti gli impianti.
+ * @returns {Promise&lt;Object>} Una promessa che risolve i dati settimanali per il grafico a barre per gli edifici specificati.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchWeeklyBarChartDataByBuilding = async (
+  startDate,
+  endDate,
+  buildings = [],
+  impianti = []
+) => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/weekly-consumption`, {
+      params: {
+        startDate,
+        endDate,
+        buildings: JSON.stringify(buildings),
+        impianti: JSON.stringify(impianti),
+      },
+    });
+    return response.data; // Assumiamo che i dati vengano restituiti come chartData
+  } catch (error) {
+    console.error(
+      "Errore nel recupero dei dati per il grafico: ",
+      error.message
+    );
+    throw new Error(
+      "Errore durante il recupero dei dati per il grafico: " + error.message
+    );
+  }
+};
+
+/**
+ * Recupera i dati sui contatori.
+ *
+ * Invia una richiesta GET per ottenere informazioni sui contatori disponibili.
+ *
+ * @function
+ * @name fetchMetersData
+ * @returns {Promise&lt;Object>} Una promessa che risolve i dati sui contatori.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchMetersData = async () => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/info_meters`);
+    return response.data;
+  } catch (error) {
+    throw new Error("Errore nella richiesta dei consumi: " + error.message);
+  }
+};
+
+/**
+ * Recupera dati specifici in base a campi innestati.
+ *
+ * Invia una richiesta GET per ottenere dati specifici in base a un campo innestato, come impianti o edifici.
+ *
+ * @function
+ * @name fetchNestedFieldData
+ * @param {string} fieldName - Il nome del campo innestato per cui ottenere i dati.
+ * @param {string} startDate - La data di inizio dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {string} endDate - La data di fine dell'intervallo, nel formato "YYYY-MM-DD".
+ * @param {Array&lt;string>} [buildings=[]] - Un array di edifici per filtrare i dati. Se vuoto, verranno presi tutti gli edifici.
+ * @param {Array&lt;string>} [impianti=[]] - Un array di impianti per filtrare i dati. Se vuoto, verranno presi tutti gli impianti.
+ * @returns {Promise&lt;Object>} Una promessa che risolve i dati del campo specificato.
+ * @throws {Error} Se la richiesta fallisce, viene sollevato un errore con il messaggio di errore.
+ */
+export const fetchNestedFieldData = async (
+  fieldName,
+  startDate,
+  endDate,
+  buildings = [],
+  impianti = []
+) => {
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/nestedFieldData`, {
+      params: {
+        fieldName,
+        startDate,
+        endDate,
+        buildings: JSON.stringify(buildings),
+        impianti: JSON.stringify(impianti),
+      },
+    });
+    return response.data; // I dati sono restituiti dal backend
+  } catch (error) {
+    throw new Error(
+      `Errore nel recupero dei dati per il campo ${fieldName}: ${error.message}`
+    );
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Fri Dec 13 2024 12:39:39 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

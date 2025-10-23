@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>services/exportPDFService.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">services/exportPDFService.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace services
+ * @fileoverview
+ * Questo modulo permette la generazione dinamica di documenti PDF utilizzando la libreria PDFKit,
+ * con supporto per sezioni di testo, grafici e pagine multiple.
+ * @module exportExcelService
+ */
+
+const PDFDocument = require("pdfkit");
+const path = require("path");
+const fs = require("fs");
+const sizeOf = require("image-size");
+const moment = require("moment");
+
+/**
+ * Pulisce un oggetto rimuovendo tutte le proprietà con valori vuoti.
+ *
+ * @param {Object} params - L'oggetto da pulire.
+ * @returns {Object} - L'oggetto pulito.
+ */
+const cleanParams = (params) => {
+  if (typeof params !== "object" || params === null) {
+    // Se `params` non è un oggetto valido, restituisci un oggetto vuoto
+    return {};
+  }
+
+  return Object.fromEntries(
+    Object.entries(params)
+      .map(([key, value]) => {
+        if (
+          typeof value === "object" &amp;&amp;
+          !Array.isArray(value) &amp;&amp;
+          value !== null
+        ) {
+          // Se il valore è un oggetto, chiama ricorsivamente `cleanParams`
+          const cleanedValue = cleanParams(value);
+          return [key, cleanedValue];
+        }
+        return [key, value];
+      })
+      .filter(([key, value]) => {
+        if (typeof value === "string") {
+          return value.trim() !== ""; // Mantieni solo se la stringa non è vuota
+        }
+        if (Array.isArray(value)) {
+          return value.length > 0; // Mantieni solo se l'array non è vuoto
+        }
+        if (typeof value === "object" &amp;&amp; value !== null) {
+          return Object.keys(value).length > 0; // Mantieni solo se l'oggetto non è vuoto
+        }
+        return value !== undefined &amp;&amp; value !== null; // Mantieni solo se il valore è definito e non null
+      })
+  );
+};
+
+/**
+ * Crea un documento PDF con un titolo e un array di sezioni.
+ * Ogni sezione può essere di tipo "text", "table" o "chart".
+ *
+ * @param {string} title - Il titolo del PDF.
+ * @param {Array} sections - Un array di sezioni da aggiungere al PDF.
+ * @returns {Promise&lt;Buffer>} - Una Promise che restituisce il PDF come Buffer.
+ */
+const createPDF = async (title, sections) => {
+  return new Promise((resolve, reject) => {
+    try {
+      const doc = new PDFDocument({ autoFirstPage: false });
+      const buffers = [];
+
+      doc.on("data", (chunk) => buffers.push(chunk));
+      doc.on("end", () => {
+        const pdfBuffer = Buffer.concat(buffers);
+        resolve(pdfBuffer);
+      });
+
+      doc.addPage();
+      doc
+        .fontSize(24)
+        .fillColor("black")
+        .text(title || `Report dei consumi - ${new Date().toLocaleString()}`, {
+          align: "center",
+        });
+      doc.moveDown(1);
+
+      sections.forEach((section, index) => {
+        try {
+          console.log(`\nElaborazione della sezione ${index + 1}:`, section);
+          const currentY = doc.y;
+          console.log(
+            `Posizione Y corrente prima di elaborare la sezione: ${currentY}`
+          );
+
+          if (
+            index > 0 &amp;&amp;
+            (section.forceNewPage || shouldStartNewPage(doc, section))
+          ) {
+            console.log("Aggiunta nuova pagina per la sezione:", index + 1);
+            doc.addPage();
+          }
+
+          doc
+            .fontSize(18)
+            .fillColor("black")
+            .text(
+              `${section.config.title || `Sezione ${index + 1}`}${
+                section.config.chartDescription &amp;&amp;
+                section.config.chartDescription.title
+                  ? `: ${section.config.chartDescription.title}`
+                  : ""
+              }`,
+              { underline: true }
+            );
+
+          // Aggiungi la sezione specifica
+          switch (section.type) {
+            case "text":
+              addTextSection(doc, section.config);
+              break;
+            case "table":
+              // addTableSection(doc, section.config);
+              break;
+            case "chart":
+              addChartSection(doc, section.config);
+              break;
+            default:
+              doc.fontSize(12).text("Tipo di sezione non supportato.");
+              console.log(`Tipo di sezione non supportato: ${section.type}`);
+          }
+
+          const newY = doc.y;
+          doc.moveDown(1);
+          console.log(`Posizione Y dopo la sezione ${index + 1}: ${newY}`);
+        } catch (error) {
+          console.error(`Errore nella sezione ${index + 1}:`, error);
+        }
+      });
+
+      doc.end();
+      console.log("PDF creato con successo.");
+    } catch (error) {
+      console.error("Errore nella creazione del PDF:", error);
+      reject(error);
+    }
+  });
+};
+
+/**
+ * Determina se è necessario iniziare una nuova pagina nel PDF.
+ *
+ * @param {PDFDocument} doc - L'oggetto PDFKit.
+ * @param {Object} section - La sezione da aggiungere.
+ * @returns {boolean} - Restituisce `true` se una nuova pagina deve essere aggiunta, altrimenti `false`.
+ */
+const shouldStartNewPage = (doc, section) => {
+  const pageHeight = doc.page.height;
+  const currentY = doc.y;
+  console.log(
+    `Posizione Y corrente: ${currentY}, Altezza della pagina: ${pageHeight}`
+  );
+
+  const estimatedSectionHeight = estimateSectionHeight(section);
+  console.log(`Altezza stimata della sezione: ${estimatedSectionHeight}`);
+
+  // Verifica se la sezione può stare nella pagina corrente
+  if (currentY + estimatedSectionHeight > pageHeight) {
+    console.log(
+      "Spazio insufficiente per la sezione, aggiunta di una nuova pagina."
+    );
+    return true;
+  }
+  return false;
+};
+
+/**
+ * Stima l'altezza di una sezione per determinare se è necessaria una nuova pagina.
+ *
+ * @param {Object} section - La sezione da stimare.
+ * @returns {number} - L'altezza stimata della sezione in punti.
+ */
+const estimateSectionHeight = (section) => {
+  switch (section.type) {
+    case "text":
+      const textHeight = section.config.text.split("\n").length * 15 + 20;
+      console.log(`Altezza stimata per il testo: ${textHeight}`);
+      return textHeight;
+    case "chart":
+      const chartHeight = 350 + 20;
+      console.log(`Altezza stimata per il grafico: ${chartHeight}`);
+      return chartHeight;
+    default:
+      console.log(`Altezza stimata minima per una sezione non supportata: 50`);
+      return 50;
+  }
+};
+
+/**
+ * Aggiunge una sezione di testo al documento PDF.
+ *
+ * @param {PDFDocument} doc - L'oggetto PDFKit.
+ * @param {Object} config - La configurazione della sezione di testo.
+ * @param {string} config.text - Il testo da aggiungere.
+ * @param {number} [config.fontSize=12] - La dimensione del font.
+ * @param {string} [config.color='black'] - Il colore del testo.
+ * @param {string} [config.fontStyle=''] - Lo stile del font, ad esempio "bold", "italic", "underline".
+ * @param {string} [config.textAlign='left'] - L'allineamento del testo (left, right, center, justify).
+ * @throws {Error} - Se ci sono errori nei parametri.
+ */
+const addTextSection = (doc, config) => {
+  const {
+    text,
+    fontSize = 12,
+    color = "black",
+    fontStyle = "",
+    textAlign = "left",
+  } = config;
+
+  console.log("Config della sezione di testo:", config);
+
+  if (isNaN(fontSize) || fontSize &lt;= 0) {
+    throw new Error(
+      `fontSize deve essere un numero positivo valido. Ricevuto: ${fontSize}`
+    );
+  }
+
+  if (typeof text !== "string") {
+    throw new Error(
+      `Il testo deve essere una stringa valida. Ricevuto: ${text}`
+    );
+  }
+
+  if (typeof color !== "string") {
+    throw new Error(`Color deve essere una stringa valida. Ricevuto: ${color}`);
+  }
+
+  try {
+    doc.fontSize(fontSize).fillColor(color);
+  } catch (error) {
+    throw new Error(
+      `Errore nell'impostazione di fontSize, font, o color: ${error.message}`
+    );
+  }
+
+  if (fontStyle.includes("bold")) {
+    doc.font("Helvetica-Bold");
+  }
+  if (fontStyle.includes("italic")) {
+    doc.font("Helvetica-Oblique");
+  }
+  if (fontStyle.includes("underline")) {
+    doc.underline();
+  }
+
+  try {
+    console.log("Aggiunta del testo alla sezione.");
+    doc.text(text, {
+      align: textAlign,
+      lineBreak: true,
+    });
+  } catch (error) {
+    throw new Error(
+      `Errore nell'aggiungere il testo alla sezione: ${error.message}`
+    );
+  }
+
+  doc.font("Helvetica"); // Ripristina lo stile di default
+  console.log("Sezione di testo aggiunta con successo.");
+};
+
+/**
+ * Aggiunge una sezione di grafico al documento PDF.
+ *
+ * @param {PDFDocument} doc - L'oggetto PDFKit.
+ * @param {Object} config - La configurazione della sezione di grafico.
+ * @param {Object} [config.chartDescription] - La descrizione del grafico.
+ * @param {string} [config.chartDescription.title] - Il titolo del grafico.
+ * @param {string} [config.chartImageUrl] - Il percorso dell'immagine del grafico.
+ * @throws {Error} - Se ci sono errori nell'aggiungere l'immagine del grafico.
+ */
+const addChartSection = (doc, config) => {
+  if (config &amp;&amp; config.chartDescription) {
+    const chartDescription = config.chartDescription;
+
+    // Descrizione del grafico
+    const title = chartDescription.title || "";
+    const startDate = chartDescription.startDate
+      ? moment(chartDescription.startDate).format("DD/MM/YYYY HH:mm")
+      : "Non specificata";
+    const endDate = chartDescription.endDate
+      ? moment(chartDescription.endDate).format("DD/MM/YYYY HH:mm")
+      : "Non specificata";
+    const buildings =
+      chartDescription.filters.buildings.length > 0
+        ? chartDescription.filters.buildings.join(", ")
+        : "Nessun edificio selezionato";
+    const plants =
+      chartDescription.filters.impianti.length > 0
+        ? chartDescription.filters.impianti.join(", ")
+        : "Nessun impianto selezionato";
+
+    // Creazione della descrizione dettagliata
+    const descriptionText = `
+      Periodo: dal ${startDate} al ${endDate}
+      Filtri applicati:
+      - Edifici: ${buildings}
+      - Impianti: ${plants}
+    `;
+
+    // Aggiungi la descrizione al PDF
+    try {
+      doc
+        .fontSize(16)
+        .fillColor("black")
+        .text(descriptionText, { align: "left", lineGap: 4 });
+
+      // Spaziatura dopo la descrizione
+      doc.moveDown(1); // Aggiunge uno spazio dopo la descrizione
+    } catch (error) {
+      console.error("Errore nell'aggiungere la descrizione al PDF:", error);
+      doc
+        .fontSize(12)
+        .fillColor("black")
+        .text("Errore nell'aggiungere la descrizione del grafico.", {
+          align: "center",
+          italic: true,
+        });
+    }
+  } else {
+    console.log(
+      "Descrizione del grafico non implementata: nessuna descrizione fornita."
+    );
+    doc
+      .fontSize(12)
+      .fillColor("black")
+      .text("Descrizione del grafico non disponibile.", {
+        align: "center",
+        italic: true,
+      });
+  }
+
+  if (config &amp;&amp; config.chartImageUrl) {
+    const filePath = path.join(
+      __dirname,
+      "../uploads",
+      path.basename(config.chartImageUrl)
+    );
+    console.log("Percorso dell'immagine del grafico:", filePath);
+
+    try {
+      const imageSize = getImageSize(filePath);
+      console.log("Dimensioni originali dell'immagine:", imageSize);
+      const maxWidth = 500;
+      const maxHeight = 350;
+      let width = imageSize.width;
+      let height = imageSize.height;
+
+      if (width > maxWidth || height > maxHeight) {
+        const aspectRatio = width / height;
+        if (width > maxWidth) {
+          width = maxWidth;
+          height = Math.round(width / aspectRatio);
+        }
+        if (height > maxHeight) {
+          height = maxHeight;
+          width = Math.round(height * aspectRatio);
+        }
+      }
+
+      console.log("Dimensioni finali per l'immagine:", { width, height });
+
+      if (doc.y + height > doc.page.height) {
+        console.log(
+          "Spazio insufficiente per l'immagine, aggiunta di una nuova pagina."
+        );
+        doc.addPage();
+      }
+
+      doc.image(filePath, {
+        width,
+        height,
+        align: "center",
+        valign: "center",
+      });
+
+      // Aggiorna manualmente doc.y dopo l'inserimento dell'immagine
+      doc.y += height; // Sposta la posizione `y` per il prossimo contenuto
+
+      console.log("Grafico aggiunto con successo.");
+    } catch (error) {
+      console.error("Errore nell'aggiungere l'immagine al PDF:", error);
+      doc
+        .fontSize(12)
+        .fillColor("black")
+        .text("Errore nell'aggiungere il grafico.", {
+          align: "center",
+          italic: true,
+        });
+    }
+  } else {
+    console.log("Grafico non implementato: nessuna immagine fornita.");
+    doc
+      .fontSize(12)
+      .fillColor("black")
+      .text("Grafico non implementato: aggiungi un grafico qui.", {
+        align: "center",
+        italic: true,
+      });
+  }
+};
+
+/**
+ * Ottiene le dimensioni di un'immagine dal percorso specificato.
+ *
+ * @param {string} filePath - Il percorso dell'immagine.
+ * @returns {Object} - Un oggetto contenente le dimensioni dell'immagine (`width` e `height`).
+ */
+const getImageSize = (filePath) => {
+  return sizeOf(filePath);
+};
+
+module.exports = {
+  createPDF,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

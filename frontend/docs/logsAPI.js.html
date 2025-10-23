@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>logsAPI.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li></li><li><a href="module-exportAPI.html">exportAPI</a></li><li></li><li><a href="module-fileAPI.html">fileAPI</a></li><li></li><li><a href="module-logsAPI.html">logsAPI</a></li><li></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">logsAPI.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace utils
+ * @fileoverview
+ * Questo modulo gestisce l'interazione con l'API per il recupero dei logs.
+ * In particolare, offre una funzione per ottenere i logs filtrati in base a determinati parametri.
+ * La funzione principale è:
+ *
+ * 1. **getLogs**: Recupera i logs dal server in base ai filtri passati come parametri.
+ *
+ * Ogni richiesta inviata tramite questo modulo è una GET alla rotta `/getFilteredLogs` dell'API,
+ * che restituirà i logs filtrati in base ai criteri specificati.
+ *
+ * Questo modulo si basa su Axios per le richieste HTTP.
+ *
+ * @module logsAPI
+ * @requires axiosInstance
+ *
+ */
+
+import axiosInstance from "./api";
+
+const BASE_API = "/logs";
+
+/**
+ * Recupera i logs dal server in base ai filtri specificati.
+ *
+ * Questa funzione invia una richiesta GET al backend, passando i filtri come parametri della query
+ * per ottenere i logs che soddisfano i criteri forniti. Se la richiesta è riuscita, i logs vengono
+ * restituiti sotto forma di dati JSON.
+ *
+ * @param {Object} [filters={}] - I filtri da applicare ai logs. Ogni filtro viene inviato come parametro di query.
+ * @returns {Promise&lt;Object>} Una promessa che restituisce i logs filtrati dal server.
+ *
+ * @throws {Error} Se si verifica un errore nella richiesta o se la connessione al server fallisce.
+
+ */
+export const getLogs = async (filters = {}) => {
+  console.log(filters);
+  try {
+    const response = await axiosInstance.get(`${BASE_API}/getFilteredLogs`, {
+      params: filters,
+    });
+    return response.data;
+  } catch (error) {
+    if (error.response &amp;&amp; error.response.data) {
+      throw new Error(error.response.data.message || "Errore sconosciuto");
+    }
+    throw new Error("Errore di connessione al server");
+  }
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Fri Dec 13 2024 12:39:39 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

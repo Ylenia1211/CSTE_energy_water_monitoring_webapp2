@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>pages/ReportConfigurator.jsx - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-AdminProtectedRoute.html">AdminProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-AdminProtectedRoute.html#~AdminProtectedRoute">AdminProtectedRoute</a></li></ul></li><li><a href="module-AdvancedAnalysis.html">AdvancedAnalysis</a><ul class='methods'><li data-type='method'><a href="module-AdvancedAnalysis.html#~AdvancedAnalysis">AdvancedAnalysis</a></li></ul></li><li><a href="module-AlertNotifications.html">AlertNotifications</a><ul class='methods'><li data-type='method'><a href="module-AlertNotifications.html#~AlertNotifications">AlertNotifications</a></li></ul></li><li><a href="module-AppRoutes.html">AppRoutes</a><ul class='methods'><li data-type='method'><a href="module-AppRoutes.html#~AppRoutes">AppRoutes</a></li></ul></li><li><a href="module-BarChart.html">BarChart</a></li><li><a href="module-BuildingEnergyConsumption.html">BuildingEnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumption.html#~BuildingEnergyConsumption">BuildingEnergyConsumption</a></li></ul></li><li><a href="module-BuildingEnergyConsumptionChartPanel.html">BuildingEnergyConsumptionChartPanel</a><ul class='methods'><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~BuildingEnergyConsumptionChartPanel">BuildingEnergyConsumptionChartPanel</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useBarChartData">useBarChartData</a></li><li data-type='method'><a href="module-BuildingEnergyConsumptionChartPanel.html#~useExport">useExport</a></li></ul></li><li><a href="module-BuildingFilterSelect.html">BuildingFilterSelect</a><ul class='methods'><li data-type='method'><a href="module-BuildingFilterSelect.html#~BuildingFilterSelect">BuildingFilterSelect</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~applyFilters">applyFilters</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~fetchBuildingsAndImpianti">fetchBuildingsAndImpianti</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleBuildingChange">handleBuildingChange</a></li><li data-type='method'><a href="module-BuildingFilterSelect.html#~handleImpiantoChange">handleImpiantoChange</a></li></ul></li><li><a href="module-Button.html">Button</a><ul class='methods'><li data-type='method'><a href="module-Button.html#~Button">Button</a></li></ul></li><li><a href="module-ChartReportSelector.html">ChartReportSelector</a><ul class='methods'><li data-type='method'><a href="module-ChartReportSelector.html#~ChartReportSelector">ChartReportSelector</a></li></ul></li><li><a href="module-Dashboard.html">Dashboard</a><ul class='methods'><li data-type='method'><a href="module-Dashboard.html#~Dashboard">Dashboard</a></li></ul></li><li><a href="module-DashboardPanel.html">DashboardPanel</a><ul class='methods'><li data-type='method'><a href="module-DashboardPanel.html#~DashboardPanel">DashboardPanel</a></li></ul></li><li><a href="module-DraggableSection.html">DraggableSection</a><ul class='methods'><li data-type='method'><a href="module-DraggableSection.html#~DraggableSection">DraggableSection</a></li></ul></li><li><a href="module-Edifici.html">Edifici</a><ul class='methods'><li data-type='method'><a href="module-Edifici.html#~Edifici">Edifici</a></li></ul></li><li><a href="module-EnergyConsumption.html">EnergyConsumption</a><ul class='methods'><li data-type='method'><a href="module-EnergyConsumption.html#~EnergyConsumption">EnergyConsumption</a></li></ul></li><li><a href="module-ErrorDisplay.html">ErrorDisplay</a><ul class='methods'><li data-type='method'><a href="module-ErrorDisplay.html#~ErrorDisplay">ErrorDisplay</a></li></ul></li><li><a href="module-FilterContext.html">FilterContext</a></li><li><a href="module-Footer.html">Footer</a><ul class='methods'><li data-type='method'><a href="module-Footer.html#~Footer">Footer</a></li></ul></li><li><a href="module-Home.html">Home</a><ul class='methods'><li data-type='method'><a href="module-Home.html#~Home">Home</a></li></ul></li><li><a href="module-HourlyAverageConsumptionTotalChart.html">HourlyAverageConsumptionTotalChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~HourlyAverageConsumptionTotalChart">HourlyAverageConsumptionTotalChart</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchBuildings">fetchBuildings</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~fetchData">fetchData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~generateTimeSeriesData">generateTimeSeriesData</a></li><li data-type='method'><a href="module-HourlyAverageConsumptionTotalChart.html#~handleExportToPDF">handleExportToPDF</a></li></ul></li><li><a href="module-HourlyConsumptionChart.html">HourlyConsumptionChart</a><ul class='methods'><li data-type='method'><a href="module-HourlyConsumptionChart.html#~HourlyConsumptionChart">HourlyConsumptionChart</a></li></ul></li><li><a href="module-Input.html">Input</a><ul class='methods'><li data-type='method'><a href="module-Input.html#~Input">Input</a></li></ul></li><li><a href="module-LoadingSpinner.html">LoadingSpinner</a><ul class='methods'><li data-type='method'><a href="module-LoadingSpinner.html#~LoadingSpinner">LoadingSpinner</a></li></ul></li><li><a href="module-LogFilter.html">LogFilter</a><ul class='methods'><li data-type='method'><a href="module-LogFilter.html#~LogFilter">LogFilter</a></li></ul></li><li><a href="module-Login.html">Login</a><ul class='methods'><li data-type='method'><a href="module-Login.html#~Login">Login</a></li></ul></li><li><a href="module-Logout.html">Logout</a><ul class='methods'><li data-type='method'><a href="module-Logout.html#~Logout">Logout</a></li></ul></li><li><a href="module-Logs.html">Logs</a><ul class='methods'><li data-type='method'><a href="module-Logs.html#~Logs">Logs</a></li></ul></li><li><a href="module-Menu.html">Menu</a><ul class='methods'><li data-type='method'><a href="module-Menu.html#~Menu">Menu</a></li></ul></li><li><a href="module-Navbar.html">Navbar</a><ul class='methods'><li data-type='method'><a href="module-Navbar.html#~Navbar">Navbar</a></li></ul></li><li><a href="module-NotificationContext.html">NotificationContext</a></li><li><a href="module-NotificationTable.html">NotificationTable</a><ul class='methods'><li data-type='method'><a href="module-NotificationTable.html#~NotificationTable">NotificationTable</a></li></ul></li><li><a href="module-Notifications.html">Notifications</a><ul class='methods'><li data-type='method'><a href="module-Notifications.html#~Notifications">Notifications</a></li></ul></li><li><a href="module-Panel.html">Panel</a></li><li><a href="module-PanelWrapper.html">PanelWrapper</a><ul class='methods'><li data-type='method'><a href="module-PanelWrapper.html#~PanelWrapper">PanelWrapper</a></li></ul></li><li><a href="module-Profile.html">Profile</a><ul class='methods'><li data-type='method'><a href="module-Profile.html#~Profile">Profile</a></li></ul></li><li><a href="module-ProtectedRoute.html">ProtectedRoute</a><ul class='methods'><li data-type='method'><a href="module-ProtectedRoute.html#~ProtectedRoute">ProtectedRoute</a></li></ul></li><li><a href="module-Register.html">Register</a><ul class='methods'><li data-type='method'><a href="module-Register.html#~Register">Register</a></li></ul></li><li><a href="module-ReportConfigurator.html">ReportConfigurator</a><ul class='methods'><li data-type='method'><a href="module-ReportConfigurator.html#~ReportConfigurator">ReportConfigurator</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~addSection">addSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~cancelEdit">cancelEdit</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~dataURItoBlob">dataURItoBlob</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~editSection">editSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~generatePDF">generatePDF</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragEnter">handleDragEnter</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleDragLeave">handleDragLeave</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~handleGetDescription">handleGetDescription</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~moveSection">moveSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~removeSection">removeSection</a></li><li data-type='method'><a href="module-ReportConfigurator.html#~saveEditedSection">saveEditedSection</a></li></ul></li><li><a href="module-RequestPasswordReset.html">RequestPasswordReset</a><ul class='methods'><li data-type='method'><a href="module-RequestPasswordReset.html#~RequestPasswordReset">RequestPasswordReset</a></li></ul></li><li><a href="module-ResetPassword.html">ResetPassword</a><ul class='methods'><li data-type='method'><a href="module-ResetPassword.html#~ResetPassword">ResetPassword</a></li></ul></li><li><a href="module-ResultCard.html">ResultCard</a><ul class='methods'><li data-type='method'><a href="module-ResultCard.html#~ResultCard">ResultCard</a></li></ul></li><li><a href="module-Settings.html">Settings</a><ul class='methods'><li data-type='method'><a href="module-Settings.html#~Settings">Settings</a></li><li data-type='method'><a href="module-Settings.html#~checkIfUserIsObserving">checkIfUserIsObserving</a></li><li data-type='method'><a href="module-Settings.html#~handleToggleNotification">handleToggleNotification</a></li></ul></li><li><a href="module-TabMenuItem.html">TabMenuItem</a><ul class='methods'><li data-type='method'><a href="module-TabMenuItem.html#~TabMenuItem">TabMenuItem</a></li></ul></li><li><a href="module-TimeRangePicker.html">TimeRangePicker</a><ul class='methods'><li data-type='method'><a href="module-TimeRangePicker.html#~TimeRangePicker">TimeRangePicker</a></li></ul></li><li><a href="module-TimeSeriesChart.html">TimeSeriesChart</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChart.html#~TimeSeriesChartComponent">TimeSeriesChartComponent</a></li><li data-type='method'><a href="module-TimeSeriesChart.html#~getRandomColor">getRandomColor</a></li></ul></li><li><a href="module-TimeSeriesChartByBuilding.html">TimeSeriesChartByBuilding</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesChartByBuilding.html#~TimeSeriesChartByBuilding">TimeSeriesChartByBuilding</a></li></ul></li><li><a href="module-TimeSeriesDataComponent.html">TimeSeriesDataComponent</a><ul class='methods'><li data-type='method'><a href="module-TimeSeriesDataComponent.html#~TimeSeriesDataComponent">TimeSeriesDataComponent</a></li></ul></li><li><a href="module-Unauthorized.html">Unauthorized</a><ul class='methods'><li data-type='method'><a href="module-Unauthorized.html#~Unauthorized">Unauthorized</a></li></ul></li><li><a href="module-UserManagement.html">UserManagement</a><ul class='methods'><li data-type='method'><a href="module-UserManagement.html#~UserManagement">UserManagement</a></li><li data-type='method'><a href="module-UserManagement.html#~cancelDelete">cancelDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~confirmDelete">confirmDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~fetchUsers">fetchUsers</a></li><li data-type='method'><a href="module-UserManagement.html#~handleAddUser">handleAddUser</a></li><li data-type='method'><a href="module-UserManagement.html#~handleCancel">handleCancel</a></li><li data-type='method'><a href="module-UserManagement.html#~handleChange">handleChange</a></li><li data-type='method'><a href="module-UserManagement.html#~handleDelete">handleDelete</a></li><li data-type='method'><a href="module-UserManagement.html#~handleEdit">handleEdit</a></li><li data-type='method'><a href="module-UserManagement.html#~handleSave">handleSave</a></li><li data-type='method'><a href="module-UserManagement.html#~resetForm">resetForm</a></li></ul></li><li><a href="module-WeeklyBarChart.html">WeeklyBarChart</a><ul class='methods'><li data-type='method'><a href="module-WeeklyBarChart.html#~WeeklyBarChart">WeeklyBarChart</a></li></ul></li><li><a href="module-authAPI.html">authAPI</a><ul class='methods'><li data-type='method'><a href="module-authAPI.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authAPI.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authAPI.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-axiosConfig.html">axiosConfig</a><ul class='methods'><li data-type='method'><a href="module-axiosConfig.html#~handleGlobalError">handleGlobalError</a></li><li data-type='method'><a href="module-axiosConfig.html#~responseInterceptor">responseInterceptor</a></li></ul></li><li><a href="module-consumiAPI.html">consumiAPI</a><ul class='methods'><li data-type='method'><a href="module-consumiAPI.html#~fetchBarChartDataByBuilding">fetchBarChartDataByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumption">fetchHourlyAverageConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchHourlyAverageConsumptionTotal">fetchHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchMetersData">fetchMetersData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchNestedFieldData">fetchNestedFieldData</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumption">fetchTotalConsumption</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchTotalConsumptionByBuilding">fetchTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-consumiAPI.html#~fetchWeeklyBarChartDataByBuilding">fetchWeeklyBarChartDataByBuilding</a></li></ul></li><li><a href="module-exportAPI.html">exportAPI</a></li><li><a href="module-fileAPI.html">fileAPI</a></li><li><a href="module-logsAPI.html">logsAPI</a></li><li><a href="module-main.html">main</a><ul class='methods'><li data-type='method'><a href="module-main.html#~renderApp">renderApp</a></li></ul></li><li><a href="module-observersAPI.html">observersAPI</a><ul class='methods'><li data-type='method'><a href="module-observersAPI.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observersAPI.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observersAPI.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observersAPI.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queriesAPI.html">queriesAPI</a><ul class='methods'><li data-type='method'><a href="module-queriesAPI.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-socketAPI.html">socketAPI</a><ul class='methods'><li data-type='method'><a href="module-socketAPI.html#~setupSocketListeners">setupSocketListeners</a></li></ul></li><li><a href="module-store.html">store</a></li><li><a href="module-useBuildingFilters.html">useBuildingFilters</a><ul class='methods'><li data-type='method'><a href="module-useBuildingFilters.html#~useBuildingFilters">useBuildingFilters</a></li></ul></li><li><a href="module-useTimeRange.html">useTimeRange</a><ul class='methods'><li data-type='method'><a href="module-useTimeRange.html#~useTimeRange">useTimeRange</a></li></ul></li><li><a href="module-userAPI.html">userAPI</a><ul class='methods'><li data-type='method'><a href="module-userAPI.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userAPI.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userAPI.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userAPI.html#~getUserProfile">getUserProfile</a></li><li data-type='method'><a href="module-userAPI.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userAPI.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserDetails">updateUserDetails</a></li><li data-type='method'><a href="module-userAPI.html#~updateUserProfile">updateUserProfile</a></li></ul></li><li><a href="module-userSlice.html">userSlice</a><ul class='methods'><li data-type='method'><a href="module-userSlice.html#~middleware">middleware</a></li><li data-type='method'><a href="module-userSlice.html#~serializableMiddleware">serializableMiddleware</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">pages/ReportConfigurator.jsx</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace pages
+ * @fileoverview
+ * Il file contiene un componente React per la configurazione di un report personalizzato in formato PDF.
+ * L'utente può aggiungere, modificare e rimuovere diverse sezioni, come tabelle, grafici e testo personalizzato.
+ * Ogni sezione può essere configurata con specifici parametri, come la query per le tabelle, l'anteprima dei grafici e la personalizzazione del testo.
+ * Inoltre, l'utente può spostare le sezioni tramite drag-and-drop e generare il report in formato PDF.
+ *
+ * Le funzionalità principali includono:
+ * - Aggiunta e configurazione di sezioni del report (grafico o  testo).
+ * - Creazione e visualizzazione di grafici tramite un componente esterno.
+ * - Modifica delle sezioni già aggiunte.
+ * - Generazione di un report in formato PDF.
+ *
+ * @module ReportConfigurator
+ */
+
+import React, { useState, useEffect, useRef } from "react";
+import html2canvas from "html2canvas";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+
+import DraggableSection from "../components/common/DraggableSection";
+import ChartReportSelector from "../components/common/ChartReportSelector";
+
+import { exportQueryDataToPDF } from "../utils/exportAPI";
+import { uploadImage } from "../utils/filesAPI";
+
+/**
+ * @component
+ * Componente per la configurazione di un report personalizzato.
+ * Permette agli utenti di aggiungere, modificare e rimuovere sezioni come tabelle, grafici e testo personalizzato.
+ * Gestisce la logica per la selezione delle query, la configurazione dinamica delle sezioni e la generazione del PDF.
+ *
+ * @function ReportConfigurator
+ * @returns {JSX.Element} Il componente di configurazione del report.
+ */
+const ReportConfigurator = () => {
+  const [title, setTitle] = useState("");
+  const [sections, setSections] = useState([]);
+  const [currentSection, setCurrentSection] = useState({
+    type: "",
+    config: {},
+  });
+  const [showIndicator, setShowIndicator] = useState(false);
+  const [indicatorPosition, setIndicatorPosition] = useState(null);
+  const chartRef = useRef();
+  const [editingIndex, setEditingIndex] = useState(null);
+
+  const [seletedChartDescription, setseletedChartDescription] = useState({});
+  /**
+   * Funzione per aggiornare i dati per la descrizione del grafico selezionato.
+   * @function handleGetDescription
+   * @param {Object} description La descrizione del grafico selezionato.
+   * @returns {void}
+   */
+  const handleGetDescription = (description) => {
+    setseletedChartDescription(description);
+  };
+
+  /**
+   * Funzione per convertire un'immagine in formato DataURL in un oggetto Blob.
+   * @function dataURItoBlob
+   * @param {string} dataURI La stringa DataURL dell'immagine.
+   * @returns {Blob} L'oggetto Blob risultante.
+   */
+  function dataURItoBlob(dataURI) {
+    const byteString = atob(dataURI.split(",")[1]);
+    const mimeString = dataURI.split(",")[0].split(":")[1].split(";")[0];
+
+    const ab = new ArrayBuffer(byteString.length);
+    const ia = new Uint8Array(ab);
+    for (let i = 0; i &lt; byteString.length; i++) {
+      ia[i] = byteString.charCodeAt(i);
+    }
+
+    return new Blob([ab], { type: mimeString });
+  }
+
+  /**
+   * Funzione per aggiungere una nuova sezione al report.
+   * La sezione può essere di tipo 'chart' o 'text'. Se la sezione è di tipo grafico, viene creato un canvas
+   * e l'immagine risultante viene caricata su un server.
+   * @function addSection
+   * @returns {void}
+   */
+  const addSection = async () => {
+    if (!currentSection.type) return;
+
+    //Se le sezione da aggiungere è di tipo chart
+    if (currentSection.type === "chart") {
+      const chartElement =
+        chartRef.current.querySelector("canvas") || chartRef.current;
+
+      if (chartElement) {
+        try {
+          const canvas = await html2canvas(chartElement, {
+            useCORS: true,
+            scale: 3,
+            backgroundColor: null,
+          });
+
+          const chartImage = canvas.toDataURL("image/png");
+          const imageBlob = dataURItoBlob(chartImage);
+
+          const response = await uploadImage(imageBlob);
+
+          if (response &amp;&amp; response.fileUrl) {
+            setSections([
+              ...sections,
+              {
+                ...currentSection,
+                config: {
+                  ...currentSection.config,
+                  chartImageUrl: response.fileUrl,
+                  chartDescription: seletedChartDescription,
+                },
+              },
+            ]);
+          } else {
+            console.error(
+              "Errore nell'upload dell'immagine o fileUrl mancante"
+            );
+          }
+        } catch (error) {
+          console.error("Errore durante la creazione del canvas:", error);
+        }
+      } else {
+        console.error("Elemento canvas non trovato");
+      }
+    } else {
+      setSections([...sections, currentSection]);
+    }
+
+    setCurrentSection({ type: "", config: {} });
+    setseletedChartDescription({});
+  };
+
+  /**
+   * Funzione per rimuovere una sezione dal report in base al suo indice.
+   * @function removeSection
+   * @param {number} index L'indice della sezione da rimuovere.
+   * @returns {void}
+   */
+  const removeSection = (index) => {
+    setSections(sections.filter((_, i) => i !== index));
+  };
+
+  /**
+   * Funzione per spostare una sezione nella lista in base agli indici di partenza e destinazione.
+   * @function moveSection
+   * @param {number} fromIndex L'indice di partenza della sezione.
+   * @param {number} toIndex L'indice di destinazione della sezione.
+   * @returns {void}
+   */
+  const moveSection = (fromIndex, toIndex) => {
+    const updatedSections = [...sections];
+    const [movedSection] = updatedSections.splice(fromIndex, 1);
+    updatedSections.splice(toIndex, 0, movedSection);
+    setSections(updatedSections);
+    setShowIndicator(false);
+  };
+
+  /**
+   * Funzione per gestire l'evento di entrata nel drag, mostrando l'indicatore di posizione.
+   * @function handleDragEnter
+   * @param {number} index L'indice della sezione in cui è stato effettuato l'entrata del drag.
+   * @returns {void}
+   */
+  const handleDragEnter = (index) => {
+    setShowIndicator(true);
+    setIndicatorPosition(index);
+  };
+
+  /**
+   * Funzione per gestire l'evento di uscita del drag, nascondendo l'indicatore di posizione.
+   * @function handleDragLeave
+   * @returns {void}
+   */
+  const handleDragLeave = () => {
+    setShowIndicator(false);
+    setIndicatorPosition(null);
+  };
+
+  /**
+   * Funzione per generare il report in formato PDF.
+   * @function generatePDF
+   * @returns {Promise&lt;void>}
+   */
+  const generatePDF = async () => {
+    try {
+      await exportQueryDataToPDF(title, sections);
+    } catch (error) {
+      console.error("Errore nella generazione del PDF:", error);
+    }
+  };
+
+  /**
+   * Funzione per avviare la modifica di una sezione esistente.
+   * @function editSection
+   * @param {number} index L'indice della sezione da modificare.
+   * @returns {void}
+   */
+  const editSection = (index) => {
+    setEditingIndex(index);
+    setCurrentSection(sections[index]);
+  };
+
+  /**
+   * Funzione per salvare le modifiche apportate a una sezione esistente.
+   * Se la sezione è di tipo 'chart', aggiorna l'immagine del grafico.
+   * @function saveEditedSection
+   * @returns {void}
+   */
+  const saveEditedSection = async () => {
+    if (editingIndex !== null) {
+      const updatedSections = [...sections];
+
+      // Se la sezione modificata è di tipo "chart"
+      if (currentSection.type === "chart") {
+        const chartElement =
+          chartRef.current.querySelector("canvas") || chartRef.current;
+
+        if (chartElement) {
+          try {
+            // Crea un'immagine dal contenuto del canvas
+            const canvas = await html2canvas(chartElement, {
+              useCORS: true,
+              scale: 3,
+              backgroundColor: null,
+            });
+
+            const chartImage = canvas.toDataURL("image/png");
+            const imageBlob = dataURItoBlob(chartImage);
+
+            // Carica l'immagine
+            const response = await uploadImage(imageBlob);
+
+            if (response &amp;&amp; response.fileUrl) {
+              // Aggiorna l'URL dell'immagine nella sezione esistente
+              updatedSections[editingIndex] = {
+                ...currentSection,
+                config: {
+                  ...currentSection.config,
+                  chartImageUrl: response.fileUrl,
+                },
+              };
+
+              setSections(updatedSections);
+              setEditingIndex(null);
+              setCurrentSection({ type: "", config: {} });
+            } else {
+              console.error(
+                "Errore nell'upload dell'immagine o fileUrl mancante"
+              );
+            }
+          } catch (error) {
+            console.error("Errore durante la creazione del canvas:", error);
+          }
+        } else {
+          console.error("Elemento canvas non trovato");
+        }
+      } else {
+        // Se non è un grafico, salva la sezione modificata direttamente
+        updatedSections[editingIndex] = currentSection;
+        setSections(updatedSections);
+        setEditingIndex(null);
+        setCurrentSection({ type: "", config: {} });
+      }
+    }
+  };
+
+  /**
+   * Funzione per annullare la modifica di una sezione.
+   * @function cancelEdit
+   * @returns {void}
+   */
+  const cancelEdit = () => {
+    setEditingIndex(null);
+    setCurrentSection({ type: "", config: {} });
+  };
+
+  return (
+    &lt;DndProvider backend={HTML5Backend}>
+      &lt;div className="p-6 min-h-screen">
+        &lt;h1 className="text-3xl text-white font-bold mb-6">
+          Creazione Report Personalizzato PDF
+        &lt;/h1>
+        {/* Titolo Report */}
+        &lt;div className="bg-white shadow-md rounded-lg p-4 mb-6">
+          &lt;label className="block text-xl font-bold mb-2">
+            Titolo del report
+          &lt;/label>
+          &lt;input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            placeholder="Inserisci il titolo del report"
+          />
+        &lt;/div>
+        {/* Selezione Tipo Sezione */}
+        &lt;div className="bg-white shadow-md rounded-lg p-4 mb-6">
+          &lt;h2 className="text-xl font-bold mb-4">Aggiungi una sezione&lt;/h2>
+          &lt;div className="mb-4">
+            &lt;label className="block text-gray-700 font-medium mb-2">
+              Titolo della sezione
+            &lt;/label>
+            &lt;input
+              type="text"
+              value={currentSection.config.title || ""}
+              placeholder="Inserisci il titolo della sezione"
+              onChange={(e) =>
+                setCurrentSection({
+                  ...currentSection,
+                  config: {
+                    ...currentSection.config,
+                    title: e.target.value,
+                  },
+                })
+              }
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+          &lt;/div>
+          &lt;label className="block text-gray-700 font-medium mb-2">
+            Scegli il tipo di sezione
+          &lt;/label>
+          &lt;select
+            value={currentSection.type}
+            onChange={(e) =>
+              setCurrentSection({ ...currentSection, type: e.target.value })
+            }
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            &lt;option value="">Seleziona tipo di sezione&lt;/option>
+            &lt;option value="chart">Grafico&lt;/option>
+            &lt;option value="text">Testo Personalizzato&lt;/option>
+          &lt;/select>
+
+          {/* Configurazione Dinamica */}
+          {currentSection.type === "chart" &amp;&amp; (
+            &lt;div className="mt-4">
+              &lt;label className="block text-gray-700 font-medium mb-2">
+                Visualizza anteprima del grafico
+              &lt;/label>
+              &lt;div ref={chartRef}>
+                &lt;ChartReportSelector getDescription={handleGetDescription} />
+              &lt;/div>
+            &lt;/div>
+          )}
+
+          {currentSection.type === "text" &amp;&amp; (
+            &lt;div className="mt-4">
+              &lt;div className="flex flex-col mb-4">
+                &lt;label className="block text-gray-700 font-medium mb-2">
+                  Scegli la dimensione
+                &lt;/label>
+                &lt;input
+                  type="number"
+                  min="10"
+                  max="100"
+                  placeholder="16"
+                  className="mb-2 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  onChange={(e) =>
+                    setCurrentSection({
+                      ...currentSection,
+                      config: {
+                        ...currentSection.config,
+                        fontSize: Number(e.target.value),
+                      },
+                    })
+                  }
+                />
+
+                &lt;label className="block text-gray-700 font-medium mb-2">
+                  Scegli il colore
+                &lt;/label>
+                &lt;input
+                  type="color"
+                  className="mb-2 border border-gray-300 rounded-lg"
+                  onChange={(e) =>
+                    setCurrentSection({
+                      ...currentSection,
+                      config: {
+                        ...currentSection.config,
+                        color: e.target.value,
+                      },
+                    })
+                  }
+                />
+
+                &lt;label className="block text-gray-700 font-medium mb-2">
+                  Scegli lo stile
+                &lt;/label>
+                &lt;select
+                  className="mb-4 border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                  onChange={(e) =>
+                    setCurrentSection({
+                      ...currentSection,
+                      config: {
+                        ...currentSection.config,
+                        fontStyle: e.target.value,
+                      },
+                    })
+                  }
+                >
+                  &lt;option value="normal">Normale&lt;/option>
+                  &lt;option value="italic">Corsivo&lt;/option>
+                  &lt;option value="bold">Grassetto&lt;/option>
+                  &lt;option value="underline">Sottolineato&lt;/option>
+                &lt;/select>
+              &lt;/div>
+
+              &lt;label className="block text-gray-700 font-medium mb-2">
+                Anteprima Testo
+              &lt;/label>
+              &lt;textarea
+                rows="4"
+                placeholder="Inserisci il testo"
+                onChange={(e) =>
+                  setCurrentSection({
+                    ...currentSection,
+                    config: {
+                      ...currentSection.config,
+                      text: e.target.value,
+                    },
+                  })
+                }
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                style={{
+                  fontFamily: currentSection.config.font,
+                  fontSize: currentSection.config.fontSize + "px",
+                  color: currentSection.config.color,
+                  fontStyle:
+                    currentSection.config.fontStyle === "italic"
+                      ? "italic"
+                      : "normal",
+                  fontWeight:
+                    currentSection.config.fontStyle === "bold"
+                      ? "bold"
+                      : "normal",
+                  textDecoration:
+                    currentSection.config.fontStyle === "underline"
+                      ? "underline"
+                      : "none",
+                }}
+              >&lt;/textarea>
+            &lt;/div>
+          )}
+
+          {editingIndex !== null &amp;&amp; (
+            &lt;div className="p-4 mb-6">
+              &lt;h2 className="text-xl font-bold mb-4">Modifica Sezione&lt;/h2>
+
+              &lt;button
+                onClick={saveEditedSection}
+                className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
+              >
+                Salva Modifiche
+              &lt;/button>
+              &lt;button
+                onClick={cancelEdit}
+                className="mt-4 bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+              >
+                Annulla
+              &lt;/button>
+            &lt;/div>
+          )}
+
+          &lt;button
+            onClick={addSection}
+            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+          >
+            Aggiungi sezione
+          &lt;/button>
+        &lt;/div>
+        {/* Lista delle sezioni */}
+        &lt;div className="bg-white shadow-md rounded-lg p-4">
+          &lt;h2 className="text-xl font-bold mb-4">Sezioni Aggiunte&lt;/h2>
+          {sections.length > 0 ? (
+            &lt;ul className="space-y-4">
+              {sections.map((section, index) => (
+                &lt;DraggableSection
+                  key={index}
+                  section={section}
+                  index={index}
+                  moveSection={moveSection}
+                  removeSection={removeSection}
+                  showIndicator={showIndicator}
+                  indicatorPosition={indicatorPosition}
+                  onDragEnter={handleDragEnter}
+                  onDragLeave={handleDragLeave}
+                  editSection={editSection}
+                />
+              ))}
+            &lt;/ul>
+          ) : (
+            &lt;p>Nessuna sezione aggiunta.&lt;/p>
+          )}
+        &lt;/div>
+        {/* Bottoni per generare il PDF */}
+        &lt;div className="mt-6 flex justify-end">
+          &lt;button
+            onClick={generatePDF}
+            className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600"
+          >
+            Genera PDF
+          &lt;/button>
+        &lt;/div>
+      &lt;/div>
+    &lt;/DndProvider>
+  );
+};
+
+export default ReportConfigurator;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:16 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>services/exportExcelService.js - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="Configurations.html">Configurations(index)</a></li><li><a href="module-EmailService.html">EmailService</a><ul class='methods'><li data-type='method'><a href="module-EmailService.html#~sendEmail">sendEmail</a></li></ul></li><li><a href="module-anomalyController.html">anomalyController</a><ul class='methods'><li data-type='method'><a href="module-anomalyController.html#~getFilteredLogs">getFilteredLogs</a></li></ul></li><li><a href="module-app.html">app</a></li><li><a href="module-authConfig.html">authConfig</a></li><li><a href="module-authController.html">authController</a><ul class='methods'><li data-type='method'><a href="module-authController.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authController.html#~logoutUser">logoutUser</a></li><li data-type='method'><a href="module-authController.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-authMiddleware.html">authMiddleware</a><ul class='methods'><li data-type='method'><a href="module-authMiddleware.html#~authMiddleware">authMiddleware</a></li></ul></li><li><a href="module-authService.html">authService</a><ul class='methods'><li data-type='method'><a href="module-authService.html#~generateToken">generateToken</a></li><li data-type='method'><a href="module-authService.html#~getPayload">getPayload</a></li><li data-type='method'><a href="module-authService.html#~loginUser">loginUser</a></li><li data-type='method'><a href="module-authService.html#~registerUser">registerUser</a></li></ul></li><li><a href="module-dbConfig.html">dbConfig</a><ul class='methods'><li data-type='method'><a href="module-dbConfig.html#~connectDB">connectDB</a></li></ul></li><li><a href="module-energyDataController.html">energyDataController</a><ul class='methods'><li data-type='method'><a href="module-energyDataController.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataController.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataController.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataController.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataController.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataController.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li></ul></li><li><a href="module-energyDataService.html">energyDataService</a><ul class='methods'><li data-type='method'><a href="module-energyDataService.html#~aggregateConsumption">aggregateConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~buildChartData">buildChartData</a></li><li data-type='method'><a href="module-energyDataService.html#~createMatchFilter">createMatchFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~fetchConsumptionData">fetchConsumptionData</a></li><li data-type='method'><a href="module-energyDataService.html#~getBarChartByBuilding">getBarChartByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumption">getHourlyAverageConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getHourlyAverageConsumptionTotal">getHourlyAverageConsumptionTotal</a></li><li data-type='method'><a href="module-energyDataService.html#~getInfoMeters">getInfoMeters</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValues">getLiveValues</a></li><li data-type='method'><a href="module-energyDataService.html#~getLiveValuesByBuilding">getLiveValuesByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getNestedFields">getNestedFields</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumption">getTotalConsumption</a></li><li data-type='method'><a href="module-energyDataService.html#~getTotalConsumptionByBuilding">getTotalConsumptionByBuilding</a></li><li data-type='method'><a href="module-energyDataService.html#~getValuesByFilter">getValuesByFilter</a></li><li data-type='method'><a href="module-energyDataService.html#~getWeeklyConsumptionByDay">getWeeklyConsumptionByDay</a></li><li data-type='method'><a href="module-energyDataService.html#~queryEnergyData">queryEnergyData</a></li></ul></li><li><a href="module-exportExcelController.html">exportExcelController</a><ul class='methods'><li data-type='method'><a href="module-exportExcelController.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportData">exportData</a></li><li data-type='method'><a href="module-exportExcelController.html#~exportQueryData">exportQueryData</a></li><li data-type='method'><a href="module-exportExcelController.html#~getFunctionParameters">getFunctionParameters</a></li><li data-type='method'><a href="module-exportExcelController.html#~mapParamsToFunctionParams">mapParamsToFunctionParams</a></li></ul></li><li><a href="module-exportExcelService.html">exportExcelService</a><ul class='methods'><li data-type='method'><a href="module-exportExcelService.html#~addChartSection">addChartSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~addTextSection">addTextSection</a></li><li data-type='method'><a href="module-exportExcelService.html#~calculateColumnWidths">calculateColumnWidths</a></li><li data-type='method'><a href="module-exportExcelService.html#~capitalizeFirstLetter">capitalizeFirstLetter</a></li><li data-type='method'><a href="module-exportExcelService.html#~cleanParams">cleanParams</a></li><li data-type='method'><a href="module-exportExcelService.html#~createExcelFile">createExcelFile</a></li><li data-type='method'><a href="module-exportExcelService.html#~createPDF">createPDF</a></li><li data-type='method'><a href="module-exportExcelService.html#~estimateSectionHeight">estimateSectionHeight</a></li><li data-type='method'><a href="module-exportExcelService.html#~generateColumnsConfig">generateColumnsConfig</a></li><li data-type='method'><a href="module-exportExcelService.html#~getCellLength">getCellLength</a></li><li data-type='method'><a href="module-exportExcelService.html#~getImageSize">getImageSize</a></li><li data-type='method'><a href="module-exportExcelService.html#~prepareRow">prepareRow</a></li><li data-type='method'><a href="module-exportExcelService.html#~shouldStartNewPage">shouldStartNewPage</a></li></ul></li><li></li><li><a href="module-exportPDFController.html">exportPDFController</a><ul class='methods'><li data-type='method'><a href="module-exportPDFController.html#~generatePDF">generatePDF</a></li></ul></li><li><a href="module-fileService.html">fileService</a><ul class='methods'><li data-type='method'><a href="module-fileService.html#~processFile">processFile</a></li></ul></li><li><a href="module-fileUploadController.html">fileUploadController</a><ul class='methods'><li data-type='method'><a href="module-fileUploadController.html#~uploadFile">uploadFile</a></li></ul></li><li><a href="module-isAdminMiddleware.html">isAdminMiddleware</a><ul class='methods'><li data-type='method'><a href="module-isAdminMiddleware.html#~isAdminMiddleware">isAdminMiddleware</a></li></ul></li><li><a href="module-monitorWorker.html">monitorWorker</a><ul class='methods'><li data-type='method'><a href="module-monitorWorker.html#~monitorFunzioneprincipalechemonitoraleanomalieintemporeale.Esegueilcontrolloperiodicodeidati,rilevaanomalieeinviareportviaemail.Ilmonitoraggiovieneeseguitoogniminuto,controllandoidatidegliultimi%2560checkTime%2560minutieverificandoanomalielegateaisensori,aidatimancantieallemediealtediTotW.Ilrisultatovieneinviatoviaemailagliosservatori,eleanomalievengonoregistrateneldatabase.">monitorFunzione principale che monitora le anomalie in tempo reale.Esegue il controllo periodico dei dati, rileva anomalie e invia report via email.Il monitoraggio viene eseguito ogni minuto, controllando i dati degli ultimi `checkTime` minutie verificando anomalie legate ai sensori, ai dati mancanti e alle medie alte di TotW.Il risultato viene inviato via email agli osservatori, e le anomalie vengono registrate nel database.</a></li></ul></li><li><a href="module-observerController.html">observerController</a><ul class='methods'><li data-type='method'><a href="module-observerController.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerController.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerController.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerController.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-observerService.html">observerService</a><ul class='methods'><li data-type='method'><a href="module-observerService.html#~addObserver">addObserver</a></li><li data-type='method'><a href="module-observerService.html#~getObservers">getObservers</a></li><li data-type='method'><a href="module-observerService.html#~isUserObserving">isUserObserving</a></li><li data-type='method'><a href="module-observerService.html#~removeObserver">removeObserver</a></li></ul></li><li><a href="module-queryController.html">queryController</a><ul class='methods'><li data-type='method'><a href="module-queryController.html#~getQueries">getQueries</a></li></ul></li><li><a href="module-queryService.html">queryService</a><ul class='methods'><li data-type='method'><a href="module-queryService.html#~getAvailableQueries">getAvailableQueries</a></li></ul></li><li><a href="module-serverConfig.html">serverConfig</a></li><li><a href="module-userController.html">userController</a><ul class='methods'><li data-type='method'><a href="module-userController.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userController.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userController.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userController.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userController.html#~requestPasswordReset">requestPasswordReset</a></li><li data-type='method'><a href="module-userController.html#~resetPassword">resetPassword</a></li><li data-type='method'><a href="module-userController.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userController.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-userService.html">userService</a><ul class='methods'><li data-type='method'><a href="module-userService.html#~addUser">addUser</a></li><li data-type='method'><a href="module-userService.html#~deleteUser">deleteUser</a></li><li data-type='method'><a href="module-userService.html#~generateResetToken">generateResetToken</a></li><li data-type='method'><a href="module-userService.html#~getAllUsers">getAllUsers</a></li><li data-type='method'><a href="module-userService.html#~getProfile">getProfile</a></li><li data-type='method'><a href="module-userService.html#~resetPasswordWithToken">resetPasswordWithToken</a></li><li data-type='method'><a href="module-userService.html#~sendResetEmail">sendResetEmail</a></li><li data-type='method'><a href="module-userService.html#~updateProfile">updateProfile</a></li><li data-type='method'><a href="module-userService.html#~updateUser">updateUser</a></li></ul></li><li><a href="module-utils.html">utils</a><ul class='methods'><li data-type='method'><a href="module-utils.html#~createFilters">createFilters</a></li><li data-type='method'><a href="module-utils.html#~createProjection">createProjection</a></li><li data-type='method'><a href="module-utils.html#~parseArray">parseArray</a></li><li data-type='method'><a href="module-utils.html#~validateDate">validateDate</a></li><li data-type='method'><a href="module-utils.html#~validateDateRange">validateDateRange</a></li></ul></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">services/exportExcelService.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @namespace services
+ * @fileoverview
+ * Fornisce utilità per generare e gestire file Excel, con particolare attenzione alla configurazione dinamica delle colonne e alla gestione di dati complessi.
+ * Questo modulo utilizza la libreria `ExcelJS` per creare file Excel in modo dinamico, adattando la larghezza delle colonne e gestendo oggetti annidati nei dati.
+ *
+ * Le funzionalità principali del modulo includono:
+ * - `generateColumnsConfig`: Crea la configurazione delle colonne in base ai dati forniti, gestendo oggetti annidati, date e valori normali.
+ * - `prepareRow`: Prepara i dati per l'inserimento nel foglio Excel, appiattendo eventuali oggetti annidati in un formato di chiavi dotate di notazione.
+ * - `createExcelFile`: Genera un file Excel, applicando la configurazione delle colonne e aggiungendo i dati preparati.
+ * - Calcolo automatico della larghezza ottimale delle colonne in base ai dati, per garantire una visualizzazione leggibile.
+ * - Funzioni di supporto per gestire la capitalizzazione delle stringhe e il calcolo delle lunghezze delle celle.
+ *
+ * Questo modulo è utile in contesti in cui è necessario esportare dati strutturati in formato Excel, come report o esportazioni da database.
+ *
+ * @module exportExcelService
+ */
+
+const ExcelJS = require("exceljs");
+
+/**
+ * Genera la configurazione delle colonne basata sui dati forniti.
+ * La configurazione tiene conto di oggetti annidati, date e valori normali.
+ *
+ * @param {Array&lt;Object>} data - L'array di oggetti con i dati per generare la configurazione delle colonne.
+ * @returns {Array&lt;Object>} - L'array di configurazioni delle colonne per il foglio Excel.
+ */
+const generateColumnsConfig = (data) => {
+  // Se `data[0]` ha una proprietà `_doc`, usa `_doc` per accedere ai dati reali
+  const keys = Object.keys(data[0]._doc || data[0]);
+
+  const columnsConfig = [];
+
+  keys.forEach((key) => {
+    const value = data[0]._doc ? data[0]._doc[key] : data[0][key];
+
+    // Determina se il valore è una data, un oggetto annidato o un valore normale
+    if (value instanceof Date) {
+      columnsConfig.push({
+        header: capitalizeFirstLetter(key),
+        key: key,
+        width: Math.max(key.length, 15),
+      });
+    } else if (value &amp;&amp; typeof value === "object") {
+      // Gestione delle proprietà annidate
+      Object.keys(value).forEach((subKey) => {
+        columnsConfig.push({
+          header: `${capitalizeFirstLetter(key)}.${subKey}`,
+          key: `${key}.${subKey}`,
+          width: Math.max(subKey.length, 15),
+        });
+      });
+    } else {
+      columnsConfig.push({
+        header: capitalizeFirstLetter(key),
+        key: key,
+        width: Math.max(key.length, 15),
+      });
+    }
+  });
+
+  // Calcola la larghezza massima per ciascuna colonna, considerando anche i valori nelle righe
+  const columnWidths = calculateColumnWidths(columnsConfig, data, keys);
+
+  // Ritorna la configurazione finale delle colonne con larghezze ottimizzate
+  return columnsConfig.map((col) => ({
+    ...col,
+    width: columnWidths[col.key] + 2, // Margine per la leggibilità
+  }));
+};
+
+/**
+ * Calcola la larghezza massima delle colonne in base ai dati.
+ *
+ * @param {Array&lt;Object>} columnsConfig - La configurazione delle colonne.
+ * @param {Array&lt;Object>} data - I dati su cui calcolare la larghezza.
+ * @param {Array&lt;string>} keys - Le chiavi dei dati.
+ * @returns {Object} - Un oggetto con la larghezza massima per ogni colonna.
+ */
+const calculateColumnWidths = (columnsConfig, data, keys) => {
+  const columnWidths = columnsConfig.reduce((acc, col) => {
+    acc[col.key] = col.header.length;
+    return acc;
+  }, {});
+
+  data.forEach((row) => {
+    const currentRow = row._doc || row;
+    keys.forEach((key) => {
+      const value = currentRow[key];
+      const cellLength = getCellLength(value, key);
+      if (cellLength > columnWidths[key]) {
+        columnWidths[key] = cellLength;
+      }
+    });
+  });
+
+  return columnWidths;
+};
+
+/**
+ * Calcola la lunghezza della cella per il valore dato.
+ *
+ * @param {any} value - Il valore da cui calcolare la lunghezza.
+ * @param {string} key - La chiave associata al valore (usata per i campi annidati).
+ * @returns {number} - La lunghezza della cella.
+ */
+const getCellLength = (value, key) => {
+  if (value instanceof Date) {
+    return value.toString().length;
+  } else if (value &amp;&amp; typeof value === "object") {
+    // Calcola la lunghezza per i valori annidati
+    return Object.values(value).reduce((maxLen, subValue) => {
+      return Math.max(maxLen, (subValue || "").toString().length);
+    }, key.length); // Considera la lunghezza della chiave
+  }
+  return (value || "").toString().length;
+};
+
+/**
+ * Capitalizza la prima lettera di una stringa.
+ *
+ * @param {string} str - La stringa da capitalizzare.
+ * @returns {string} - La stringa con la prima lettera maiuscola.
+ */
+const capitalizeFirstLetter = (str) => {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+};
+
+/**
+ * Prepara una riga di dati per l'inserimento nel foglio Excel.
+ * Gestisce oggetti annidati e li appiattisce in chiavi dotate di notazione.
+ *
+ * @param {Object} row - La riga di dati da preparare.
+ * @returns {Object} - La riga preparata, con chiavi appiattite.
+ */
+const prepareRow = (row) => {
+  const data = row._doc || row;
+  const flattenedRow = {};
+
+  Object.keys(data).forEach((key) => {
+    if (
+      typeof data[key] === "object" &amp;&amp;
+      data[key] !== null &amp;&amp;
+      !(data[key] instanceof Date)
+    ) {
+      // Gestione delle proprietà annidate
+      Object.keys(data[key]).forEach((subKey) => {
+        flattenedRow[`${key}.${subKey}`] = data[key][subKey] || "NaN";
+      });
+    } else {
+      flattenedRow[key] = data[key];
+    }
+  });
+
+  return flattenedRow;
+};
+
+/**
+ * Crea un file Excel con i dati e la configurazione delle colonne forniti.
+ *
+ * @param {string} title - Il titolo del foglio Excel.
+ * @param {Array&lt;Object>} data - I dati da includere nel file Excel.
+ * @param {Array&lt;Object>} columnsConfig - La configurazione delle colonne per il foglio Excel.
+ * @returns {Promise&lt;ExcelJS.Workbook>} - Il workbook Excel generato.
+ */
+const createExcelFile = async (title, data, columnsConfig) => {
+  const workbook = new ExcelJS.Workbook();
+  const sheet = workbook.addWorksheet(title);
+
+  // Imposta le colonne del foglio
+  sheet.columns = columnsConfig.map((col) => ({
+    header: col.header,
+    key: col.key,
+    width: col.width || 15,
+  }));
+
+  // Aggiungi i dati al foglio
+  data.forEach((item) => {
+    const preparedRow = prepareRow(item);
+    sheet.addRow(preparedRow);
+  });
+
+  return workbook;
+};
+
+module.exports = {
+  createExcelFile,
+  generateColumnsConfig,
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.4</a> on Tue Dec 17 2024 18:10:34 GMT+0100 (Ora standard dell’Europa centrale) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
