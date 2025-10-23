@@ -151,7 +151,7 @@ docker-compose up --build
 ```
 ### Database
 
-Il progetto utilizza un database **MongoDB** per memorizzare i dati dei consumi energetici e le informazioni degli utenti.
+Il progetto utilizza un database **MongoDB** per memorizzare i dati dei consumi energetici e idrici le informazioni degli utenti.
 
 **Struttura delle collezioni:**
 
@@ -160,7 +160,7 @@ Il progetto utilizza un database **MongoDB** per memorizzare i dati dei consumi 
 - `ElectricityProd_v2`: Dati energetici prelevati dai sensori.
 - `info_meter`: Dati informativi sugli edifici e gli impianti.
 - `logs`: Dati sulle anomalie rilevate dal sistema di monitoraggio (tipologia, data, messaggio).
-
+-  `bills_water`: Dati sui consumi idrici prelevati dalle bollette che l'utente carica nel sistema. 
 ---
 
 ## Installazione e Configurazione
