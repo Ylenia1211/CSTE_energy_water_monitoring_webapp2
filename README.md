@@ -1,4 +1,5 @@
-# Energy Consumption Monitoring Web App - CSTE Centro di Sostenibilità e Transizione Ecologica di Ateneo
+# Web App - CSTE Centro di Sostenibilità e Transizione Ecologica di Ateneo
+Consumption of Energy and Water Monitoring 
 
 ![image](https://github.com/user-attachments/assets/acfbf364-1db2-4e4f-af12-0067f832b3b6)
 
