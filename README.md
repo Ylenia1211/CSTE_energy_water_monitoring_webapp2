@@ -1,4 +1,4 @@
-# 🌐 CSTE Energy & Water Management Platform
+# 🌐 CSTE Energy & Water Management Platform v2
 
 Un'applicazione **full-stack** per la gestione e l’analisi dei consumi energetici e idrici degli edifici.  
 Il progetto integra un backend Node.js, un frontend React e script Python per l’estrazione e l’elaborazione dei dati, il tutto containerizzato con Docker.
