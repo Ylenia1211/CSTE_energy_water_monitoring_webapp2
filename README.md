@@ -68,7 +68,7 @@ Puoi generare la documentazione JSDoc con il seguente comando:
 È necessario farlo sia per il backend che per il frontend, `src` è il percorso dei file da includere nella documentazione.
 
 **Struttura delle cartelle:**
-
+```
 ├── LICENSE
 ├── README.md
 ├── docker-compose.yml
@@ -148,7 +148,7 @@ Il frontend fornisce un’interfaccia utente dinamica e reattiva per visualizzar
 ### Esecuzione locale
 ```bash
 docker-compose up --build
-
+```
 ### Database
 
 Il progetto utilizza un database **MongoDB** per memorizzare i dati dei consumi energetici e le informazioni degli utenti.
