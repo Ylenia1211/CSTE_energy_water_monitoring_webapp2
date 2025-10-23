@@ -24,7 +24,7 @@ Il progetto integra un backend Node.js, un frontend React e script Python per l�
 
 ## Descrizione del Progetto
 
-Questa web app consente di monitorare i consumi energetici, rilevare anomalie, esportare report in formato **Excel** e **PDF** e inviare notifiche email in caso di consumi fuori soglia. Il progetto è composto da un backend basato su **Node.js** e **MongoDB** e un frontend **React**, con gestione dell’autenticazione e delle visualizzazioni tramite grafici.
+Questa web app consente di monitorare i consumi energetici e idrici, rilevare anomalie, esportare report in formato **Excel** e **PDF** e inviare notifiche email in caso di consumi fuori soglia. Il progetto è composto da un backend basato su **Node.js** e **MongoDB** e un frontend **React**, con gestione dell’autenticazione e delle visualizzazioni tramite grafici.
 
 
 
